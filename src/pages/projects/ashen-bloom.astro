@@ -1,0 +1,948 @@
+﻿---
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8" />
+
+	<meta
+		name="viewport"
+		content="width=device-width"
+	/>
+
+	<title>
+		Ashen Bloom | Josh Maddox
+	</title>
+
+	<meta
+		name="description"
+		content="Ashen Bloom game development project by Josh Maddox."
+	/>
+
+</head>
+
+
+<body>
+
+
+	<div
+		class="star-background"
+		id="star-background"
+	></div>
+
+
+	<header>
+
+		<nav>
+
+			<a
+				href="/"
+				class="back-button"
+			>
+				&larr; Back to Portfolio
+			</a>
+
+			<p>
+				Josh Maddox | Game Programmer
+			</p>
+
+		</nav>
+
+	</header>
+
+
+
+	<main>
+
+
+		<section class="hero">
+
+			<p class="small-title">
+				UNREAL ENGINE 5.6
+			</p>
+
+			<h1>
+				Ashen Bloom
+			</h1>
+
+			<h2>
+				Third-Person Character-Action Souls-Lite
+			</h2>
+
+			<p class="description">
+
+				Ashen Bloom is a single-player third-person
+				character-action souls-lite set in a dying world
+				where nature has fused with machines, corpses,
+				and ruined cities.
+
+			</p>
+
+		</section>
+
+
+
+		<section>
+
+			<div class="main-image">
+
+				ASHEN BLOOM GAMEPLAY IMAGE
+
+			</div>
+
+		</section>
+
+
+
+		<section>
+
+			<h2 class="section-title">
+				Project Overview
+			</h2>
+
+			<div class="text">
+
+				<p>
+
+					Ashen Bloom was developed as a collaborative
+					game development project using Unreal Engine
+					5.6.
+
+				</p>
+
+				<p>
+
+					My work focused on gameplay systems,
+					procedural environment development,
+					landscape systems, and player-facing
+					features.
+
+				</p>
+
+			</div>
+
+		</section>
+
+
+
+		<section>
+
+			<h2 class="section-title">
+				My Contributions
+			</h2>
+
+
+			<div class="card-grid">
+
+
+				<div class="card">
+
+					<h3>
+						Inventory System
+					</h3>
+
+					<p>
+
+						Developed the player inventory system
+						and inventory functionality.
+
+					</p>
+
+				</div>
+
+
+
+				<div class="card">
+
+					<h3>
+						Level-Up System
+					</h3>
+
+					<p>
+
+						Created the player level-up system used
+						for character progression.
+
+					</p>
+
+				</div>
+
+
+
+				<div class="card">
+
+					<h3>
+						Inventory Character View
+					</h3>
+
+					<p>
+
+						Implemented a character rotation view
+						inside the inventory interface.
+
+					</p>
+
+				</div>
+
+
+
+				<div class="card">
+
+					<h3>
+						Forest PCG
+					</h3>
+
+					<p>
+
+						Created a procedural forest generation
+						system using Unreal Engine's PCG tools.
+
+					</p>
+
+				</div>
+
+
+
+				<div class="card">
+
+					<h3>
+						Landscape Grass
+					</h3>
+
+					<p>
+
+						Configured the landscape grass system
+						for procedural foliage placement.
+
+					</p>
+
+				</div>
+
+
+
+				<div class="card">
+
+					<h3>
+						Landscape Materials
+					</h3>
+
+					<p>
+
+						Developed a landscape texture layering
+						system for the game's terrain.
+
+					</p>
+
+				</div>
+
+
+			</div>
+
+		</section>
+
+
+
+		<section>
+
+			<h2 class="section-title">
+				Tools & Technologies
+			</h2>
+
+
+			<div class="skills">
+
+				<span>Unreal Engine 5.6</span>
+
+				<span>C++</span>
+
+				<span>Blueprints</span>
+
+				<span>PCG</span>
+
+				<span>Gaea 2</span>
+
+				<span>Blender</span>
+
+				<span>Perforce</span>
+
+				<span>Visual Studio</span>
+
+			</div>
+
+		</section>
+
+
+
+		<section>
+
+			<h2 class="section-title">
+				Screenshots & Gameplay
+			</h2>
+
+
+			<div class="media-grid">
+
+				<div class="media">
+					SCREENSHOT 1
+				</div>
+
+				<div class="media">
+					SCREENSHOT 2
+				</div>
+
+				<div class="media">
+					SCREENSHOT 3
+				</div>
+
+				<div class="media">
+					SCREENSHOT 4
+				</div>
+
+			</div>
+
+		</section>
+
+
+
+		<section class="bottom">
+
+			<a
+				href="/"
+				class="button"
+			>
+				&larr; Back to Portfolio
+			</a>
+
+		</section>
+
+
+	</main>
+
+
+
+	<footer>
+
+		<p>
+			&copy; 2026 Josh Maddox
+		</p>
+
+	</footer>
+
+
+
+	<style is:global>
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+
+		body {
+			background: #0b0d10;
+
+			color: #eeeeee;
+
+			font-family:
+				Arial,
+				Helvetica,
+				sans-serif;
+
+			line-height: 1.6;
+
+			min-height: 100vh;
+		}
+
+
+
+		/* STARS */
+
+		.star-background {
+			position: fixed;
+
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 100%;
+
+			overflow: hidden;
+
+			pointer-events: none;
+
+			z-index: 0;
+		}
+
+
+		.star {
+			position: absolute;
+
+			top: -20px;
+
+			background: white;
+
+			border-radius: 50%;
+
+			opacity: 0;
+
+			box-shadow:
+				0 0 4px
+				rgba(255, 255, 255, 0.35);
+
+			animation:
+				fall linear infinite;
+		}
+
+
+		@keyframes fall {
+
+			0% {
+				transform:
+					translateY(-30px);
+
+				opacity: 0;
+			}
+
+			10% {
+				opacity:
+					var(--star-opacity);
+			}
+
+			80% {
+				opacity:
+					var(--star-opacity);
+			}
+
+			100% {
+				transform:
+					translateY(105vh);
+
+				opacity: 0;
+			}
+
+		}
+
+
+
+		header,
+		main,
+		footer {
+			position: relative;
+
+			z-index: 1;
+		}
+
+
+
+		header {
+			border-bottom:
+				1px solid #252a31;
+
+			background:
+				rgba(
+					11,
+					13,
+					16,
+					0.90
+				);
+
+			backdrop-filter:
+				blur(8px);
+		}
+
+
+		nav {
+			max-width: 1100px;
+
+			margin: auto;
+
+			padding:
+				22px 30px;
+
+			display: flex;
+
+			align-items: center;
+
+			justify-content:
+				space-between;
+		}
+
+
+		nav p {
+			color: #888888;
+		}
+
+
+		.back-button {
+			color: white;
+
+			text-decoration: none;
+
+			font-weight: bold;
+		}
+
+
+		.back-button:hover {
+			text-decoration:
+				underline;
+		}
+
+
+		main {
+			max-width: 1100px;
+
+			margin: auto;
+
+			padding:
+				0 30px;
+		}
+
+
+		section {
+			padding:
+				70px 0;
+		}
+
+
+
+		.hero {
+			padding-top:
+				120px;
+
+			padding-bottom:
+				50px;
+		}
+
+
+		.small-title {
+			color: #888888;
+
+			letter-spacing:
+				3px;
+
+			font-size:
+				14px;
+		}
+
+
+		.hero h1 {
+			font-size:
+				clamp(
+					55px,
+					8vw,
+					90px
+				);
+
+			line-height: 1;
+
+			margin:
+				10px 0 20px;
+		}
+
+
+		.hero h2 {
+			color: #aaaaaa;
+
+			font-size:
+				25px;
+
+			font-weight:
+				normal;
+
+			margin-bottom:
+				25px;
+		}
+
+
+		.description {
+			max-width:
+				750px;
+
+			font-size:
+				18px;
+
+			color:
+				#bbbbbb;
+		}
+
+
+
+		.main-image {
+			height:
+				500px;
+
+			background:
+				rgba(
+					23,
+					26,
+					32,
+					0.92
+				);
+
+			border:
+				1px solid #30343c;
+
+			border-radius:
+				8px;
+
+			display:
+				flex;
+
+			align-items:
+				center;
+
+			justify-content:
+				center;
+
+			color:
+				#777777;
+		}
+
+
+
+		.section-title {
+			font-size:
+				38px;
+
+			margin-bottom:
+				30px;
+		}
+
+
+
+		.text {
+			max-width:
+				800px;
+
+			font-size:
+				18px;
+
+			color:
+				#bbbbbb;
+		}
+
+
+		.text p {
+			margin-bottom:
+				20px;
+		}
+
+
+
+		.card-grid {
+			display:
+				grid;
+
+			grid-template-columns:
+				repeat(
+					2,
+					1fr
+				);
+
+			gap:
+				20px;
+		}
+
+
+		.card {
+			background:
+				rgba(
+					19,
+					22,
+					27,
+					0.92
+				);
+
+			border:
+				1px solid #292d35;
+
+			padding:
+				25px;
+
+			border-radius:
+				8px;
+		}
+
+
+		.card h3 {
+			font-size:
+				22px;
+
+			margin-bottom:
+				10px;
+		}
+
+
+		.card p {
+			color:
+				#aaaaaa;
+		}
+
+
+
+		.skills {
+			display:
+				flex;
+
+			flex-wrap:
+				wrap;
+
+			gap:
+				12px;
+		}
+
+
+		.skills span {
+			background:
+				rgba(
+					23,
+					26,
+					32,
+					0.92
+				);
+
+			border:
+				1px solid #30343c;
+
+			padding:
+				10px 18px;
+
+			border-radius:
+				5px;
+		}
+
+
+
+		.media-grid {
+			display:
+				grid;
+
+			grid-template-columns:
+				repeat(
+					2,
+					1fr
+				);
+
+			gap:
+				20px;
+		}
+
+
+		.media {
+			height:
+				300px;
+
+			background:
+				rgba(
+					23,
+					26,
+					32,
+					0.92
+				);
+
+			border:
+				1px solid #30343c;
+
+			border-radius:
+				8px;
+
+			display:
+				flex;
+
+			align-items:
+				center;
+
+			justify-content:
+				center;
+
+			color:
+				#777777;
+		}
+
+
+
+		.bottom {
+			text-align:
+				center;
+		}
+
+
+		.button {
+			display:
+				inline-block;
+
+			background:
+				white;
+
+			color:
+				black;
+
+			padding:
+				14px 25px;
+
+			border-radius:
+				5px;
+
+			text-decoration:
+				none;
+
+			font-weight:
+				bold;
+		}
+
+
+		.button:hover {
+			background:
+				#cccccc;
+		}
+
+
+
+		footer {
+			text-align:
+				center;
+
+			padding:
+				40px;
+
+			color:
+				#777777;
+
+			border-top:
+				1px solid #252a31;
+
+			background:
+				rgba(
+					11,
+					13,
+					16,
+					0.75
+				);
+		}
+
+
+
+		@media (max-width: 700px) {
+
+			.card-grid {
+				grid-template-columns:
+					1fr;
+			}
+
+
+			.media-grid {
+				grid-template-columns:
+					1fr;
+			}
+
+
+			.main-image {
+				height:
+					300px;
+			}
+
+
+			nav p {
+				display:
+					none;
+			}
+
+		}
+
+
+		@media (prefers-reduced-motion: reduce) {
+
+			.star {
+				animation:
+					none;
+			}
+
+		}
+
+	</style>
+
+
+
+	<script>
+
+		const background =
+			document.getElementById(
+				"star-background"
+			);
+
+
+		if (background) {
+
+			const numberOfStars = 60;
+
+
+			for (
+				let i = 0;
+				i < numberOfStars;
+				i++
+			) {
+
+				const star =
+					document.createElement(
+						"span"
+					);
+
+
+				star.classList.add(
+					"star"
+				);
+
+
+				const size =
+					Math.random() * 2 + 1;
+
+
+				star.style.width =
+					`${size}px`;
+
+
+				star.style.height =
+					`${size}px`;
+
+
+				star.style.left =
+					`${Math.random() * 100}%`;
+
+
+				star.style.animationDuration =
+					`${Math.random() * 15 + 15}s`;
+
+
+				star.style.animationDelay =
+					`${Math.random() * -30}s`;
+
+
+				star.style.setProperty(
+					"--star-opacity",
+					`${Math.random() * 0.30 + 0.08}`
+				);
+
+
+				background.appendChild(
+					star
+				);
+
+			}
+
+		}
+
+	</script>
+
+
+</body>
+
+</html>
