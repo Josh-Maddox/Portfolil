@@ -1,23 +1,39 @@
 ﻿---
-const base = import.meta.env.BASE_URL;
+const rawBase = import.meta.env.BASE_URL;
+
+const base =
+	rawBase.endsWith('/')
+		? rawBase
+		: `${rawBase}/`;
 ---
 
 <!doctype html>
+
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width" />
 
-	<title>Josh Maddox | Game Programmer</title>
+	<meta charset="UTF-8" />
+
+	<meta
+		name="viewport"
+		content="width=device-width"
+	/>
+
+	<title>
+		Josh Maddox | Game Programmer
+	</title>
 
 	<meta
 		name="description"
 		content="Josh Maddox - Game Programmer portfolio featuring Unreal Engine, C++, Unity, Godot, and game development projects."
 	/>
+
 </head>
 
+
 <body>
+
 
 	<div
 		class="star-background"
@@ -25,11 +41,15 @@ const base = import.meta.env.BASE_URL;
 	></div>
 
 
+
 	<header>
 
 		<nav>
 
-			<h2>Josh Maddox</h2>
+			<h2>
+				Josh Maddox
+			</h2>
+
 
 			<div class="nav-links">
 
@@ -60,8 +80,11 @@ const base = import.meta.env.BASE_URL;
 	</header>
 
 
+
 	<main>
 
+
+		<!-- HERO -->
 
 		<section
 			id="home"
@@ -72,13 +95,16 @@ const base = import.meta.env.BASE_URL;
 				GAME PROGRAMMER
 			</p>
 
+
 			<h1>
 				Josh Maddox
 			</h1>
 
+
 			<h2>
 				Game Programmer
 			</h2>
+
 
 			<p class="hero-description">
 
@@ -115,6 +141,8 @@ const base = import.meta.env.BASE_URL;
 
 
 
+		<!-- PROJECTS -->
+
 		<section id="projects">
 
 			<h2 class="section-title">
@@ -125,25 +153,33 @@ const base = import.meta.env.BASE_URL;
 			<div class="project-grid">
 
 
+				<!-- ASHEN BLOOM -->
+
 				<article class="project-card">
 
 					<div class="placeholder">
 						ASHEN BLOOM IMAGE
 					</div>
 
+
 					<h3>
 						Ashen Bloom
 					</h3>
+
 
 					<p class="tech">
 						Unreal Engine 5.6 &bull; C++ &bull; Blueprints
 					</p>
 
+
 					<p>
+
 						A third-person character-action souls-lite
 						set in a dying world where nature has fused
 						with machines, corpses, and ruined cities.
+
 					</p>
+
 
 					<a
 						class="project-link"
@@ -156,24 +192,32 @@ const base = import.meta.env.BASE_URL;
 
 
 
+				<!-- ROBORUN -->
+
 				<article class="project-card">
 
 					<div class="placeholder">
 						ROBORUN IMAGE
 					</div>
 
+
 					<h3>
 						RoboRun
 					</h3>
+
 
 					<p class="tech">
 						Unity &bull; C#
 					</p>
 
+
 					<p>
+
 						A Unity project featuring gameplay systems,
 						upgrades, a shop, and overworld development.
+
 					</p>
+
 
 					<a
 						class="project-link"
@@ -186,25 +230,33 @@ const base = import.meta.env.BASE_URL;
 
 
 
+				<!-- I AM THE WALL -->
+
 				<article class="project-card">
 
 					<div class="placeholder">
 						I AM THE WALL IMAGE
 					</div>
 
+
 					<h3>
 						I Am the Wall
 					</h3>
+
 
 					<p class="tech">
 						Godot &bull; Game Jam
 					</p>
 
+
 					<p>
+
 						A game jam project featuring custom
 						pixel art, animation, game design,
 						and development.
+
 					</p>
+
 
 					<a
 						class="project-link"
@@ -222,6 +274,8 @@ const base = import.meta.env.BASE_URL;
 
 
 
+		<!-- SKILLS -->
+
 		<section id="skills">
 
 			<h2 class="section-title">
@@ -232,15 +286,25 @@ const base = import.meta.env.BASE_URL;
 			<div class="skills">
 
 				<span>Unreal Engine 5</span>
+
 				<span>C++</span>
+
 				<span>C#</span>
+
 				<span>Blueprints</span>
+
 				<span>Unity</span>
+
 				<span>Godot</span>
+
 				<span>PCG</span>
+
 				<span>Gaea 2</span>
+
 				<span>Blender</span>
+
 				<span>Git / GitHub</span>
+
 				<span>Perforce</span>
 
 			</div>
@@ -248,6 +312,8 @@ const base = import.meta.env.BASE_URL;
 		</section>
 
 
+
+		<!-- ABOUT -->
 
 		<section id="about">
 
@@ -259,15 +325,20 @@ const base = import.meta.env.BASE_URL;
 			<div class="about">
 
 				<p>
+
 					I am a Game Development graduate focused on
 					game programming, gameplay systems, tools,
 					and technical game development.
+
 				</p>
 
+
 				<p>
+
 					I enjoy working with Unreal Engine and C++,
 					developing systems that combine programming,
 					gameplay design, and world development.
+
 				</p>
 
 			</div>
@@ -275,6 +346,8 @@ const base = import.meta.env.BASE_URL;
 		</section>
 
 
+
+		<!-- CONTACT -->
 
 		<section id="contact">
 
@@ -286,9 +359,12 @@ const base = import.meta.env.BASE_URL;
 			<div class="contact">
 
 				<p>
+
 					Interested in learning more about my projects
 					or working together?
+
 				</p>
+
 
 				<a
 					href="https://github.com/Josh-Maddox"
@@ -326,40 +402,89 @@ const base = import.meta.env.BASE_URL;
 			padding: 0;
 		}
 
+
 		html {
 			scroll-behavior: smooth;
 		}
 
+
 		body {
-			background: #0b0d10;
-			color: #eeeeee;
-			font-family: Arial, Helvetica, sans-serif;
-			line-height: 1.6;
-			min-height: 100vh;
+
+			background:
+				#0b0d10;
+
+			color:
+				#eeeeee;
+
+			font-family:
+				Arial,
+				Helvetica,
+				sans-serif;
+
+			line-height:
+				1.6;
+
+			min-height:
+				100vh;
 		}
 
 
+
+		/* STAR BACKGROUND */
+
 		.star-background {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			pointer-events: none;
-			z-index: 0;
+
+			position:
+				fixed;
+
+			top:
+				0;
+
+			left:
+				0;
+
+			width:
+				100%;
+
+			height:
+				100%;
+
+			overflow:
+				hidden;
+
+			pointer-events:
+				none;
+
+			z-index:
+				0;
 		}
 
 
 		.star {
-			position: absolute;
-			top: -20px;
-			background: white;
-			border-radius: 50%;
-			opacity: 0;
+
+			position:
+				absolute;
+
+			top:
+				-20px;
+
+			background:
+				white;
+
+			border-radius:
+				50%;
+
+			opacity:
+				0;
 
 			box-shadow:
-				0 0 4px rgba(255, 255, 255, 0.35);
+				0 0 4px
+				rgba(
+					255,
+					255,
+					255,
+					0.35
+				);
 
 			animation:
 				fall linear infinite;
@@ -369,204 +494,372 @@ const base = import.meta.env.BASE_URL;
 		@keyframes fall {
 
 			0% {
-				transform: translateY(-30px);
-				opacity: 0;
+
+				transform:
+					translateY(-30px);
+
+				opacity:
+					0;
 			}
+
 
 			10% {
-				opacity: var(--star-opacity);
+
+				opacity:
+					var(--star-opacity);
 			}
+
 
 			80% {
-				opacity: var(--star-opacity);
+
+				opacity:
+					var(--star-opacity);
 			}
 
+
 			100% {
-				transform: translateY(105vh);
-				opacity: 0;
+
+				transform:
+					translateY(105vh);
+
+				opacity:
+					0;
 			}
 
 		}
+
 
 
 		header,
 		main,
 		footer {
-			position: relative;
-			z-index: 1;
+
+			position:
+				relative;
+
+			z-index:
+				1;
 		}
 
 
+
+		/* HEADER */
+
 		header {
-			position: sticky;
-			top: 0;
+
+			position:
+				sticky;
+
+			top:
+				0;
 
 			background:
-				rgba(11, 13, 16, 0.90);
+				rgba(
+					11,
+					13,
+					16,
+					0.90
+				);
 
-			backdrop-filter: blur(8px);
+			backdrop-filter:
+				blur(8px);
 
 			border-bottom:
 				1px solid #252a31;
 
-			z-index: 100;
+			z-index:
+				100;
 		}
 
 
 		nav {
-			max-width: 1200px;
-			margin: auto;
-			padding: 20px 30px;
 
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			max-width:
+				1200px;
+
+			margin:
+				auto;
+
+			padding:
+				20px 30px;
+
+			display:
+				flex;
+
+			justify-content:
+				space-between;
+
+			align-items:
+				center;
 		}
 
 
 		nav h2 {
-			font-size: 20px;
+
+			font-size:
+				20px;
 		}
 
 
 		.nav-links {
-			display: flex;
-			gap: 25px;
+
+			display:
+				flex;
+
+			gap:
+				25px;
 		}
 
 
 		.nav-links a {
-			color: #cccccc;
-			text-decoration: none;
-			transition: 0.2s;
+
+			color:
+				#cccccc;
+
+			text-decoration:
+				none;
+
+			transition:
+				0.2s;
 		}
 
 
 		.nav-links a:hover {
-			color: white;
+
+			color:
+				white;
 		}
 
 
+
 		main {
-			max-width: 1200px;
-			margin: auto;
-			padding: 0 30px;
+
+			max-width:
+				1200px;
+
+			margin:
+				auto;
+
+			padding:
+				0 30px;
 		}
 
 
 		section {
-			padding: 100px 0;
+
+			padding:
+				100px 0;
 		}
 
 
-		.hero {
-			min-height: 85vh;
 
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
+		/* HERO */
+
+		.hero {
+
+			min-height:
+				85vh;
+
+			display:
+				flex;
+
+			flex-direction:
+				column;
+
+			justify-content:
+				center;
 		}
 
 
 		.small-title {
-			font-size: 14px;
-			letter-spacing: 4px;
-			color: #999999;
-			margin-bottom: 10px;
+
+			font-size:
+				14px;
+
+			letter-spacing:
+				4px;
+
+			color:
+				#999999;
+
+			margin-bottom:
+				10px;
 		}
 
 
 		.hero h1 {
-			font-size:
-				clamp(55px, 9vw, 105px);
 
-			line-height: 1;
-			margin-bottom: 20px;
+			font-size:
+				clamp(
+					55px,
+					9vw,
+					105px
+				);
+
+			line-height:
+				1;
+
+			margin-bottom:
+				20px;
 		}
 
 
 		.hero h2 {
-			font-size: 28px;
-			font-weight: normal;
-			color: #bbbbbb;
-			margin-bottom: 25px;
+
+			font-size:
+				28px;
+
+			font-weight:
+				normal;
+
+			color:
+				#bbbbbb;
+
+			margin-bottom:
+				25px;
 		}
 
 
 		.hero-description {
-			max-width: 700px;
-			font-size: 18px;
-			color: #aaaaaa;
+
+			max-width:
+				700px;
+
+			font-size:
+				18px;
+
+			color:
+				#aaaaaa;
 		}
 
 
 		.hero-buttons {
-			display: flex;
-			gap: 15px;
-			margin-top: 35px;
+
+			display:
+				flex;
+
+			gap:
+				15px;
+
+			margin-top:
+				35px;
 		}
 
 
 		.button {
-			display: inline-block;
-			padding: 13px 22px;
-			border-radius: 5px;
-			text-decoration: none;
-			font-weight: bold;
-			transition: 0.2s;
+
+			display:
+				inline-block;
+
+			padding:
+				13px 22px;
+
+			border-radius:
+				5px;
+
+			text-decoration:
+				none;
+
+			font-weight:
+				bold;
+
+			transition:
+				0.2s;
 		}
 
 
 		.primary {
-			background: white;
-			color: black;
+
+			background:
+				white;
+
+			color:
+				black;
 		}
 
 
 		.primary:hover {
-			background: #cccccc;
+
+			background:
+				#cccccc;
 		}
 
 
 		.secondary {
-			border: 1px solid #555555;
-			color: white;
+
+			border:
+				1px solid #555555;
+
+			color:
+				white;
 
 			background:
-				rgba(15, 18, 22, 0.70);
+				rgba(
+					15,
+					18,
+					22,
+					0.70
+				);
 		}
 
 
 		.secondary:hover {
-			background: #20242b;
+
+			background:
+				#20242b;
 		}
 
+
+
+		/* SECTION TITLES */
 
 		.section-title {
-			font-size: 40px;
-			margin-bottom: 40px;
+
+			font-size:
+				40px;
+
+			margin-bottom:
+				40px;
 		}
 
 
+
+		/* PROJECTS */
+
 		.project-grid {
-			display: grid;
+
+			display:
+				grid;
 
 			grid-template-columns:
-				repeat(3, 1fr);
+				repeat(
+					3,
+					1fr
+				);
 
-			gap: 25px;
+			gap:
+				25px;
 		}
 
 
 		.project-card {
+
 			background:
-				rgba(19, 22, 27, 0.92);
+				rgba(
+					19,
+					22,
+					27,
+					0.92
+				);
 
 			border:
 				1px solid #292d35;
 
-			border-radius: 8px;
-			padding: 20px;
+			border-radius:
+				8px;
+
+			padding:
+				20px;
 
 			transition:
 				transform 0.2s,
@@ -575,93 +868,171 @@ const base = import.meta.env.BASE_URL;
 
 
 		.project-card:hover {
-			transform: translateY(-5px);
-			border-color: #555b66;
+
+			transform:
+				translateY(-5px);
+
+			border-color:
+				#555b66;
 		}
 
 
 		.placeholder {
-			height: 200px;
-			background: #20242b;
 
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			height:
+				200px;
 
-			color: #777777;
-			margin-bottom: 20px;
-			border-radius: 5px;
+			background:
+				#20242b;
+
+			display:
+				flex;
+
+			align-items:
+				center;
+
+			justify-content:
+				center;
+
+			color:
+				#777777;
+
+			margin-bottom:
+				20px;
+
+			border-radius:
+				5px;
 		}
 
 
 		.project-card h3 {
-			font-size: 26px;
-			margin-bottom: 5px;
+
+			font-size:
+				26px;
+
+			margin-bottom:
+				5px;
 		}
 
 
 		.tech {
-			color: #888888;
-			font-size: 14px;
-			margin-bottom: 15px;
+
+			color:
+				#888888;
+
+			font-size:
+				14px;
+
+			margin-bottom:
+				15px;
 		}
 
 
 		.project-card > p {
-			margin-bottom: 20px;
+
+			margin-bottom:
+				20px;
 		}
 
 
 		.project-link {
-			color: white;
-			font-weight: bold;
-			text-decoration: none;
+
+			color:
+				white;
+
+			font-weight:
+				bold;
+
+			text-decoration:
+				none;
 		}
 
 
 		.project-link:hover {
-			text-decoration: underline;
+
+			text-decoration:
+				underline;
 		}
 
 
+
+		/* SKILLS */
+
 		.skills {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 12px;
+
+			display:
+				flex;
+
+			flex-wrap:
+				wrap;
+
+			gap:
+				12px;
 		}
 
 
 		.skills span {
+
 			background:
-				rgba(23, 26, 32, 0.92);
+				rgba(
+					23,
+					26,
+					32,
+					0.92
+				);
 
 			border:
 				1px solid #30343c;
 
-			padding: 10px 18px;
-			border-radius: 5px;
+			padding:
+				10px 18px;
+
+			border-radius:
+				5px;
 		}
 
 
+
+		/* ABOUT */
+
 		.about {
-			max-width: 800px;
-			font-size: 18px;
-			color: #bbbbbb;
+
+			max-width:
+				800px;
+
+			font-size:
+				18px;
+
+			color:
+				#bbbbbb;
 		}
 
 
 		.about p {
-			margin-bottom: 20px;
+
+			margin-bottom:
+				20px;
 		}
 
 
+
+		/* CONTACT */
+
 		.contact {
+
 			background:
-				rgba(19, 22, 27, 0.92);
+				rgba(
+					19,
+					22,
+					27,
+					0.92
+				);
 
-			padding: 40px;
+			padding:
+				40px;
 
-			border-radius: 8px;
+			border-radius:
+				8px;
 
 			border:
 				1px solid #292d35;
@@ -669,40 +1040,72 @@ const base = import.meta.env.BASE_URL;
 
 
 		.contact p {
-			margin-bottom: 25px;
+
+			margin-bottom:
+				25px;
 		}
 
 
+
+		/* FOOTER */
+
 		footer {
-			text-align: center;
-			padding: 40px;
-			color: #777777;
+
+			text-align:
+				center;
+
+			padding:
+				40px;
+
+			color:
+				#777777;
 
 			border-top:
 				1px solid #252a31;
 
 			background:
-				rgba(11, 13, 16, 0.75);
+				rgba(
+					11,
+					13,
+					16,
+					0.75
+				);
 		}
 
+
+
+		/* MOBILE */
 
 		@media (max-width: 800px) {
 
 			.nav-links {
-				display: none;
+
+				display:
+					none;
 			}
+
 
 			.project-grid {
-				grid-template-columns: 1fr;
+
+				grid-template-columns:
+					1fr;
 			}
+
 
 			.hero h1 {
-				font-size: 55px;
+
+				font-size:
+					55px;
 			}
 
+
 			.hero-buttons {
-				flex-direction: column;
-				align-items: flex-start;
+
+				flex-direction:
+					column;
+
+				align-items:
+					flex-start;
 			}
 
 		}
@@ -721,7 +1124,8 @@ const base = import.meta.env.BASE_URL;
 
 		if (background) {
 
-			const numberOfStars = 60;
+			const numberOfStars =
+				60;
 
 
 			for (
@@ -748,17 +1152,22 @@ const base = import.meta.env.BASE_URL;
 				star.style.width =
 					`${size}px`;
 
+
 				star.style.height =
 					`${size}px`;
+
 
 				star.style.left =
 					`${Math.random() * 100}%`;
 
+
 				star.style.animationDuration =
 					`${Math.random() * 15 + 15}s`;
 
+
 				star.style.animationDelay =
 					`${Math.random() * -30}s`;
+
 
 				star.style.setProperty(
 					"--star-opacity",
@@ -775,6 +1184,7 @@ const base = import.meta.env.BASE_URL;
 		}
 
 	</script>
+
 
 </body>
 
