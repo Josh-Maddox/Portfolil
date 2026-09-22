@@ -1,9 +1,7 @@
 ﻿<!doctype html>
 
 <html lang="en">
-
 	<head>
-
 		<meta charset="UTF-8" />
 
 		<meta
@@ -11,14 +9,1142 @@
 			content="width=device-width, initial-scale=1.0"
 	/>
 
-		<title>
-			Josh Maddox | Game Programmer
-		</title>
-
 		<meta
 			name="description"
-			content="Josh Maddox - Game Programmer portfolio."
+			content="Josh Maddox - Game Programmer portfolio featuring Unreal Engine, C++, Unity, Godot, gameplay systems, procedural environments, and game development projects."
 	/>
+
+		<title>Josh Maddox | Game Programmer</title>
+
+
+		<style is:inline="">
+
+			/* =========================================================
+			RESET
+			========================================================= */
+
+			* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			}
+
+			html {
+			scroll-behavior: smooth;
+			scroll-padding-top: 90px;
+			}
+
+			body {
+			min-height: 100vh;
+
+			background:
+			radial-gradient(
+			circle at top,
+			#151922 0%,
+			#0b0d11 45%,
+			#07080b 100%
+			);
+
+			color: #f4f4f4;
+
+			font-family:
+			Arial,
+			Helvetica,
+			sans-serif;
+
+			line-height: 1.6;
+
+			overflow-x: hidden;
+			}
+
+			a {
+			color: inherit;
+			}
+
+
+			/* =========================================================
+			STAR BACKGROUND
+			========================================================= */
+
+			.star-background {
+			position: fixed;
+
+			inset: 0;
+
+			z-index: 0;
+
+			overflow: hidden;
+
+			pointer-events: none;
+			}
+
+			.star {
+			position: absolute;
+
+			top: -20px;
+
+			background: #ffffff;
+
+			border-radius: 50%;
+
+			opacity: 0;
+
+			box-shadow:
+			0 0 5px rgba(255, 255, 255, 0.35);
+
+			animation:
+			fall linear infinite;
+			}
+
+			@keyframes fall {
+
+			0% {
+			transform:
+			translateY(-40px);
+
+			opacity: 0;
+			}
+
+			10% {
+			opacity:
+			var(--star-opacity);
+			}
+
+			80% {
+			opacity:
+			var(--star-opacity);
+			}
+
+			100% {
+			transform:
+			translateY(110vh);
+
+			opacity: 0;
+			}
+
+			}
+
+
+			/* =========================================================
+			PAGE LAYERS
+			========================================================= */
+
+			header,
+			main,
+			footer {
+			position: relative;
+			z-index: 2;
+			}
+
+
+			/* =========================================================
+			NAVIGATION
+			========================================================= */
+
+			header {
+			position: sticky;
+
+			top: 0;
+
+			z-index: 100;
+
+			background:
+			rgba(
+			8,
+			10,
+			13,
+			0.90
+			);
+
+			backdrop-filter:
+			blur(12px);
+
+			border-bottom:
+			1px solid #272b33;
+			}
+
+			nav {
+			width: min(1180px, calc(100% - 40px));
+
+			margin: 0 auto;
+
+			min-height: 76px;
+
+			display: flex;
+
+			align-items: center;
+
+			justify-content:
+			space-between;
+			}
+
+			.logo {
+			font-size: 20px;
+
+			font-weight: 700;
+
+			text-decoration: none;
+			}
+
+			.nav-links {
+			display: flex;
+
+			gap: 28px;
+			}
+
+			.nav-links a {
+			color: #aeb3bb;
+
+			text-decoration: none;
+
+			font-size: 15px;
+
+			transition:
+			color 0.2s ease;
+			}
+
+			.nav-links a:hover {
+			color: #ffffff;
+			}
+
+
+			/* =========================================================
+			GENERAL
+			========================================================= */
+
+			main {
+			width:
+			min(
+			1180px,
+			calc(100% - 40px)
+			);
+
+			margin: 0 auto;
+			}
+
+			section {
+			padding:
+			110px 0;
+			}
+
+			.section-label {
+			margin-bottom: 12px;
+
+			color: #8d949f;
+
+			font-size: 12px;
+
+			font-weight: 700;
+
+			letter-spacing: 4px;
+			}
+
+			.section-title {
+			margin-bottom: 20px;
+
+			font-size:
+			clamp(
+			38px,
+			6vw,
+			56px
+			);
+
+			line-height: 1.05;
+			}
+
+			.section-description {
+			max-width: 720px;
+
+			margin-bottom: 45px;
+
+			color: #a9afb8;
+
+			font-size: 17px;
+			}
+
+
+			/* =========================================================
+			HERO
+			========================================================= */
+
+			.hero {
+			min-height:
+			calc(
+			100vh - 76px
+			);
+
+			display: flex;
+
+			flex-direction: column;
+
+			justify-content: center;
+			}
+
+			.hero-label {
+			margin-bottom: 16px;
+
+			color: #9198a3;
+
+			font-size: 13px;
+
+			font-weight: 700;
+
+			letter-spacing: 5px;
+			}
+
+			.hero h1 {
+			margin-bottom: 18px;
+
+			font-size:
+			clamp(
+			64px,
+			10vw,
+			118px
+			);
+
+			line-height: 0.92;
+
+			letter-spacing: -4px;
+			}
+
+			.hero h2 {
+			margin-bottom: 24px;
+
+			color: #c1c5cb;
+
+			font-size:
+			clamp(
+			25px,
+			4vw,
+			36px
+			);
+
+			font-weight: 400;
+			}
+
+			.hero-description {
+			max-width: 750px;
+
+			color: #a8aeb7;
+
+			font-size: 19px;
+			}
+
+			.hero-buttons {
+			margin-top: 38px;
+
+			display: flex;
+
+			flex-wrap: wrap;
+
+			gap: 14px;
+			}
+
+
+			/* =========================================================
+			BUTTONS
+			========================================================= */
+
+			.button {
+			display: inline-flex;
+
+			align-items: center;
+
+			justify-content: center;
+
+			min-height: 46px;
+
+			padding:
+			0 22px;
+
+			border-radius: 6px;
+
+			font-weight: 700;
+
+			text-decoration: none;
+
+			transition:
+			transform 0.2s ease,
+			background 0.2s ease,
+			border-color 0.2s ease;
+			}
+
+			.button:hover {
+			transform:
+			translateY(-2px);
+			}
+
+			.button-primary {
+			background: #f2f2f2;
+
+			color: #0a0b0d;
+			}
+
+			.button-primary:hover {
+			background: #d7d7d7;
+			}
+
+			.button-secondary {
+			background:
+			rgba(
+			22,
+			25,
+			31,
+			0.85
+			);
+
+			border:
+			1px solid #3b414b;
+
+			color: #ffffff;
+			}
+
+			.button-secondary:hover {
+			background: #20242b;
+
+			border-color: #5a626e;
+			}
+
+
+			/* =========================================================
+			PROJECT GRID
+			========================================================= */
+
+			.project-grid {
+			display: grid;
+
+			grid-template-columns:
+			repeat(
+			3,
+			minmax(0, 1fr)
+			);
+
+			gap: 24px;
+
+			align-items: start;
+			}
+
+			.project-card {
+			background:
+			linear-gradient(
+			145deg,
+			rgba(22, 25, 31, 0.96),
+			rgba(13, 15, 19, 0.96)
+			);
+
+			border:
+			1px solid #2c3139;
+
+			border-radius: 10px;
+
+			overflow: hidden;
+
+			box-shadow:
+			0 18px 45px
+			rgba(
+			0,
+			0,
+			0,
+			0.22
+			);
+
+			transition:
+			transform 0.25s ease,
+			border-color 0.25s ease;
+			}
+
+			.project-card:not([open]):hover {
+			transform:
+			translateY(-6px);
+
+			border-color:
+			#555d69;
+			}
+
+			.project-card[open] {
+			grid-column:
+			1 / -1;
+
+			border-color:
+			#606875;
+			}
+
+			.project-summary {
+			display: block;
+
+			padding: 18px;
+
+			cursor: pointer;
+
+			list-style: none;
+			}
+
+			.project-summary::-webkit-details-marker {
+			display: none;
+			}
+
+			.project-summary::marker {
+			content: "";
+			}
+
+			.project-image {
+			height: 215px;
+
+			margin-bottom: 20px;
+
+			display: flex;
+
+			align-items: center;
+
+			justify-content: center;
+
+			background:
+			linear-gradient(
+			135deg,
+			#232833,
+			#151820
+			);
+
+			border:
+			1px solid #303641;
+
+			border-radius: 7px;
+
+			color: #6f7782;
+
+			font-size: 12px;
+
+			font-weight: 700;
+
+			letter-spacing: 2px;
+
+			text-align: center;
+			}
+
+			.project-type {
+			margin-bottom: 7px;
+
+			color: #7f8792;
+
+			font-size: 11px;
+
+			font-weight: 700;
+
+			letter-spacing: 3px;
+			}
+
+			.project-card h3 {
+			margin-bottom: 5px;
+
+			font-size: 26px;
+			}
+
+			.project-tech {
+			margin-bottom: 16px;
+
+			color: #7f8791;
+
+			font-size: 13px;
+			}
+
+			.project-description {
+			min-height: 82px;
+
+			margin-bottom: 22px;
+
+			color: #b6bbc2;
+
+			font-size: 15px;
+			}
+
+			.project-open,
+			.project-close {
+			font-size: 14px;
+
+			font-weight: 700;
+			}
+
+			.project-close {
+			display: none;
+			}
+
+			.project-card[open]
+			.project-open {
+			display: none;
+			}
+
+			.project-card[open]
+			.project-close {
+			display: inline;
+			}
+
+
+			/* =========================================================
+			EXPANDED PROJECT
+			========================================================= */
+
+			.project-details {
+			padding:
+			60px 48px 70px;
+
+			background:
+			rgba(
+			7,
+			9,
+			12,
+			0.62
+			);
+
+			border-top:
+			1px solid #2b3038;
+
+			animation:
+			projectOpen
+			0.25s ease;
+			}
+
+			@keyframes projectOpen {
+
+			from {
+			opacity: 0;
+
+			transform:
+			translateY(-8px);
+			}
+
+			to {
+			opacity: 1;
+
+			transform:
+			translateY(0);
+			}
+
+			}
+
+			.detail-header {
+			max-width: 850px;
+
+			margin-bottom: 42px;
+			}
+
+			.detail-label {
+			margin-bottom: 12px;
+
+			color: #858d98;
+
+			font-size: 12px;
+
+			font-weight: 700;
+
+			letter-spacing: 4px;
+			}
+
+			.detail-header h2 {
+			margin-bottom: 20px;
+
+			font-size:
+			clamp(
+			46px,
+			8vw,
+			76px
+			);
+
+			line-height: 0.98;
+			}
+
+			.detail-header p {
+			color: #b3b8c0;
+
+			font-size: 18px;
+			}
+
+			.hero-media {
+			height: 500px;
+
+			margin-bottom: 70px;
+
+			display: flex;
+
+			align-items: center;
+
+			justify-content: center;
+
+			background:
+			linear-gradient(
+			135deg,
+			#171b22,
+			#0f1217
+			);
+
+			border:
+			1px solid #303640;
+
+			border-radius: 10px;
+
+			color: #686f79;
+
+			font-size: 13px;
+
+			font-weight: 700;
+
+			letter-spacing: 2px;
+			}
+
+			.detail-section {
+			margin-bottom: 70px;
+			}
+
+			.detail-section:last-child {
+			margin-bottom: 0;
+			}
+
+			.detail-section h3 {
+			margin-bottom: 24px;
+
+			font-size: 32px;
+			}
+
+			.detail-section > p {
+			max-width: 850px;
+
+			margin-bottom: 16px;
+
+			color: #afb4bc;
+
+			font-size: 17px;
+			}
+
+
+			/* =========================================================
+			CONTRIBUTION CARDS
+			========================================================= */
+
+			.contribution-grid {
+			display: grid;
+
+			grid-template-columns:
+			repeat(
+			2,
+			minmax(0, 1fr)
+			);
+
+			gap: 18px;
+			}
+
+			.contribution {
+			padding: 24px;
+
+			background:
+			linear-gradient(
+			145deg,
+			#171a20,
+			#111318
+			);
+
+			border:
+			1px solid #2d323a;
+
+			border-radius: 8px;
+			}
+
+			.contribution h4 {
+			margin-bottom: 9px;
+
+			font-size: 20px;
+			}
+
+			.contribution p {
+			color: #9fa5ae;
+			}
+
+
+			/* =========================================================
+			TECHNOLOGY TAGS
+			========================================================= */
+
+			.tags {
+			display: flex;
+
+			flex-wrap: wrap;
+
+			gap: 10px;
+			}
+
+			.tags span {
+			padding:
+			9px 14px;
+
+			background: #15181e;
+
+			border:
+			1px solid #303640;
+
+			border-radius: 5px;
+
+			color: #c7cbd1;
+
+			font-size: 14px;
+			}
+
+
+			/* =========================================================
+			CODE EXAMPLES
+			========================================================= */
+
+			.code-grid {
+			display: grid;
+
+			grid-template-columns:
+			repeat(
+			2,
+			minmax(0, 1fr)
+			);
+
+			gap: 20px;
+			}
+
+			.code-card {
+			overflow: hidden;
+
+			background: #080a0d;
+
+			border:
+			1px solid #303640;
+
+			border-radius: 8px;
+			}
+
+			.code-title {
+			padding:
+			12px 16px;
+
+			display: flex;
+
+			align-items: center;
+
+			justify-content:
+			space-between;
+
+			background: #171a20;
+
+			border-bottom:
+			1px solid #303640;
+
+			color: #b6bbc2;
+
+			font-size: 12px;
+			}
+
+			.code-card pre {
+			min-height: 235px;
+
+			margin: 0;
+
+			padding: 24px;
+
+			overflow-x: auto;
+
+			color: #d9dde2;
+			}
+
+			.code-card code {
+			font-family:
+			Consolas,
+			"Courier New",
+			monospace;
+
+			font-size: 13px;
+
+			line-height: 1.7;
+			}
+
+
+			/* =========================================================
+			SCREENSHOTS
+			========================================================= */
+
+			.media-grid {
+			display: grid;
+
+			grid-template-columns:
+			repeat(
+			2,
+			minmax(0, 1fr)
+			);
+
+			gap: 18px;
+			}
+
+			.media-box {
+			height: 290px;
+
+			display: flex;
+
+			align-items: center;
+
+			justify-content: center;
+
+			background:
+			linear-gradient(
+			135deg,
+			#171b22,
+			#101319
+			);
+
+			border:
+			1px solid #303640;
+
+			border-radius: 8px;
+
+			color: #656c76;
+
+			font-size: 12px;
+
+			font-weight: 700;
+
+			letter-spacing: 2px;
+			}
+
+
+			/* =========================================================
+			SKILLS
+			========================================================= */
+
+			.skill-layout {
+			display: grid;
+
+			grid-template-columns:
+			repeat(
+			2,
+			minmax(0, 1fr)
+			);
+
+			gap: 20px;
+			}
+
+			.skill-card {
+			padding: 28px;
+
+			background:
+			rgba(
+			19,
+			22,
+			27,
+			0.88
+			);
+
+			border:
+			1px solid #2c3139;
+
+			border-radius: 8px;
+			}
+
+			.skill-card h3 {
+			margin-bottom: 18px;
+
+			font-size: 22px;
+			}
+
+
+			/* =========================================================
+			ABOUT
+			========================================================= */
+
+			.about-card {
+			max-width: 850px;
+
+			padding: 36px;
+
+			background:
+			rgba(
+			19,
+			22,
+			27,
+			0.88
+			);
+
+			border:
+			1px solid #2c3139;
+
+			border-radius: 8px;
+			}
+
+			.about-card p {
+			margin-bottom: 18px;
+
+			color: #afb4bc;
+
+			font-size: 18px;
+			}
+
+			.about-card p:last-child {
+			margin-bottom: 0;
+			}
+
+
+			/* =========================================================
+			CONTACT
+			========================================================= */
+
+			.contact-card {
+			padding: 40px;
+
+			display: flex;
+
+			align-items: center;
+
+			justify-content:
+			space-between;
+
+			gap: 30px;
+
+			background:
+			rgba(
+			19,
+			22,
+			27,
+			0.88
+			);
+
+			border:
+			1px solid #2c3139;
+
+			border-radius: 8px;
+			}
+
+			.contact-card h3 {
+			margin-bottom: 8px;
+
+			font-size: 26px;
+			}
+
+			.contact-card p {
+			color: #9fa5ae;
+			}
+
+
+			/* =========================================================
+			FOOTER
+			========================================================= */
+
+			footer {
+			padding: 42px 20px;
+
+			text-align: center;
+
+			color: #686f79;
+
+			border-top:
+			1px solid #242931;
+
+			background:
+			rgba(
+			7,
+			9,
+			12,
+			0.78
+			);
+			}
+
+
+			/* =========================================================
+			RESPONSIVE
+			========================================================= */
+
+			@media (max-width: 900px) {
+
+			.project-grid {
+			grid-template-columns: 1fr;
+			}
+
+			.project-card[open] {
+			grid-column: auto;
+			}
+
+			.contribution-grid,
+			.code-grid,
+			.media-grid,
+			.skill-layout {
+			grid-template-columns: 1fr;
+			}
+
+			.hero-media {
+			height: 340px;
+			}
+
+			.project-description {
+			min-height: auto;
+			}
+
+			}
+
+			@media (max-width: 700px) {
+
+			.nav-links {
+			display: none;
+			}
+
+			.hero h1 {
+			letter-spacing: -2px;
+			}
+
+			.project-details {
+			padding:
+			45px 22px 55px;
+			}
+
+			.hero-media {
+			height: 270px;
+			}
+
+			.media-box {
+			height: 230px;
+			}
+
+			.contact-card {
+			flex-direction: column;
+
+			align-items: flex-start;
+			}
+
+			}
+
+			@media (max-width: 500px) {
+
+			main {
+			width:
+			min(
+			100% - 28px,
+			1180px
+			);
+			}
+
+			nav {
+			width:
+			min(
+			100% - 28px,
+			1180px
+			);
+			}
+
+			section {
+			padding:
+			80px 0;
+			}
+
+			.hero h1 {
+			font-size: 54px;
+			}
+
+			.hero-buttons {
+			flex-direction: column;
+
+			align-items: flex-start;
+			}
+
+			}
+
+		</style>
 
 	</head>
 
@@ -26,24 +1152,28 @@
 	<body>
 
 
-		<!-- STAR BACKGROUND -->
+		<!-- =========================================================
+	     FALLING STAR BACKGROUND
+	========================================================= -->
 
 		<div
-			class="star-background"
 			id="star-background"
+			class="star-background"
 	></div>
 
 
 
-		<!-- NAVIGATION -->
+		<!-- =========================================================
+	     NAVIGATION
+	========================================================= -->
 
 		<header>
 
 			<nav>
 
 				<a
-					href="#home"
 					class="logo"
+					href="#home"
 			>
 					Josh Maddox
 				</a>
@@ -82,16 +1212,16 @@
 		<main>
 
 
-			<!-- ================================================= -->
-			<!-- HERO                                              -->
-			<!-- ================================================= -->
+			<!-- =====================================================
+		     HERO
+		===================================================== -->
 
 			<section
 				id="home"
 				class="hero"
 		>
 
-				<p class="small-title">
+				<p class="hero-label">
 					GAME PROGRAMMER
 				</p>
 
@@ -108,10 +1238,9 @@
 
 				<p class="hero-description">
 
-					I build gameplay systems, tools, environments,
-					and interactive experiences using Unreal Engine,
-					C++, Unity, Godot, and other game development
-					technologies.
+					I create gameplay systems, technical tools,
+					procedural environments, and interactive experiences
+					using Unreal Engine, C++, Unity, and Godot.
 
 				</p>
 
@@ -119,18 +1248,18 @@
 				<div class="hero-buttons">
 
 					<a
+						class="button button-primary"
 						href="#projects"
-						class="button primary"
 				>
 						View Projects
 					</a>
 
 
 					<a
+						class="button button-secondary"
 						href="https://github.com/Josh-Maddox"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="button secondary"
 				>
 						GitHub
 					</a>
@@ -141,65 +1270,85 @@
 
 
 
-			<!-- ================================================= -->
-			<!-- PROJECTS                                          -->
-			<!-- ================================================= -->
+			<!-- =====================================================
+		     PROJECTS
+		===================================================== -->
 
 			<section id="projects">
+
+				<p class="section-label">
+					SELECTED WORK
+				</p>
+
 
 				<h2 class="section-title">
 					Featured Projects
 				</h2>
 
 
+				<p class="section-description">
+
+					Select a project to expand it and view
+					the full project breakdown, contributions,
+					code examples, tools, and screenshots.
+
+				</p>
+
+
+
 				<div class="project-grid">
 
 
-					<!-- ========================================= -->
-					<!-- ASHEN BLOOM                               -->
-					<!-- ========================================= -->
+					<!-- =================================================
+				     ASHEN BLOOM
+				================================================= -->
 
 					<details class="project-card">
 
-
 						<summary class="project-summary">
 
+
 							<div class="project-image">
+
 								ASHEN BLOOM IMAGE
-							</div>
-
-
-							<div class="project-card-content">
-
-								<h3>
-									Ashen Bloom
-								</h3>
-
-
-								<p class="tech">
-									Unreal Engine 5.6 &bull; C++ &bull; Blueprints
-								</p>
-
-
-								<p>
-
-									A third-person character-action
-									souls-lite set in a dying world where
-									nature has fused with machines,
-									corpses, and ruined cities.
-
-								</p>
-
-
-								<span class="open-project">
-									View Project &rarr;
-								</span>
-
-								<span class="close-project">
-									Collapse Project &uarr;
-								</span>
 
 							</div>
+
+
+							<p class="project-type">
+								UNREAL ENGINE 5.6
+							</p>
+
+
+							<h3>
+								Ashen Bloom
+							</h3>
+
+
+							<p class="project-tech">
+								C++ • Blueprints • PCG
+							</p>
+
+
+							<p class="project-description">
+
+								A third-person character-action
+								souls-lite set in a dying world
+								where nature has fused with machines,
+								corpses, and ruined cities.
+
+							</p>
+
+
+							<span class="project-open">
+								View Project →
+							</span>
+
+
+							<span class="project-close">
+								Collapse Project ↑
+							</span>
+
 
 						</summary>
 
@@ -208,11 +1357,9 @@
 						<div class="project-details">
 
 
-							<!-- PROJECT HEADER -->
-
 							<div class="detail-header">
 
-								<p class="small-title">
+								<p class="detail-label">
 									UNREAL ENGINE 5.6
 								</p>
 
@@ -225,10 +1372,10 @@
 								<p>
 
 									Ashen Bloom is a single-player
-									third-person character-action souls-lite
-									set in a dying world where nature has
-									fused with machines, corpses, and
-									ruined cities.
+									third-person character-action
+									souls-lite set in a dying world where
+									nature has fused with machines,
+									corpses, and ruined cities.
 
 								</p>
 
@@ -236,17 +1383,13 @@
 
 
 
-							<!-- MAIN IMAGE -->
+							<div class="hero-media">
 
-							<div class="large-image">
-
-								ASHEN BLOOM GAMEPLAY IMAGE
+								ASHEN BLOOM GAMEPLAY IMAGE / VIDEO
 
 							</div>
 
 
-
-							<!-- OVERVIEW -->
 
 							<div class="detail-section">
 
@@ -257,8 +1400,7 @@
 
 								<p>
 
-									Ashen Bloom was developed as a
-									collaborative game development project
+									Ashen Bloom was developed collaboratively
 									using Unreal Engine 5.6.
 
 								</p>
@@ -266,18 +1408,16 @@
 
 								<p>
 
-									My work focused on gameplay systems,
+									My work focused on player systems,
 									procedural environment development,
-									landscape systems, and player-facing
-									features.
+									landscape tools, foliage systems,
+									and technical gameplay features.
 
 								</p>
 
 							</div>
 
 
-
-							<!-- CONTRIBUTIONS -->
 
 							<div class="detail-section">
 
@@ -286,20 +1426,20 @@
 								</h3>
 
 
-								<div class="detail-grid">
+								<div class="contribution-grid">
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Inventory System
 										</h4>
 
+
 										<p>
 
 											Developed the player inventory
-											system and inventory
-											functionality.
+											system and its core functionality.
 
 										</p>
 
@@ -307,11 +1447,12 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Level-Up System
 										</h4>
+
 
 										<p>
 
@@ -325,17 +1466,18 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Inventory Character View
 										</h4>
 
+
 										<p>
 
-											Implemented a character rotation
-											view inside the inventory
-											interface.
+											Implemented the rotating player
+											character view used inside the
+											inventory interface.
 
 										</p>
 
@@ -343,17 +1485,18 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
-											Forest PCG
+											Forest PCG System
 										</h4>
+
 
 										<p>
 
-											Created a procedural forest
+											Built a procedural forest
 											generation system using Unreal
-											Engine's PCG tools.
+											Engine's PCG framework.
 
 										</p>
 
@@ -361,17 +1504,18 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Landscape Grass
 										</h4>
 
+
 										<p>
 
-											Configured the landscape grass
-											system for procedural foliage
-											placement.
+											Configured landscape grass
+											placement for procedural
+											foliage coverage.
 
 										</p>
 
@@ -379,17 +1523,18 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Landscape Materials
 										</h4>
 
+
 										<p>
 
-											Developed a landscape texture
-											layering system for the game's
-											terrain.
+											Created the landscape texture
+											layering system used throughout
+											the environment.
 
 										</p>
 
@@ -401,8 +1546,6 @@
 							</div>
 
 
-
-							<!-- TOOLS -->
 
 							<div class="detail-section">
 
@@ -411,15 +1554,22 @@
 								</h3>
 
 
-								<div class="skill-tags">
+								<div class="tags">
 
 									<span>Unreal Engine 5.6</span>
+
 									<span>C++</span>
+
 									<span>Blueprints</span>
+
 									<span>PCG</span>
+
 									<span>Gaea 2</span>
+
 									<span>Blender</span>
+
 									<span>Perforce</span>
+
 									<span>Visual Studio</span>
 
 								</div>
@@ -427,8 +1577,6 @@
 							</div>
 
 
-
-							<!-- CODE -->
 
 							<div class="detail-section">
 
@@ -440,9 +1588,9 @@
 								<div class="code-grid">
 
 
-									<div class="code-box">
+									<div class="code-card">
 
-										<div class="code-header">
+										<div class="code-title">
 
 											<span>
 												Inventory System
@@ -457,10 +1605,17 @@
 
 										<pre>
 											<code>
-												// Add an inventory code example here.
-												//
-												// This box can contain a short section
-												// of your actual Ashen Bloom C++ code.
+												// Inventory System Example
+
+												// Replace this placeholder with
+												// a short piece of C++ code that
+												// you personally wrote.
+
+												// Example areas:
+												// - Add Item
+												// - Remove Item
+												// - Inventory Slots
+												// - Item Rotation View
 											</code>
 										</pre>
 
@@ -468,12 +1623,12 @@
 
 
 
-									<div class="code-box">
+									<div class="code-card">
 
-										<div class="code-header">
+										<div class="code-title">
 
 											<span>
-												Level System
+												Level-Up System
 											</span>
 
 											<span>
@@ -485,10 +1640,17 @@
 
 										<pre>
 											<code>
-												// Add a level-up code example here.
-												//
-												// Keep portfolio samples short and
-												// focused on code you personally wrote.
+												// Level-Up System Example
+
+												// Replace this placeholder with
+												// a short section of your actual
+												// player progression code.
+
+												// Example areas:
+												// - Experience
+												// - Level calculation
+												// - Stat increases
+												// - Upgrade costs
 											</code>
 										</pre>
 
@@ -500,8 +1662,6 @@
 							</div>
 
 
-
-							<!-- MEDIA -->
 
 							<div class="detail-section">
 
@@ -539,50 +1699,55 @@
 
 
 
-					<!-- ========================================= -->
-					<!-- ROBORUN                                   -->
-					<!-- ========================================= -->
+					<!-- =================================================
+				     ROBORUN
+				================================================= -->
 
 					<details class="project-card">
 
-
 						<summary class="project-summary">
 
+
 							<div class="project-image">
+
 								ROBORUN IMAGE
-							</div>
-
-
-							<div class="project-card-content">
-
-								<h3>
-									RoboRun
-								</h3>
-
-
-								<p class="tech">
-									Unity &bull; C#
-								</p>
-
-
-								<p>
-
-									A Unity project featuring gameplay
-									systems, upgrades, a shop, and
-									overworld development.
-
-								</p>
-
-
-								<span class="open-project">
-									View Project &rarr;
-								</span>
-
-								<span class="close-project">
-									Collapse Project &uarr;
-								</span>
 
 							</div>
+
+
+							<p class="project-type">
+								UNITY
+							</p>
+
+
+							<h3>
+								RoboRun
+							</h3>
+
+
+							<p class="project-tech">
+								Unity • C#
+							</p>
+
+
+							<p class="project-description">
+
+								A Unity project featuring gameplay
+								systems, upgrades, a shop, overworld
+								development, and level creation.
+
+							</p>
+
+
+							<span class="project-open">
+								View Project →
+							</span>
+
+
+							<span class="project-close">
+								Collapse Project ↑
+							</span>
+
 
 						</summary>
 
@@ -593,7 +1758,7 @@
 
 							<div class="detail-header">
 
-								<p class="small-title">
+								<p class="detail-label">
 									UNITY
 								</p>
 
@@ -616,9 +1781,9 @@
 
 
 
-							<div class="large-image">
+							<div class="hero-media">
 
-								ROBORUN GAMEPLAY IMAGE
+								ROBORUN GAMEPLAY IMAGE / VIDEO
 
 							</div>
 
@@ -633,19 +1798,20 @@
 
 								<p>
 
-									RoboRun was developed in Unity using
-									C# and focused on building gameplay
-									systems and creating a playable
-									game world.
+									The project focused on building
+									gameplay systems while creating
+									a playable game world using
+									Unity and C#.
 
 								</p>
 
 
 								<p>
 
-									My work included gameplay systems
-									and creating a large portion of the
-									game's map and overworld.
+									My work included the shop,
+									player upgrades, overworld
+									development, and most of the
+									map creation.
 
 								</p>
 
@@ -660,14 +1826,15 @@
 								</h3>
 
 
-								<div class="detail-grid">
+								<div class="contribution-grid">
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Shop System
 										</h4>
+
 
 										<p>
 
@@ -681,17 +1848,18 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Upgrade System
 										</h4>
 
+
 										<p>
 
 											Developed gameplay upgrade
-											functionality used during
-											player progression.
+											functionality used for player
+											progression.
 
 										</p>
 
@@ -699,11 +1867,12 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Overworld
 										</h4>
+
 
 										<p>
 
@@ -716,17 +1885,18 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Map Development
 										</h4>
 
+
 										<p>
 
-											Created a large portion of the
-											game's map and helped establish
-											the playable world.
+											Created most of the project's
+											map and helped establish the
+											playable world.
 
 										</p>
 
@@ -746,12 +1916,16 @@
 								</h3>
 
 
-								<div class="skill-tags">
+								<div class="tags">
 
 									<span>Unity</span>
+
 									<span>C#</span>
+
 									<span>Visual Studio</span>
+
 									<span>Gameplay Systems</span>
+
 									<span>Level Development</span>
 
 								</div>
@@ -770,9 +1944,9 @@
 								<div class="code-grid">
 
 
-									<div class="code-box">
+									<div class="code-card">
 
-										<div class="code-header">
+										<div class="code-title">
 
 											<span>
 												Shop System
@@ -787,10 +1961,16 @@
 
 										<pre>
 											<code>
-												// Add a short section of your
-												// RoboRun shop system here.
-												//
-												// Use code that you personally wrote.
+												// Shop System Example
+
+												// Replace this placeholder with
+												// your own RoboRun C# code.
+
+												// Good examples:
+												// - Purchase checks
+												// - Currency
+												// - Item costs
+												// - Shop inventory
 											</code>
 										</pre>
 
@@ -798,9 +1978,9 @@
 
 
 
-									<div class="code-box">
+									<div class="code-card">
 
-										<div class="code-header">
+										<div class="code-title">
 
 											<span>
 												Upgrade System
@@ -815,10 +1995,16 @@
 
 										<pre>
 											<code>
-												// Add an upgrade system example here.
-												//
-												// This can show purchasing,
-												// upgrading, or player progression.
+												// Upgrade System Example
+
+												// Replace this placeholder with
+												// your actual upgrade code.
+
+												// Good examples:
+												// - Upgrade levels
+												// - Stat changes
+												// - Cost calculations
+												// - Unlock requirements
 											</code>
 										</pre>
 
@@ -867,50 +2053,55 @@
 
 
 
-					<!-- ========================================= -->
-					<!-- I AM THE WALL                             -->
-					<!-- ========================================= -->
+					<!-- =================================================
+				     I AM THE WALL
+				================================================= -->
 
 					<details class="project-card">
 
-
 						<summary class="project-summary">
 
+
 							<div class="project-image">
+
 								I AM THE WALL IMAGE
-							</div>
-
-
-							<div class="project-card-content">
-
-								<h3>
-									I Am the Wall
-								</h3>
-
-
-								<p class="tech">
-									Godot &bull; Game Jam
-								</p>
-
-
-								<p>
-
-									A game jam project featuring custom
-									pixel art, animation, game design,
-									and development.
-
-								</p>
-
-
-								<span class="open-project">
-									View Project &rarr;
-								</span>
-
-								<span class="close-project">
-									Collapse Project &uarr;
-								</span>
 
 							</div>
+
+
+							<p class="project-type">
+								GODOT GAME JAM
+							</p>
+
+
+							<h3>
+								I Am the Wall
+							</h3>
+
+
+							<p class="project-tech">
+								Godot • Pixel Art • Game Jam
+							</p>
+
+
+							<p class="project-description">
+
+								A Godot game jam project featuring
+								custom pixel art, animation,
+								game design, and development.
+
+							</p>
+
+
+							<span class="project-open">
+								View Project →
+							</span>
+
+
+							<span class="project-close">
+								Collapse Project ↑
+							</span>
+
 
 						</summary>
 
@@ -921,7 +2112,7 @@
 
 							<div class="detail-header">
 
-								<p class="small-title">
+								<p class="detail-label">
 									GODOT GAME JAM
 								</p>
 
@@ -933,9 +2124,9 @@
 
 								<p>
 
-									I Am the Wall is a Godot game jam
-									project created for the
-									"You Are the Weapon" game jam.
+									I Am the Wall was created in Godot
+									for the "You Are the Weapon"
+									game jam.
 
 								</p>
 
@@ -943,9 +2134,9 @@
 
 
 
-							<div class="large-image">
+							<div class="hero-media">
 
-								I AM THE WALL GAMEPLAY IMAGE
+								I AM THE WALL GAMEPLAY IMAGE / VIDEO
 
 							</div>
 
@@ -960,19 +2151,19 @@
 
 								<p>
 
-									I Am the Wall was created as a
-									game jam project using Godot.
+									The project was developed during
+									a limited game jam development
+									period using Godot.
 
 								</p>
 
 
 								<p>
 
-									The project gave me experience
-									working within a limited development
-									period while contributing to the
-									game's visual direction, design,
-									artwork, and animation.
+									My contributions focused heavily
+									on the game's visual direction,
+									pixel artwork, animation,
+									and game design.
 
 								</p>
 
@@ -987,20 +2178,20 @@
 								</h3>
 
 
-								<div class="detail-grid">
+								<div class="contribution-grid">
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Pixel Art
 										</h4>
 
+
 										<p>
 
 											Created most of the pixel
-											artwork used throughout
-											the project.
+											art used throughout the game.
 
 										</p>
 
@@ -1008,16 +2199,17 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Animation
 										</h4>
 
+
 										<p>
 
 											Created most of the pixel
-											animations used in the game.
+											animations used in the project.
 
 										</p>
 
@@ -1025,17 +2217,18 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Color Palette
 										</h4>
 
+
 										<p>
 
-											Created the color palette used
-											to establish the game's visual
-											style.
+											Created the color palette
+											used to define the visual
+											style of the game.
 
 										</p>
 
@@ -1043,16 +2236,17 @@
 
 
 
-									<div class="detail-box">
+									<div class="contribution">
 
 										<h4>
 											Game Design Document
 										</h4>
 
+
 										<p>
 
 											Worked on the game design
-											document and helped define
+											document and helped establish
 											the direction of the project.
 
 										</p>
@@ -1073,12 +2267,16 @@
 								</h3>
 
 
-								<div class="skill-tags">
+								<div class="tags">
 
 									<span>Godot</span>
+
 									<span>Pixel Art</span>
+
 									<span>Animation</span>
+
 									<span>Game Design</span>
+
 									<span>Game Jam Development</span>
 
 								</div>
@@ -1090,61 +2288,19 @@
 							<div class="detail-section">
 
 								<h3>
-									Project Examples
+									Artwork & Development Examples
 								</h3>
 
 
-								<div class="code-grid">
+								<div class="media-grid">
 
-
-									<div class="code-box">
-
-										<div class="code-header">
-
-											<span>
-												Pixel Art
-											</span>
-
-											<span>
-												Example
-											</span>
-
-										</div>
-
-
-										<div class="visual-example">
-
-											PIXEL ART / SPRITE SHEET
-
-										</div>
-
+									<div class="media-box">
+										PIXEL ART EXAMPLE
 									</div>
 
-
-
-									<div class="code-box">
-
-										<div class="code-header">
-
-											<span>
-												Animation
-											</span>
-
-											<span>
-												Example
-											</span>
-
-										</div>
-
-
-										<div class="visual-example">
-
-											ANIMATION EXAMPLE
-
-										</div>
-
+									<div class="media-box">
+										ANIMATION EXAMPLE
 									</div>
-
 
 								</div>
 
@@ -1193,40 +2349,121 @@
 
 
 
-			<!-- ================================================= -->
-			<!-- SKILLS                                            -->
-			<!-- ================================================= -->
+			<!-- =====================================================
+		     SKILLS
+		===================================================== -->
 
 			<section id="skills">
+
+				<p class="section-label">
+					TECHNICAL SKILLS
+				</p>
+
 
 				<h2 class="section-title">
 					Skills
 				</h2>
 
 
-				<div class="skills">
+				<div class="skill-layout">
 
-					<span>Unreal Engine 5</span>
 
-					<span>C++</span>
+					<div class="skill-card">
 
-					<span>C#</span>
+						<h3>
+							Programming
+						</h3>
 
-					<span>Blueprints</span>
 
-					<span>Unity</span>
+						<div class="tags">
 
-					<span>Godot</span>
+							<span>C++</span>
 
-					<span>PCG</span>
+							<span>C#</span>
 
-					<span>Gaea 2</span>
+							<span>Blueprints</span>
 
-					<span>Blender</span>
+							<span>Python</span>
 
-					<span>Git / GitHub</span>
+						</div>
 
-					<span>Perforce</span>
+					</div>
+
+
+
+					<div class="skill-card">
+
+						<h3>
+							Engines
+						</h3>
+
+
+						<div class="tags">
+
+							<span>Unreal Engine 5</span>
+
+							<span>Unity</span>
+
+							<span>Godot</span>
+
+						</div>
+
+					</div>
+
+
+
+					<div class="skill-card">
+
+						<h3>
+							Game Development
+						</h3>
+
+
+						<div class="tags">
+
+							<span>Gameplay Systems</span>
+
+							<span>UI</span>
+
+							<span>PCG</span>
+
+							<span>Level Development</span>
+
+							<span>Materials</span>
+
+							<span>Debugging</span>
+
+						</div>
+
+					</div>
+
+
+
+					<div class="skill-card">
+
+						<h3>
+							Tools
+						</h3>
+
+
+						<div class="tags">
+
+							<span>Visual Studio</span>
+
+							<span>Gaea 2</span>
+
+							<span>Blender</span>
+
+							<span>Perforce</span>
+
+							<span>Git</span>
+
+							<span>GitHub</span>
+
+						</div>
+
+					</div>
+
 
 				</div>
 
@@ -1234,33 +2471,47 @@
 
 
 
-			<!-- ================================================= -->
-			<!-- ABOUT                                             -->
-			<!-- ================================================= -->
+			<!-- =====================================================
+		     ABOUT
+		===================================================== -->
 
 			<section id="about">
+
+				<p class="section-label">
+					ABOUT
+				</p>
+
 
 				<h2 class="section-title">
 					About Me
 				</h2>
 
 
-				<div class="about">
+				<div class="about-card">
 
 					<p>
 
 						I am a Game Development graduate focused
 						on game programming, gameplay systems,
-						tools, and technical game development.
+						technical tools, and environment development.
 
 					</p>
 
 
 					<p>
 
-						I enjoy working with Unreal Engine and C++,
-						developing systems that combine programming,
+						I enjoy working with Unreal Engine and C++
+						and building systems that combine programming,
 						gameplay design, and world development.
+
+					</p>
+
+
+					<p>
+
+						My background also includes collaborative
+						game development experience and four years
+						of service in the United States Marine Corps.
 
 					</p>
 
@@ -1270,34 +2521,48 @@
 
 
 
-			<!-- ================================================= -->
-			<!-- CONTACT                                           -->
-			<!-- ================================================= -->
+			<!-- =====================================================
+		     CONTACT
+		===================================================== -->
 
 			<section id="contact">
 
+				<p class="section-label">
+					CONTACT
+				</p>
+
+
 				<h2 class="section-title">
-					Contact
+					Let's Connect
 				</h2>
 
 
-				<div class="contact">
+				<div class="contact-card">
 
-					<p>
+					<div>
 
-						Interested in learning more about my
-						projects or working together?
+						<h3>
+							Interested in my work?
+						</h3>
 
-					</p>
+
+						<p>
+
+							View my GitHub for additional
+							game development and programming work.
+
+						</p>
+
+					</div>
 
 
 					<a
+						class="button button-primary"
 						href="https://github.com/Josh-Maddox"
 						target="_blank"
 						rel="noopener noreferrer"
-						class="button primary"
 				>
-						View My GitHub
+						View GitHub
 					</a>
 
 				</div>
@@ -1311,1030 +2576,33 @@
 
 		<footer>
 
-			<p>
-				&copy; 2026 Josh Maddox
-			</p>
+			© 2026 Josh Maddox
 
 		</footer>
 
 
 
-		<!-- ===================================================== -->
-		<!-- CSS                                                   -->
-		<!-- ===================================================== -->
+		<!-- =========================================================
+	     INLINE JAVASCRIPT
+	========================================================= -->
 
-		<style is:global="">
+		<script is:inline="">
 
-
-			* {
-			box-sizing: border-box;
-
-			margin: 0;
-
-			padding: 0;
-			}
-
-
-
-			html {
-			scroll-behavior: smooth;
-
-			scroll-padding-top: 90px;
-			}
-
-
-
-			body {
-			background: #0b0d10;
-
-			color: #eeeeee;
-
-			font-family:
-			Arial,
-			Helvetica,
-			sans-serif;
-
-			line-height: 1.6;
-
-			min-height: 100vh;
-			}
-
-
-
-			/* ================================================= */
-			/* STARS                                             */
-			/* ================================================= */
-
-			.star-background {
-			position: fixed;
-
-			top: 0;
-
-			left: 0;
-
-			width: 100%;
-
-			height: 100%;
-
-			overflow: hidden;
-
-			pointer-events: none;
-
-			z-index: 0;
-			}
-
-
-
-			.star {
-			position: absolute;
-
-			top: -20px;
-
-			background: white;
-
-			border-radius: 50%;
-
-			opacity: 0;
-
-			box-shadow:
-			0 0 4px
-			rgba(
-			255,
-			255,
-			255,
-			0.35
-			);
-
-			animation:
-			fall linear infinite;
-			}
-
-
-
-			@keyframes fall {
-
-			0% {
-			transform:
-			translateY(-30px);
-
-			opacity: 0;
-			}
-
-
-			10% {
-			opacity:
-			var(--star-opacity);
-			}
-
-
-			80% {
-			opacity:
-			var(--star-opacity);
-			}
-
-
-			100% {
-			transform:
-			translateY(105vh);
-
-			opacity: 0;
-			}
-
-			}
-
-
-
-			header,
-			main,
-			footer {
-			position: relative;
-
-			z-index: 1;
-			}
-
-
-
-			/* ================================================= */
-			/* NAV                                               */
-			/* ================================================= */
-
-			header {
-			position: sticky;
-
-			top: 0;
-
-			z-index: 100;
-
-			background:
-			rgba(
-			11,
-			13,
-			16,
-			0.92
-			);
-
-			backdrop-filter:
-			blur(8px);
-
-			border-bottom:
-			1px solid #252a31;
-			}
-
-
-
-			nav {
-			max-width: 1200px;
-
-			margin: auto;
-
-			padding:
-			20px 30px;
-
-			display: flex;
-
-			justify-content:
-			space-between;
-
-			align-items:
-			center;
-			}
-
-
-
-			.logo {
-			color: white;
-
-			font-weight: bold;
-
-			font-size: 20px;
-
-			text-decoration: none;
-			}
-
-
-
-			.nav-links {
-			display: flex;
-
-			gap: 25px;
-			}
-
-
-
-			.nav-links a {
-			color: #cccccc;
-
-			text-decoration: none;
-			}
-
-
-
-			.nav-links a:hover {
-			color: white;
-			}
-
-
-
-			/* ================================================= */
-			/* GENERAL                                           */
-			/* ================================================= */
-
-			main {
-			max-width: 1200px;
-
-			margin: auto;
-
-			padding:
-			0 30px;
-			}
-
-
-
-			section {
-			padding:
-			100px 0;
-			}
-
-
-
-			.section-title {
-			font-size: 40px;
-
-			margin-bottom: 40px;
-			}
-
-
-
-			.small-title {
-			font-size: 14px;
-
-			letter-spacing: 4px;
-
-			color: #999999;
-
-			margin-bottom: 10px;
-			}
-
-
-
-			/* ================================================= */
-			/* HERO                                              */
-			/* ================================================= */
-
-			.hero {
-			min-height: 85vh;
-
-			display: flex;
-
-			flex-direction: column;
-
-			justify-content:
-			center;
-			}
-
-
-
-			.hero h1 {
-			font-size:
-			clamp(
-			55px,
-			9vw,
-			105px
-			);
-
-			line-height: 1;
-
-			margin-bottom: 20px;
-			}
-
-
-
-			.hero h2 {
-			font-size: 28px;
-
-			font-weight: normal;
-
-			color: #bbbbbb;
-
-			margin-bottom: 25px;
-			}
-
-
-
-			.hero-description {
-			max-width: 700px;
-
-			font-size: 18px;
-
-			color: #aaaaaa;
-			}
-
-
-
-			.hero-buttons {
-			display: flex;
-
-			gap: 15px;
-
-			margin-top: 35px;
-			}
-
-
-
-			/* ================================================= */
-			/* BUTTONS                                           */
-			/* ================================================= */
-
-			.button {
-			display: inline-block;
-
-			padding:
-			13px 22px;
-
-			border-radius: 5px;
-
-			text-decoration: none;
-
-			font-weight: bold;
-
-			transition:
-			0.2s;
-			}
-
-
-
-			.primary {
-			background: white;
-
-			color: black;
-			}
-
-
-
-			.primary:hover {
-			background: #cccccc;
-			}
-
-
-
-			.secondary {
-			border:
-			1px solid #555555;
-
-			color: white;
-
-			background:
-			rgba(
-			20,
-			23,
-			28,
-			0.8
-			);
-			}
-
-
-
-			.secondary:hover {
-			background: #20242b;
-			}
-
-
-
-			/* ================================================= */
-			/* PROJECT GRID                                      */
-			/* ================================================= */
-
-			.project-grid {
-			display: grid;
-
-			grid-template-columns:
-			repeat(
-			3,
-			1fr
-			);
-
-			gap: 25px;
-
-			align-items: start;
-			}
-
-
-
-			.project-card {
-			background:
-			rgba(
-			19,
-			22,
-			27,
-			0.94
-			);
-
-			border:
-			1px solid #292d35;
-
-			border-radius: 8px;
-
-			overflow: hidden;
-
-			transition:
-			border-color 0.2s,
-			transform 0.2s;
-			}
-
-
-
-			.project-card:not([open]):hover {
-			transform:
-			translateY(-5px);
-
-			border-color:
-			#555b66;
-			}
-
-
-
-			.project-card[open] {
-			grid-column:
-			1 / -1;
-
-			border-color:
-			#505761;
-			}
-
-
-
-			.project-summary {
-			list-style: none;
-
-			cursor: pointer;
-
-			padding: 20px;
-			}
-
-
-
-			.project-summary::-webkit-details-marker {
-			display: none;
-			}
-
-
-
-			.project-image {
-			height: 200px;
-
-			background: #20242b;
-
-			display: flex;
-
-			align-items: center;
-
-			justify-content:
-			center;
-
-			color: #777777;
-
-			margin-bottom: 20px;
-
-			border-radius: 5px;
-			}
-
-
-
-			.project-card-content h3 {
-			font-size: 26px;
-
-			margin-bottom: 5px;
-			}
-
-
-
-			.tech {
-			color: #888888;
-
-			font-size: 14px;
-
-			margin-bottom: 15px;
-			}
-
-
-
-			.project-card-content > p:not(.tech) {
-			margin-bottom: 20px;
-			}
-
-
-
-			.open-project,
-			.close-project {
-			color: white;
-
-			font-weight: bold;
-			}
-
-
-
-			.close-project {
-			display: none;
-			}
-
-
-
-			.project-card[open]
-			.open-project {
-			display: none;
-			}
-
-
-
-			.project-card[open]
-			.close-project {
-			display: inline;
-			}
-
-
-
-			/* ================================================= */
-			/* OPEN PROJECT                                      */
-			/* ================================================= */
-
-			.project-details {
-			border-top:
-			1px solid #292d35;
-
-			padding:
-			60px 45px;
-
-			background:
-			rgba(
-			11,
-			13,
-			16,
-			0.45
-			);
-			}
-
-
-
-			.detail-header {
-			margin-bottom: 45px;
-			}
-
-
-
-			.detail-header h2 {
-			font-size:
-			clamp(
-			50px,
-			8vw,
-			80px
-			);
-
-			line-height: 1;
-
-			margin-bottom: 20px;
-			}
-
-
-
-			.detail-header > p:last-child {
-			max-width: 800px;
-
-			font-size: 18px;
-
-			color: #bbbbbb;
-			}
-
-
-
-			.large-image {
-			height: 500px;
-
-			background: #171a20;
-
-			border:
-			1px solid #30343c;
-
-			border-radius: 8px;
-
-			display: flex;
-
-			align-items: center;
-
-			justify-content:
-			center;
-
-			color: #777777;
-
-			margin-bottom: 70px;
-			}
-
-
-
-			.detail-section {
-			margin-bottom: 70px;
-			}
-
-
-
-			.detail-section > h3 {
-			font-size: 34px;
-
-			margin-bottom: 25px;
-			}
-
-
-
-			.detail-section > p {
-			max-width: 850px;
-
-			font-size: 18px;
-
-			color: #bbbbbb;
-
-			margin-bottom: 18px;
-			}
-
-
-
-			/* ================================================= */
-			/* CONTRIBUTION BOXES                                */
-			/* ================================================= */
-
-			.detail-grid {
-			display: grid;
-
-			grid-template-columns:
-			repeat(
-			2,
-			1fr
-			);
-
-			gap: 20px;
-			}
-
-
-
-			.detail-box {
-			background: #13161b;
-
-			border:
-			1px solid #292d35;
-
-			border-radius: 8px;
-
-			padding: 25px;
-			}
-
-
-
-			.detail-box h4 {
-			font-size: 22px;
-
-			margin-bottom: 10px;
-			}
-
-
-
-			.detail-box p {
-			color: #aaaaaa;
-			}
-
-
-
-			/* ================================================= */
-			/* SKILL TAGS                                        */
-			/* ================================================= */
-
-			.skill-tags,
-			.skills {
-			display: flex;
-
-			flex-wrap: wrap;
-
-			gap: 12px;
-			}
-
-
-
-			.skill-tags span,
-			.skills span {
-			background: #171a20;
-
-			border:
-			1px solid #30343c;
-
-			padding:
-			10px 18px;
-
-			border-radius: 5px;
-			}
-
-
-
-			/* ================================================= */
-			/* CODE                                              */
-			/* ================================================= */
-
-			.code-grid {
-			display: grid;
-
-			grid-template-columns:
-			repeat(
-			2,
-			1fr
-			);
-
-			gap: 20px;
-			}
-
-
-
-			.code-box {
-			background: #0d0f12;
-
-			border:
-			1px solid #30363f;
-
-			border-radius: 8px;
-
-			overflow: hidden;
-			}
-
-
-
-			.code-header {
-			padding:
-			12px 16px;
-
-			background: #171a20;
-
-			border-bottom:
-			1px solid #30363f;
-
-			display: flex;
-
-			justify-content:
-			space-between;
-
-			color: #aaaaaa;
-
-			font-size: 13px;
-			}
-
-
-
-			pre {
-			margin: 0;
-
-			padding: 25px;
-
-			overflow-x: auto;
-
-			min-height: 220px;
-			}
-
-
-
-			code {
-			font-family:
-			Consolas,
-			"Courier New",
-			monospace;
-
-			font-size: 14px;
-
-			color: #d5d8dc;
-			}
-
-
-
-			.visual-example {
-			height: 260px;
-
-			display: flex;
-
-			align-items: center;
-
-			justify-content: center;
-
-			color: #777777;
-			}
-
-
-
-			/* ================================================= */
-			/* SCREENSHOTS                                       */
-			/* ================================================= */
-
-			.media-grid {
-			display: grid;
-
-			grid-template-columns:
-			repeat(
-			2,
-			1fr
-			);
-
-			gap: 20px;
-			}
-
-
-
-			.media-box {
-			height: 300px;
-
-			background: #171a20;
-
-			border:
-			1px solid #30343c;
-
-			border-radius: 8px;
-
-			display: flex;
-
-			align-items: center;
-
-			justify-content:
-			center;
-
-			color: #777777;
-			}
-
-
-
-			/* ================================================= */
-			/* ABOUT                                             */
-			/* ================================================= */
-
-			.about {
-			max-width: 800px;
-
-			font-size: 18px;
-
-			color: #bbbbbb;
-			}
-
-
-
-			.about p {
-			margin-bottom: 20px;
-			}
-
-
-
-			/* ================================================= */
-			/* CONTACT                                           */
-			/* ================================================= */
-
-			.contact {
-			background:
-			rgba(
-			19,
-			22,
-			27,
-			0.92
-			);
-
-			padding: 40px;
-
-			border-radius: 8px;
-
-			border:
-			1px solid #292d35;
-			}
-
-
-
-			.contact p {
-			margin-bottom: 25px;
-			}
-
-
-
-			/* ================================================= */
-			/* FOOTER                                            */
-			/* ================================================= */
-
-			footer {
-			text-align: center;
-
-			padding: 40px;
-
-			color: #777777;
-
-			border-top:
-			1px solid #252a31;
-
-			background:
-			rgba(
-			11,
-			13,
-			16,
-			0.75
-			);
-			}
-
-
-
-			/* ================================================= */
-			/* MOBILE                                            */
-			/* ================================================= */
-
-			@media (max-width: 900px) {
-
-			.project-grid {
-			grid-template-columns:
-			1fr;
-			}
-
-
-			.project-card[open] {
-			grid-column:
-			auto;
-			}
-
-
-			.detail-grid,
-			.code-grid,
-			.media-grid {
-			grid-template-columns:
-			1fr;
-			}
-
-
-			.large-image {
-			height: 320px;
-			}
-
-			}
-
-
-
-			@media (max-width: 700px) {
-
-			.nav-links {
-			display: none;
-			}
-
-
-			.hero h1 {
-			font-size: 55px;
-			}
-
-
-			.hero-buttons {
-			flex-direction: column;
-
-			align-items: flex-start;
-			}
-
-
-			.project-details {
-			padding:
-			45px 20px;
-			}
-
-
-			.large-image {
-			height: 260px;
-			}
-
-
-			.media-box {
-			height: 240px;
-			}
-
-			}
-
-
-		</style>
-
-
-
-		<!-- ===================================================== -->
-		<!-- SCRIPT                                                -->
-		<!-- ===================================================== -->
-
-		<script>
-
-
-			/* STAR BACKGROUND */
-
-			const background =
+			const starBackground =
 			document.getElementById(
 			"star-background"
 			);
 
 
-			if (background) {
+			if (starBackground) {
 
-			const numberOfStars =
-			70;
+			const starCount =
+			85;
 
 
 			for (
 			let i = 0;
-			i < numberOfStars;
+			i < starCount;
 				i++
 			) {
 
@@ -2344,13 +2612,12 @@
 					);
 
 
-				star.classList.add(
-					"star"
-				);
+				star.className =
+					"star";
 
 
 				const size =
-					Math.random() * 2 + 1;
+					Math.random() * 2 + 0.7;
 
 
 				star.style.width =
@@ -2366,20 +2633,20 @@
 
 
 				star.style.animationDuration =
-					`${Math.random() * 15 + 15}s`;
+					`${Math.random() * 18 + 14}s`;
 
 
 				star.style.animationDelay =
-					`${Math.random() * -30}s`;
+					`${Math.random() * -35}s`;
 
 
 				star.style.setProperty(
 					"--star-opacity",
-					`${Math.random() * 0.30 + 0.08}`
+					`${Math.random() * 0.38 + 0.08}`
 				);
 
 
-				background.appendChild(
+				starBackground.appendChild(
 					star
 				);
 
@@ -2389,27 +2656,24 @@
 
 
 
-		/*
-			Close other projects automatically
-			when a different project is opened.
-		*/
-
-		const projectCards =
+		const projects =
 			document.querySelectorAll(
 				".project-card"
 			);
 
 
-		projectCards.forEach(
+		projects.forEach(
 			(project) => {
 
 				project.addEventListener(
 					"toggle",
 					() => {
 
-						if (project.open) {
+						if (
+							project.open
+						) {
 
-							projectCards.forEach(
+							projects.forEach(
 								(otherProject) => {
 
 									if (
@@ -2432,10 +2696,8 @@
 			}
 		);
 
-
 		</script>
 
 
 	</body>
-
 </html>

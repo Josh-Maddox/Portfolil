@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-	site: 'https://Josh-Maddox.github.io',
+	site: 'https://josh-maddox.github.io',
 	base: '/Portfoli',
 
 	build: {
 		format: 'file',
+		inlineStylesheets: 'always',
 	},
 
 	vite: {
