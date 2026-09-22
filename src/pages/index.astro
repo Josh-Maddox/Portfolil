@@ -16,6 +16,12 @@
 
 		<title>Josh Maddox | Game Programmer</title>
 
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/Portfoli/favicon.ico"
+	/>
+
 
 		<style is:inline="">
 
@@ -99,29 +105,22 @@
 			@keyframes fall {
 
 			0% {
-			transform:
-			translateY(-40px);
-
+			transform: translateY(-40px);
 			opacity: 0;
 			}
 
 			10% {
-			opacity:
-			var(--star-opacity);
+			opacity: var(--star-opacity);
 			}
 
 			80% {
-			opacity:
-			var(--star-opacity);
+			opacity: var(--star-opacity);
 			}
 
 			100% {
-			transform:
-			translateY(110vh);
-
+			transform: translateY(110vh);
 			opacity: 0;
 			}
-
 			}
 
 
@@ -156,11 +155,9 @@
 			0.90
 			);
 
-			backdrop-filter:
-			blur(12px);
+			backdrop-filter: blur(12px);
 
-			border-bottom:
-			1px solid #272b33;
+			border-bottom: 1px solid #272b33;
 			}
 
 			nav {
@@ -174,8 +171,7 @@
 
 			align-items: center;
 
-			justify-content:
-			space-between;
+			justify-content: space-between;
 			}
 
 			.logo {
@@ -199,8 +195,7 @@
 
 			font-size: 15px;
 
-			transition:
-			color 0.2s ease;
+			transition: color 0.2s ease;
 			}
 
 			.nav-links a:hover {
@@ -223,8 +218,7 @@
 			}
 
 			section {
-			padding:
-			110px 0;
+			padding: 110px 0;
 			}
 
 			.section-label {
@@ -268,10 +262,7 @@
 			========================================================= */
 
 			.hero {
-			min-height:
-			calc(
-			100vh - 76px
-			);
+			min-height: calc(100vh - 76px);
 
 			display: flex;
 
@@ -354,8 +345,7 @@
 
 			min-height: 46px;
 
-			padding:
-			0 22px;
+			padding: 0 22px;
 
 			border-radius: 6px;
 
@@ -370,8 +360,7 @@
 			}
 
 			.button:hover {
-			transform:
-			translateY(-2px);
+			transform: translateY(-2px);
 			}
 
 			.button-primary {
@@ -393,8 +382,7 @@
 			0.85
 			);
 
-			border:
-			1px solid #3b414b;
+			border: 1px solid #3b414b;
 
 			color: #ffffff;
 			}
@@ -432,8 +420,7 @@
 			rgba(13, 15, 19, 0.96)
 			);
 
-			border:
-			1px solid #2c3139;
+			border: 1px solid #2c3139;
 
 			border-radius: 10px;
 
@@ -454,19 +441,15 @@
 			}
 
 			.project-card:not([open]):hover {
-			transform:
-			translateY(-6px);
+			transform: translateY(-6px);
 
-			border-color:
-			#555d69;
+			border-color: #555d69;
 			}
 
 			.project-card[open] {
-			grid-column:
-			1 / -1;
+			grid-column: 1 / -1;
 
-			border-color:
-			#606875;
+			border-color: #606875;
 			}
 
 			.project-summary {
@@ -505,8 +488,7 @@
 			#151820
 			);
 
-			border:
-			1px solid #303641;
+			border: 1px solid #303641;
 
 			border-radius: 7px;
 
@@ -568,13 +550,11 @@
 			display: none;
 			}
 
-			.project-card[open]
-			.project-open {
+			.project-card[open] .project-open {
 			display: none;
 			}
 
-			.project-card[open]
-			.project-close {
+			.project-card[open] .project-close {
 			display: inline;
 			}
 
@@ -584,8 +564,7 @@
 			========================================================= */
 
 			.project-details {
-			padding:
-			60px 48px 70px;
+			padding: 60px 48px 70px;
 
 			background:
 			rgba(
@@ -595,12 +574,9 @@
 			0.62
 			);
 
-			border-top:
-			1px solid #2b3038;
+			border-top: 1px solid #2b3038;
 
-			animation:
-			projectOpen
-			0.25s ease;
+			animation: projectOpen 0.25s ease;
 			}
 
 			@keyframes projectOpen {
@@ -608,17 +584,14 @@
 			from {
 			opacity: 0;
 
-			transform:
-			translateY(-8px);
+			transform: translateY(-8px);
 			}
 
 			to {
 			opacity: 1;
 
-			transform:
-			translateY(0);
+			transform: translateY(0);
 			}
-
 			}
 
 			.detail-header {
@@ -676,8 +649,7 @@
 			#0f1217
 			);
 
-			border:
-			1px solid #303640;
+			border: 1px solid #303640;
 
 			border-radius: 10px;
 
@@ -716,7 +688,7 @@
 
 
 			/* =========================================================
-			CONTRIBUTION CARDS
+			CONTRIBUTIONS
 			========================================================= */
 
 			.contribution-grid {
@@ -741,8 +713,7 @@
 			#111318
 			);
 
-			border:
-			1px solid #2d323a;
+			border: 1px solid #2d323a;
 
 			border-radius: 8px;
 			}
@@ -759,7 +730,7 @@
 
 
 			/* =========================================================
-			TECHNOLOGY TAGS
+			TAGS
 			========================================================= */
 
 			.tags {
@@ -771,13 +742,11 @@
 			}
 
 			.tags span {
-			padding:
-			9px 14px;
+			padding: 9px 14px;
 
 			background: #15181e;
 
-			border:
-			1px solid #303640;
+			border: 1px solid #303640;
 
 			border-radius: 5px;
 
@@ -788,7 +757,7 @@
 
 
 			/* =========================================================
-			CODE EXAMPLES
+			CODE
 			========================================================= */
 
 			.code-grid {
@@ -808,27 +777,23 @@
 
 			background: #080a0d;
 
-			border:
-			1px solid #303640;
+			border: 1px solid #303640;
 
 			border-radius: 8px;
 			}
 
 			.code-title {
-			padding:
-			12px 16px;
+			padding: 12px 16px;
 
 			display: flex;
 
 			align-items: center;
 
-			justify-content:
-			space-between;
+			justify-content: space-between;
 
 			background: #171a20;
 
-			border-bottom:
-			1px solid #303640;
+			border-bottom: 1px solid #303640;
 
 			color: #b6bbc2;
 
@@ -891,8 +856,7 @@
 			#101319
 			);
 
-			border:
-			1px solid #303640;
+			border: 1px solid #303640;
 
 			border-radius: 8px;
 
@@ -933,8 +897,7 @@
 			0.88
 			);
 
-			border:
-			1px solid #2c3139;
+			border: 1px solid #2c3139;
 
 			border-radius: 8px;
 			}
@@ -963,8 +926,7 @@
 			0.88
 			);
 
-			border:
-			1px solid #2c3139;
+			border: 1px solid #2c3139;
 
 			border-radius: 8px;
 			}
@@ -993,8 +955,7 @@
 
 			align-items: center;
 
-			justify-content:
-			space-between;
+			justify-content: space-between;
 
 			gap: 30px;
 
@@ -1006,8 +967,7 @@
 			0.88
 			);
 
-			border:
-			1px solid #2c3139;
+			border: 1px solid #2c3139;
 
 			border-radius: 8px;
 			}
@@ -1034,8 +994,7 @@
 
 			color: #686f79;
 
-			border-top:
-			1px solid #242931;
+			border-top: 1px solid #242931;
 
 			background:
 			rgba(
@@ -1075,8 +1034,8 @@
 			.project-description {
 			min-height: auto;
 			}
-
 			}
+
 
 			@media (max-width: 700px) {
 
@@ -1089,8 +1048,7 @@
 			}
 
 			.project-details {
-			padding:
-			45px 22px 55px;
+			padding: 45px 22px 55px;
 			}
 
 			.hero-media {
@@ -1106,8 +1064,8 @@
 
 			align-items: flex-start;
 			}
-
 			}
+
 
 			@media (max-width: 500px) {
 
@@ -1128,8 +1086,7 @@
 			}
 
 			section {
-			padding:
-			80px 0;
+			padding: 80px 0;
 			}
 
 			.hero h1 {
@@ -1141,7 +1098,6 @@
 
 			align-items: flex-start;
 			}
-
 			}
 
 		</style>
@@ -1153,7 +1109,7 @@
 
 
 		<!-- =========================================================
-	     FALLING STAR BACKGROUND
+	     STAR BACKGROUND
 	========================================================= -->
 
 		<div
@@ -1288,9 +1244,9 @@
 
 				<p class="section-description">
 
-					Select a project to expand it and view
-					the full project breakdown, contributions,
-					code examples, tools, and screenshots.
+					Select a project to expand it and view the full
+					project breakdown, contributions, code examples,
+					tools, and screenshots.
 
 				</p>
 
@@ -1607,15 +1563,15 @@
 											<code>
 												// Inventory System Example
 
-												// Replace this placeholder with
-												// a short piece of C++ code that
-												// you personally wrote.
+												// Replace this placeholder
+												// with a short piece of your
+												// actual C++ inventory code.
 
-												// Example areas:
+												// Good examples:
 												// - Add Item
 												// - Remove Item
 												// - Inventory Slots
-												// - Item Rotation View
+												// - Inventory Rotation
 											</code>
 										</pre>
 
@@ -1642,11 +1598,11 @@
 											<code>
 												// Level-Up System Example
 
-												// Replace this placeholder with
-												// a short section of your actual
-												// player progression code.
+												// Replace this placeholder
+												// with your player progression
+												// code.
 
-												// Example areas:
+												// Good examples:
 												// - Experience
 												// - Level calculation
 												// - Stat increases
@@ -1963,8 +1919,8 @@
 											<code>
 												// Shop System Example
 
-												// Replace this placeholder with
-												// your own RoboRun C# code.
+												// Replace this placeholder
+												// with your own RoboRun C# code.
 
 												// Good examples:
 												// - Purchase checks
@@ -1997,8 +1953,8 @@
 											<code>
 												// Upgrade System Example
 
-												// Replace this placeholder with
-												// your actual upgrade code.
+												// Replace this placeholder
+												// with your actual upgrade code.
 
 												// Good examples:
 												// - Upgrade levels
@@ -2656,6 +2612,8 @@
 
 
 
+		/* Close other projects when a new one opens */
+
 		const projects =
 			document.querySelectorAll(
 				".project-card"
@@ -2669,9 +2627,7 @@
 					"toggle",
 					() => {
 
-						if (
-							project.open
-						) {
+						if (project.open) {
 
 							projects.forEach(
 								(otherProject) => {
