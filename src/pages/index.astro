@@ -1,283 +1,712 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 
 	<head>
 
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8">
 
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
-	/>
+			<meta
+				name="viewport"
+				content="width=device-width, initial-scale=1.0"
+    >
 
-		<title>Josh Maddox | Game Programmer</title>
+				<meta
+					name="description"
+					content="Josh Maddox - Game Programmer and QA Engineer portfolio featuring Unreal Engine, C++, Unity, C#, Godot, testing, debugging, and game development projects."
+    >
 
+					<title>
+						Josh Maddox | Game Programmer & QA Engineer
+					</title>
 
-		<style is:inline="">
 
-			* {
-			box-sizing: border-box;
-			}
+					<style>
 
+						/* =====================================================
+						BASIC PAGE
+						===================================================== */
 
-			html {
-			scroll-behavior: smooth;
-			}
+						* {
+						box-sizing: border-box;
+						margin: 0;
+						padding: 0;
+						}
 
 
-			body {
-			margin: 0;
+						html {
+						scroll-behavior: smooth;
+						}
 
-			background: #101214;
 
-			color: #eeeeee;
+						body {
+						min-height: 100vh;
 
-			font-family:
-			Arial,
-			Helvetica,
-			sans-serif;
+						background: #080a0d;
 
-			line-height: 1.6;
-			}
+						color: #f2f2f2;
 
+						font-family:
+						Arial,
+						Helvetica,
+						sans-serif;
 
-			main {
-			width: 90%;
+						line-height: 1.6;
 
-			max-width: 1000px;
+						overflow-x: hidden;
+						}
 
-			margin: 0 auto;
 
-			padding: 60px 0;
-			}
+						a {
+						color: inherit;
 
+						text-decoration: none;
+						}
 
-			h1 {
-			font-size: 48px;
 
-			margin-bottom: 5px;
-			}
 
+						/* =====================================================
+						STAR BACKGROUND
+						===================================================== */
 
-			h2 {
-			margin-top: 0;
+						#stars {
+						position: fixed;
 
-			color: #bbbbbb;
+						top: 0;
+						left: 0;
 
-			font-weight: normal;
-			}
+						width: 100%;
+						height: 100%;
 
+						overflow: hidden;
 
-			.intro {
-			margin-bottom: 50px;
-			}
+						pointer-events: none;
 
+						z-index: 0;
+						}
 
-			.intro p {
-			max-width: 700px;
 
-			color: #bbbbbb;
-			}
+						.star {
+						position: absolute;
 
+						top: -10px;
 
-			section {
-			margin-bottom: 50px;
-			}
+						background: white;
 
+						border-radius: 50%;
 
-			section > h2 {
-			color: #ffffff;
+						opacity: 0;
 
-			font-size: 30px;
+						animation:
+						fall linear infinite;
+						}
 
-			font-weight: bold;
 
-			margin-bottom: 20px;
-			}
+						@keyframes fall {
 
+						0% {
+						transform:
+						translateY(-20px);
 
-			details {
-			margin-bottom: 15px;
+						opacity: 0;
+						}
 
-			background: #181b1f;
 
-			border: 1px solid #30343a;
+						10% {
+						opacity:
+						var(--opacity);
+						}
 
-			border-radius: 6px;
 
-			overflow: hidden;
-			}
+						85% {
+						opacity:
+						var(--opacity);
+						}
 
 
-			summary {
-			padding: 20px;
+						100% {
+						transform:
+						translateY(110vh);
 
-			cursor: pointer;
+						opacity: 0;
+						}
 
-			font-size: 20px;
+						}
 
-			font-weight: bold;
-			}
 
 
-			.details-content {
-			padding:
-			0 20px 20px;
+						/* =====================================================
+						PAGE CONTENT
+						===================================================== */
 
-			color: #cccccc;
-			}
+						header,
+						main,
+						footer {
+						position: relative;
 
+						z-index: 1;
+						}
 
-			.details-content h3 {
-			color: #ffffff;
 
-			margin-top: 30px;
 
-			margin-bottom: 10px;
-			}
+						/* =====================================================
+						NAVIGATION
+						===================================================== */
 
+						header {
+						position: sticky;
 
-			.details-content h4 {
-			color: #ffffff;
+						top: 0;
 
-			margin-bottom: 5px;
-			}
+						z-index: 10;
 
+						background:
+						rgba(
+						8,
+						10,
+						13,
+						0.90
+						);
 
-			.details-content p {
-			margin-top: 5px;
-			}
+						border-bottom:
+						1px solid #24282f;
 
+						backdrop-filter:
+						blur(10px);
+						}
 
-			.project-info {
-			color: #999999;
 
-			font-size: 14px;
-			}
+						nav {
+						width: 90%;
 
+						max-width: 1150px;
 
-			.code-box {
-			margin-top: 15px;
+						margin: auto;
 
-			padding: 20px;
+						min-height: 70px;
 
-			background: #0b0d0f;
+						display: flex;
 
-			border: 1px solid #30343a;
+						align-items: center;
 
-			border-radius: 5px;
+						justify-content: space-between;
+						}
 
-			overflow-x: auto;
-			}
 
+						.logo {
+						font-size: 20px;
 
-			pre {
-			margin: 0;
-			}
+						font-weight: bold;
+						}
 
 
-			code {
-			font-family:
-			Consolas,
-			"Courier New",
-			monospace;
+						.nav-links {
+						display: flex;
 
-			color: #dddddd;
-			}
+						gap: 25px;
+						}
 
 
-			.image-box {
-			min-height: 200px;
+						.nav-links a {
+						color: #a8adb5;
 
-			margin-top: 15px;
+						font-size: 14px;
+						}
 
-			display: flex;
 
-			align-items: center;
+						.nav-links a:hover {
+						color: white;
+						}
 
-			justify-content: center;
 
-			background: #202328;
 
-			border: 1px solid #30343a;
+						/* =====================================================
+						MAIN
+						===================================================== */
 
-			border-radius: 5px;
+						main {
+						width: 90%;
 
-			color: #777777;
-			}
+						max-width: 1150px;
 
+						margin: auto;
+						}
 
-			.tags {
-			display: flex;
 
-			flex-wrap: wrap;
 
-			gap: 8px;
+						/* =====================================================
+						HERO
+						===================================================== */
 
-			margin-top: 10px;
-			}
+						.hero {
+						min-height:
+						calc(
+						100vh - 70px
+						);
 
+						display: flex;
 
-			.tags span {
-			padding:
-			6px 10px;
+						flex-direction: column;
 
-			background: #22262b;
+						justify-content: center;
+						}
 
-			border: 1px solid #383d44;
 
-			border-radius: 4px;
+						.hero-label {
+						margin-bottom: 15px;
 
-			font-size: 14px;
-			}
+						color: #8d949e;
 
+						font-size: 13px;
 
-			a {
-			color: #ffffff;
-			}
+						font-weight: bold;
 
+						letter-spacing: 4px;
+						}
 
-			footer {
-			margin-top: 70px;
 
-			padding-top: 25px;
+						.hero h1 {
+						font-size:
+						clamp(
+						60px,
+						10vw,
+						110px
+						);
 
-			border-top: 1px solid #30343a;
+						line-height: 0.95;
 
-			color: #777777;
-			}
+						margin-bottom: 20px;
 
+						letter-spacing: -3px;
+						}
 
-			@media (max-width: 600px) {
 
-			h1 {
-			font-size: 38px;
-			}
+						.hero h2 {
+						margin-bottom: 25px;
 
+						color: #b8bdc5;
 
-			main {
-			width: 92%;
+						font-size:
+						clamp(
+						25px,
+						4vw,
+						35px
+						);
 
-			padding-top: 35px;
-			}
+						font-weight: normal;
+						}
 
-			}
 
-		</style>
+						.hero-description {
+						max-width: 760px;
 
-	</head>
+						color: #a6abb3;
+
+						font-size: 18px;
+						}
+
+
+						.hero-buttons {
+						display: flex;
+
+						gap: 15px;
+
+						margin-top: 35px;
+						}
+
+
+						.button {
+						display: inline-block;
+
+						padding:
+						12px 22px;
+
+						border-radius: 5px;
+
+						font-weight: bold;
+
+						transition:
+						transform 0.2s,
+						background 0.2s;
+						}
+
+
+						.button:hover {
+						transform:
+						translateY(-2px);
+						}
+
+
+						.primary-button {
+						background: white;
+
+						color: #080a0d;
+						}
+
+
+						.primary-button:hover {
+						background: #d9d9d9;
+						}
+
+
+						.secondary-button {
+						background: #15181d;
+
+						border:
+						1px solid #383d45;
+						}
+
+
+						.secondary-button:hover {
+						background: #20242b;
+						}
+
+
+
+						/* =====================================================
+						PROJECT SECTION
+						===================================================== */
+
+						#projects {
+						padding:
+						100px 0 140px;
+						}
+
+
+						.section-label {
+						color: #858c96;
+
+						font-size: 12px;
+
+						font-weight: bold;
+
+						letter-spacing: 4px;
+
+						margin-bottom: 10px;
+						}
+
+
+						.section-title {
+						font-size:
+						clamp(
+						38px,
+						6vw,
+						55px
+						);
+
+						margin-bottom: 15px;
+						}
+
+
+						.section-description {
+						max-width: 700px;
+
+						margin-bottom: 45px;
+
+						color: #9fa5ae;
+						}
+
+
+
+						/* =====================================================
+						PROJECT CARDS
+						===================================================== */
+
+						.project-grid {
+						display: grid;
+
+						grid-template-columns:
+						repeat(
+						3,
+						1fr
+						);
+
+						gap: 22px;
+
+						align-items: start;
+						}
+
+
+						.project-card {
+						background:
+						rgba(
+						18,
+						21,
+						26,
+						0.92
+						);
+
+						border:
+						1px solid #2b3038;
+
+						border-radius: 8px;
+
+						overflow: hidden;
+
+						transition:
+						border-color 0.2s,
+						transform 0.2s;
+						}
+
+
+						.project-card:hover {
+						border-color: #525a66;
+
+						transform:
+						translateY(-4px);
+						}
+
+
+						.project-main {
+						padding: 25px;
+						}
+
+
+						.project-engine {
+						margin-bottom: 8px;
+
+						color: #7f8791;
+
+						font-size: 11px;
+
+						font-weight: bold;
+
+						letter-spacing: 2px;
+						}
+
+
+						.project-main h3 {
+						margin-bottom: 5px;
+
+						font-size: 26px;
+						}
+
+
+						.project-tech {
+						margin-bottom: 15px;
+
+						color: #828994;
+
+						font-size: 13px;
+						}
+
+
+						.project-description {
+						min-height: 95px;
+
+						color: #b5bac1;
+
+						font-size: 15px;
+						}
+
+
+
+						/* =====================================================
+						PROJECT DROPDOWNS
+						===================================================== */
+
+						details {
+						border-top:
+						1px solid #2b3038;
+						}
+
+
+						summary {
+						padding:
+						16px 25px;
+
+						cursor: pointer;
+
+						list-style: none;
+
+						font-weight: bold;
+
+						font-size: 14px;
+
+						background:
+						rgba(
+						11,
+						13,
+						17,
+						0.65
+						);
+						}
+
+
+						summary::-webkit-details-marker {
+						display: none;
+						}
+
+
+						summary::after {
+						content: "+";
+
+						float: right;
+
+						color: #888f99;
+
+						font-size: 18px;
+						}
+
+
+						details[open] summary::after {
+						content: "−";
+						}
+
+
+						summary:hover {
+						background: #171a20;
+						}
+
+
+						.dropdown-content {
+						padding:
+						20px 25px 25px;
+
+						color: #aeb3ba;
+
+						border-top:
+						1px solid #252a31;
+						}
+
+
+						.dropdown-content p {
+						margin-bottom: 10px;
+						}
+
+
+						.dropdown-content p:last-child {
+						margin-bottom: 0;
+						}
+
+
+
+						/* =====================================================
+						FOOTER
+						===================================================== */
+
+						footer {
+						padding:
+						35px 20px;
+
+						text-align: center;
+
+						color: #666d76;
+
+						border-top:
+						1px solid #24282f;
+						}
+
+
+
+						/* =====================================================
+						MOBILE
+						===================================================== */
+
+						@media (max-width: 850px) {
+
+						.project-grid {
+						grid-template-columns:
+						1fr;
+						}
+
+
+						.project-description {
+						min-height: auto;
+						}
+
+						}
+
+
+						@media (max-width: 600px) {
+
+						.nav-links {
+						display: none;
+						}
+
+
+						.hero h1 {
+						font-size: 55px;
+
+						letter-spacing: -2px;
+						}
+
+
+						.hero-buttons {
+						flex-direction: column;
+
+						align-items: flex-start;
+						}
+
+						}
+
+					</style>
+
+				</head>
+
 
 
 	<body>
 
 
+		<!-- =====================================================
+         STAR BACKGROUND
+    ====================================================== -->
+
+		<div id="stars"></div>
+
+
+
+		<!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+		<header>
+
+			<nav>
+
+				<a
+					href="#home"
+					class="logo"
+            >
+					Josh Maddox
+				</a>
+
+
+				<div class="nav-links">
+
+					<a href="#home">
+						Home
+					</a>
+
+					<a href="#projects">
+						Projects
+					</a>
+
+				</div>
+
+			</nav>
+
+		</header>
+
+
+
 		<main>
 
 
-			<!-- INTRO -->
+			<!-- =================================================
+             HOME
+        ================================================== -->
 
-			<div class="intro">
+			<section
+				id="home"
+				class="hero"
+        >
+
+				<p class="hero-label">
+					GAME PROGRAMMER • QA ENGINEER
+				</p>
+
 
 				<h1>
 					Josh Maddox
@@ -285,591 +714,343 @@
 
 
 				<h2>
-					Game Programmer
+					Game Programmer | QA Engineer
 				</h2>
 
 
-				<p>
+				<p class="hero-description">
 
-					Game Development graduate focused on gameplay
-					programming, Unreal Engine, C++, gameplay systems,
-					and technical game development.
+					Game Development graduate focused on game programming,
+					quality assurance, testing, debugging, and technical
+					problem solving. Experienced with Unreal Engine, C++,
+					Unity, C#, Godot, and collaborative game development.
 
 				</p>
 
-			</div>
 
-
-
-			<!-- PROJECTS -->
-
-			<section>
-
-				<h2>
-					Projects
-				</h2>
-
-
-
-				<!-- ASHEN BLOOM -->
-
-				<details>
-
-					<summary>
-						Ashen Bloom
-					</summary>
-
-
-					<div class="details-content">
-
-						<p class="project-info">
-							Unreal Engine 5.6 • C++ • Blueprints • PCG
-						</p>
-
-
-						<p>
-
-							A third-person character-action souls-lite
-							set in a dying world where nature has fused
-							with machines, corpses, and ruined cities.
-
-						</p>
-
-
-						<h3>
-							My Work
-						</h3>
-
-
-						<h4>
-							Inventory System
-						</h4>
-
-						<p>
-							Developed the player inventory system.
-						</p>
-
-
-						<h4>
-							Level-Up System
-						</h4>
-
-						<p>
-							Developed the player level-up system.
-						</p>
-
-
-						<h4>
-							Inventory Character View
-						</h4>
-
-						<p>
-
-							Created the rotating character view
-							used inside the inventory.
-
-						</p>
-
-
-						<h4>
-							Forest PCG
-						</h4>
-
-						<p>
-
-							Created a procedural forest system
-							using Unreal Engine PCG.
-
-						</p>
-
-
-						<h4>
-							Landscape Grass
-						</h4>
-
-						<p>
-
-							Set up the landscape grass system
-							for foliage placement.
-
-						</p>
-
-
-						<h4>
-							Landscape Materials
-						</h4>
-
-						<p>
-
-							Created the landscape texture
-							layering system.
-
-						</p>
-
-
-
-						<h3>
-							Tools
-						</h3>
-
-
-						<div class="tags">
-
-							<span>Unreal Engine 5.6</span>
-
-							<span>C++</span>
-
-							<span>Blueprints</span>
-
-							<span>PCG</span>
-
-							<span>Gaea 2</span>
-
-							<span>Blender</span>
-
-							<span>Perforce</span>
-
-						</div>
-
-
-
-						<h3>
-							Gameplay / Images
-						</h3>
-
-
-						<div class="image-box">
-							Ashen Bloom Image
-						</div>
-
-
-						<div class="image-box">
-							Ashen Bloom Screenshot
-						</div>
-
-
-
-						<h3>
-							Code Example
-						</h3>
-
-
-						<div class="code-box">
-
-							<pre>
-								<code>// Ashen Bloom code example will go here.</code>
-							</pre>
-
-						</div>
-
-					</div>
-
-				</details>
-
-
-
-				<!-- ROBORUN -->
-
-				<details>
-
-					<summary>
-						RoboRun
-					</summary>
-
-
-					<div class="details-content">
-
-						<p class="project-info">
-							Unity • C#
-						</p>
-
-
-						<p>
-
-							A Unity project featuring gameplay
-							systems, upgrades, a shop system,
-							and overworld development.
-
-						</p>
-
-
-						<h3>
-							My Work
-						</h3>
-
-
-						<h4>
-							Shop System
-						</h4>
-
-						<p>
-							Worked on the game's shop system.
-						</p>
-
-
-						<h4>
-							Upgrade System
-						</h4>
-
-						<p>
-							Worked on player upgrade systems.
-						</p>
-
-
-						<h4>
-							Map Development
-						</h4>
-
-						<p>
-
-							Created most of the game's map
-							and overworld.
-
-						</p>
-
-
-
-						<h3>
-							Tools
-						</h3>
-
-
-						<div class="tags">
-
-							<span>Unity</span>
-
-							<span>C#</span>
-
-							<span>Visual Studio</span>
-
-						</div>
-
-
-
-						<h3>
-							Gameplay / Images
-						</h3>
-
-
-						<div class="image-box">
-							RoboRun Image
-						</div>
-
-
-						<div class="image-box">
-							RoboRun Screenshot
-						</div>
-
-
-
-						<h3>
-							Code Example
-						</h3>
-
-
-						<div class="code-box">
-
-							<pre>
-								<code>// RoboRun C# code example will go here.</code>
-							</pre>
-
-						</div>
-
-					</div>
-
-				</details>
-
-
-
-				<!-- I AM THE WALL -->
-
-				<details>
-
-					<summary>
-						I Am the Wall
-					</summary>
-
-
-					<div class="details-content">
-
-						<p class="project-info">
-							Godot • Game Jam • Pixel Art
-						</p>
-
-
-						<p>
-
-							A game jam project created in Godot
-							for the "You Are the Weapon" game jam.
-
-						</p>
-
-
-						<h3>
-							My Work
-						</h3>
-
-
-						<h4>
-							Pixel Art
-						</h4>
-
-						<p>
-							Created most of the game's pixel art.
-						</p>
-
-
-						<h4>
-							Animation
-						</h4>
-
-						<p>
-							Created most of the game's animations.
-						</p>
-
-
-						<h4>
-							Color Palette
-						</h4>
-
-						<p>
-							Created the project's color palette.
-						</p>
-
-
-						<h4>
-							Game Design Document
-						</h4>
-
-						<p>
-							Worked on the game's design document.
-						</p>
-
-
-
-						<h3>
-							Tools
-						</h3>
-
-
-						<div class="tags">
-
-							<span>Godot</span>
-
-							<span>Pixel Art</span>
-
-							<span>Animation</span>
-
-							<span>Game Design</span>
-
-						</div>
-
-
-
-						<h3>
-							Gameplay / Images
-						</h3>
-
-
-						<div class="image-box">
-							I Am the Wall Image
-						</div>
-
-
-						<div class="image-box">
-							Pixel Art / Animation Example
-						</div>
-
-					</div>
-
-				</details>
-
-			</section>
-
-
-
-			<!-- SKILLS -->
-
-			<section>
-
-				<h2>
-					Skills
-				</h2>
-
-
-				<details>
-
-					<summary>
-						Programming
-					</summary>
-
-
-					<div class="details-content">
-
-						<div class="tags">
-
-							<span>C++</span>
-
-							<span>C#</span>
-
-							<span>Blueprints</span>
-
-							<span>Python</span>
-
-						</div>
-
-					</div>
-
-				</details>
-
-
-
-				<details>
-
-					<summary>
-						Game Engines
-					</summary>
-
-
-					<div class="details-content">
-
-						<div class="tags">
-
-							<span>Unreal Engine 5</span>
-
-							<span>Unity</span>
-
-							<span>Godot</span>
-
-						</div>
-
-					</div>
-
-				</details>
-
-
-
-				<details>
-
-					<summary>
-						Tools
-					</summary>
-
-
-					<div class="details-content">
-
-						<div class="tags">
-
-							<span>Visual Studio</span>
-
-							<span>Blender</span>
-
-							<span>Gaea 2</span>
-
-							<span>Perforce</span>
-
-							<span>Git</span>
-
-							<span>GitHub</span>
-
-						</div>
-
-					</div>
-
-				</details>
-
-			</section>
-
-
-
-			<!-- ABOUT -->
-
-			<section>
-
-				<h2>
-					About Me
-				</h2>
-
-
-				<details>
-
-					<summary>
-						About Josh
-					</summary>
-
-
-					<div class="details-content">
-
-						<p>
-
-							I am a Game Development graduate focused
-							on gameplay programming, technical systems,
-							and game development.
-
-						</p>
-
-
-						<p>
-
-							I enjoy working with Unreal Engine,
-							C++, Unity, and other development tools.
-
-						</p>
-
-					</div>
-
-				</details>
-
-			</section>
-
-
-
-			<!-- LINKS -->
-
-			<section>
-
-				<h2>
-					Links
-				</h2>
-
-
-				<details>
-
-					<summary>
+				<div class="hero-buttons">
+
+					<a
+						href="#projects"
+						class="button primary-button"
+                >
+						View Projects
+					</a>
+
+
+					<a
+						href="https://github.com/Josh-Maddox"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="button secondary-button"
+                >
 						GitHub
-					</summary>
+					</a>
 
-
-					<div class="details-content">
-
-						<p>
-
-							<a
-								href="https://github.com/Josh-Maddox"
-								target="_blank"
-								rel="noopener noreferrer"
-						>
-								github.com/Josh-Maddox
-							</a>
-
-						</p>
-
-					</div>
-
-				</details>
+				</div>
 
 			</section>
 
 
 
-			<footer>
+			<!-- =================================================
+             PROJECTS
+        ================================================== -->
 
-				© 2026 Josh Maddox
+			<section id="projects">
 
-			</footer>
+				<p class="section-label">
+					SELECTED WORK
+				</p>
+
+
+				<h2 class="section-title">
+					Featured Projects
+				</h2>
+
+
+				<p class="section-description">
+
+					Projects demonstrating programming, game development,
+					debugging, testing, technical problem solving, and
+					collaborative development experience.
+
+				</p>
+
+
+
+				<div class="project-grid">
+
+
+					<!-- =========================================
+                     ASHEN BLOOM
+                ========================================== -->
+
+					<article class="project-card">
+
+						<div class="project-main">
+
+							<p class="project-engine">
+								UNREAL ENGINE 5.6
+							</p>
+
+
+							<h3>
+								Ashen Bloom
+							</h3>
+
+
+							<p class="project-tech">
+								C++ • Blueprints • PCG
+							</p>
+
+
+							<p class="project-description">
+
+								A third-person character-action
+								souls-lite set in a dying world
+								where nature has fused with
+								machines, corpses, and ruined cities.
+
+							</p>
+
+						</div>
+
+
+						<details>
+
+							<summary>
+								View Project
+							</summary>
+
+
+							<div class="dropdown-content">
+
+								<p>
+									Programming and development details
+									will go here.
+								</p>
+
+
+								<p>
+									Testing and debugging details
+									will go here.
+								</p>
+
+							</div>
+
+						</details>
+
+					</article>
+
+
+
+					<!-- =========================================
+                     ROBORUN
+                ========================================== -->
+
+					<article class="project-card">
+
+						<div class="project-main">
+
+							<p class="project-engine">
+								UNITY
+							</p>
+
+
+							<h3>
+								RoboRun
+							</h3>
+
+
+							<p class="project-tech">
+								Unity • C#
+							</p>
+
+
+							<p class="project-description">
+
+								A Unity project featuring gameplay
+								systems, upgrades, a shop,
+								overworld development, and
+								map creation.
+
+							</p>
+
+						</div>
+
+
+						<details>
+
+							<summary>
+								View Project
+							</summary>
+
+
+							<div class="dropdown-content">
+
+								<p>
+									Programming and development details
+									will go here.
+								</p>
+
+
+								<p>
+									Testing and debugging details
+									will go here.
+								</p>
+
+							</div>
+
+						</details>
+
+					</article>
+
+
+
+					<!-- =========================================
+                     I AM THE WALL
+                ========================================== -->
+
+					<article class="project-card">
+
+						<div class="project-main">
+
+							<p class="project-engine">
+								GODOT
+							</p>
+
+
+							<h3>
+								I Am the Wall
+							</h3>
+
+
+							<p class="project-tech">
+								Godot • Game Jam • Pixel Art
+							</p>
+
+
+							<p class="project-description">
+
+								A game jam project featuring
+								custom pixel art, animation,
+								game design, and development.
+
+							</p>
+
+						</div>
+
+
+						<details>
+
+							<summary>
+								View Project
+							</summary>
+
+
+							<div class="dropdown-content">
+
+								<p>
+									Development and project details
+									will go here.
+								</p>
+
+
+								<p>
+									Testing and debugging details
+									will go here.
+								</p>
+
+							</div>
+
+						</details>
+
+					</article>
+
+
+				</div>
+
+			</section>
 
 
 		</main>
+
+
+
+		<footer>
+
+			© 2026 Josh Maddox
+
+		</footer>
+
+
+
+		<!-- =====================================================
+         STAR BACKGROUND SCRIPT
+    ====================================================== -->
+
+		<script>
+
+			const stars =
+			document.getElementById(
+			"stars"
+			);
+
+
+			for (
+			let i = 0;
+			i < 80;
+            i++
+        ) {
+
+            const star =
+                document.createElement(
+                    "span"
+                );
+
+
+            star.className =
+                "star";
+
+
+            const size =
+                Math.random() * 2 + 1;
+
+
+            star.style.width =
+                size + "px";
+
+
+            star.style.height =
+                size + "px";
+
+
+            star.style.left =
+                Math.random() * 100 + "%";
+
+
+            star.style.animationDuration =
+                Math.random() * 15 + 15 + "s";
+
+
+            star.style.animationDelay =
+                Math.random() * -30 + "s";
+
+
+            star.style.setProperty(
+                "--opacity",
+                Math.random() * 0.35 + 0.08
+            );
+
+
+            stars.appendChild(
+                star
+            );
+
+        }
+
+		</script>
 
 
 	</body>
