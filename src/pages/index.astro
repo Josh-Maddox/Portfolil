@@ -13,7 +13,7 @@
 
 				<meta
 					name="description"
-					content="Josh Maddox - Game Programmer and QA Engineer portfolio featuring Unreal Engine, C++, Unity, C#, Godot, testing, debugging, and game development projects."
+					content="Josh Maddox - Game Programmer and QA Engineer portfolio."
     >
 
 					<title>
@@ -24,7 +24,7 @@
 					<style>
 
 						/* =====================================================
-						BASIC PAGE
+						BASIC
 						===================================================== */
 
 						* {
@@ -59,8 +59,12 @@
 
 						a {
 						color: inherit;
-
 						text-decoration: none;
+						}
+
+
+						button {
+						font: inherit;
 						}
 
 
@@ -72,11 +76,7 @@
 						#stars {
 						position: fixed;
 
-						top: 0;
-						left: 0;
-
-						width: 100%;
-						height: 100%;
+						inset: 0;
 
 						overflow: hidden;
 
@@ -105,29 +105,20 @@
 						@keyframes fall {
 
 						0% {
-						transform:
-						translateY(-20px);
-
+						transform: translateY(-20px);
 						opacity: 0;
 						}
 
-
 						10% {
-						opacity:
-						var(--opacity);
+						opacity: var(--opacity);
 						}
-
 
 						85% {
-						opacity:
-						var(--opacity);
+						opacity: var(--opacity);
 						}
 
-
 						100% {
-						transform:
-						translateY(110vh);
-
+						transform: translateY(110vh);
 						opacity: 0;
 						}
 
@@ -136,14 +127,13 @@
 
 
 						/* =====================================================
-						PAGE CONTENT
+						PAGE LAYERS
 						===================================================== */
 
 						header,
 						main,
 						footer {
 						position: relative;
-
 						z-index: 1;
 						}
 
@@ -165,7 +155,7 @@
 						8,
 						10,
 						13,
-						0.90
+						0.92
 						);
 
 						border-bottom:
@@ -179,11 +169,11 @@
 						nav {
 						width: 90%;
 
-						max-width: 1150px;
-
-						margin: auto;
+						max-width: 1100px;
 
 						min-height: 70px;
+
+						margin: auto;
 
 						display: flex;
 
@@ -195,14 +185,12 @@
 
 						.logo {
 						font-size: 20px;
-
 						font-weight: bold;
 						}
 
 
 						.nav-links {
 						display: flex;
-
 						gap: 25px;
 						}
 
@@ -227,7 +215,7 @@
 						main {
 						width: 90%;
 
-						max-width: 1150px;
+						max-width: 1100px;
 
 						margin: auto;
 						}
@@ -266,6 +254,8 @@
 
 
 						.hero h1 {
+						margin-bottom: 20px;
+
 						font-size:
 						clamp(
 						60px,
@@ -274,8 +264,6 @@
 						);
 
 						line-height: 0.95;
-
-						margin-bottom: 20px;
 
 						letter-spacing: -3px;
 						}
@@ -324,28 +312,12 @@
 						border-radius: 5px;
 
 						font-weight: bold;
-
-						transition:
-						transform 0.2s,
-						background 0.2s;
-						}
-
-
-						.button:hover {
-						transform:
-						translateY(-2px);
 						}
 
 
 						.primary-button {
 						background: white;
-
 						color: #080a0d;
-						}
-
-
-						.primary-button:hover {
-						background: #d9d9d9;
 						}
 
 
@@ -357,11 +329,6 @@
 						}
 
 
-						.secondary-button:hover {
-						background: #20242b;
-						}
-
-
 
 						/* =====================================================
 						PROJECT SECTION
@@ -369,11 +336,13 @@
 
 						#projects {
 						padding:
-						100px 0 140px;
+						100px 0 120px;
 						}
 
 
 						.section-label {
+						margin-bottom: 10px;
+
 						color: #858c96;
 
 						font-size: 12px;
@@ -381,20 +350,18 @@
 						font-weight: bold;
 
 						letter-spacing: 4px;
-
-						margin-bottom: 10px;
 						}
 
 
 						.section-title {
+						margin-bottom: 15px;
+
 						font-size:
 						clamp(
 						38px,
 						6vw,
 						55px
 						);
-
-						margin-bottom: 15px;
 						}
 
 
@@ -423,17 +390,23 @@
 
 						gap: 22px;
 
-						align-items: start;
+						margin-bottom: 35px;
 						}
 
 
 						.project-card {
+						display: flex;
+
+						flex-direction: column;
+
+						min-height: 295px;
+
 						background:
 						rgba(
 						18,
 						21,
 						26,
-						0.92
+						0.94
 						);
 
 						border:
@@ -453,11 +426,18 @@
 						border-color: #525a66;
 
 						transform:
-						translateY(-4px);
+						translateY(-3px);
+						}
+
+
+						.project-card.active {
+						border-color: #8a929e;
 						}
 
 
 						.project-main {
+						flex: 1;
+
 						padding: 25px;
 						}
 
@@ -492,9 +472,200 @@
 
 
 						.project-description {
-						min-height: 95px;
-
 						color: #b5bac1;
+
+						font-size: 15px;
+						}
+
+
+						.view-project {
+						width: 100%;
+
+						padding:
+						16px 22px;
+
+						border: none;
+
+						border-top:
+						1px solid #2b3038;
+
+						background:
+						#13161b;
+
+						color: #eeeeee;
+
+						cursor: pointer;
+
+						text-align: left;
+
+						font-weight: bold;
+						}
+
+
+						.view-project::after {
+						content: "→";
+
+						float: right;
+
+						color: #828994;
+						}
+
+
+						.view-project:hover {
+						background: #1a1e24;
+						}
+
+
+						.project-card.active
+						.view-project {
+						background: #1c2026;
+						}
+
+
+
+						/* =====================================================
+						ONE SHARED PROJECT AREA
+						===================================================== */
+
+						.project-showcase {
+						width: 100%;
+
+						min-height: 500px;
+
+						background:
+						rgba(
+						13,
+						16,
+						20,
+						0.95
+						);
+
+						border:
+						1px solid #2b3038;
+
+						border-radius: 8px;
+
+						overflow: hidden;
+						}
+
+
+						.project-detail {
+						display: none;
+
+						padding: 45px;
+						}
+
+
+						.project-detail.active {
+						display: block;
+						}
+
+
+
+						/* =====================================================
+						PROJECT DETAIL HEADER
+						===================================================== */
+
+						.detail-top {
+						margin-bottom: 45px;
+						}
+
+
+						.detail-engine {
+						margin-bottom: 8px;
+
+						color: #858c96;
+
+						font-size: 12px;
+
+						font-weight: bold;
+
+						letter-spacing: 3px;
+						}
+
+
+						.detail-top h2 {
+						margin-bottom: 12px;
+
+						font-size:
+						clamp(
+						36px,
+						6vw,
+						55px
+						);
+						}
+
+
+						.detail-top p {
+						max-width: 800px;
+
+						color: #aeb4bc;
+						}
+
+
+
+						/* =====================================================
+						DETAIL SECTIONS
+						===================================================== */
+
+						.detail-section {
+						margin-top: 50px;
+						}
+
+
+						.detail-section h3 {
+						margin-bottom: 18px;
+
+						font-size: 26px;
+						}
+
+
+						.detail-section > p {
+						max-width: 850px;
+
+						color: #aeb4bc;
+						}
+
+
+
+						/* =====================================================
+						DEVELOPMENT / QA BOXES
+						===================================================== */
+
+						.work-grid {
+						display: grid;
+
+						grid-template-columns:
+						repeat(
+						2,
+						1fr
+						);
+
+						gap: 18px;
+						}
+
+
+						.work-box {
+						padding: 22px;
+
+						background: #15181d;
+
+						border:
+						1px solid #2c3139;
+
+						border-radius: 6px;
+						}
+
+
+						.work-box h4 {
+						margin-bottom: 8px;
+
+						font-size: 19px;
+						}
+
+
+						.work-box p {
+						color: #a5abb3;
 
 						font-size: 15px;
 						}
@@ -502,81 +673,152 @@
 
 
 						/* =====================================================
-						PROJECT DROPDOWNS
+						TAGS
 						===================================================== */
 
-						details {
-						border-top:
-						1px solid #2b3038;
+						.tags {
+						display: flex;
+
+						flex-wrap: wrap;
+
+						gap: 9px;
 						}
 
 
-						summary {
+						.tags span {
 						padding:
-						16px 25px;
+						7px 11px;
 
-						cursor: pointer;
+						background: #171a20;
 
-						list-style: none;
+						border:
+						1px solid #30353d;
 
-						font-weight: bold;
+						border-radius: 4px;
+
+						color: #b9bec5;
+
+						font-size: 13px;
+						}
+
+
+
+						/* =====================================================
+						MEDIA AREA
+						===================================================== */
+
+						.media-layout {
+						display: grid;
+
+						grid-template-columns:
+						2fr 1fr;
+
+						gap: 18px;
+						}
+
+
+						.video-box {
+						min-height: 360px;
+
+						display: flex;
+
+						align-items: center;
+
+						justify-content: center;
+
+						background: #101318;
+
+						border:
+						1px solid #30353d;
+
+						border-radius: 6px;
+
+						color: #666d76;
+
+						text-align: center;
+						}
+
+
+						.image-column {
+						display: grid;
+
+						grid-template-rows:
+						1fr 1fr;
+
+						gap: 18px;
+						}
+
+
+						.image-box {
+						min-height: 170px;
+
+						display: flex;
+
+						align-items: center;
+
+						justify-content: center;
+
+						background: #15181d;
+
+						border:
+						1px solid #30353d;
+
+						border-radius: 6px;
+
+						color: #666d76;
+
+						text-align: center;
+						}
+
+
+
+						/* =====================================================
+						CODE AREA
+						===================================================== */
+
+						.code-box {
+						overflow-x: auto;
+
+						background: #07090c;
+
+						border:
+						1px solid #30353d;
+
+						border-radius: 6px;
+						}
+
+
+						.code-title {
+						padding:
+						11px 15px;
+
+						background: #171a20;
+
+						border-bottom:
+						1px solid #30353d;
+
+						color: #9097a1;
+
+						font-size: 13px;
+						}
+
+
+						pre {
+						margin: 0;
+
+						padding: 22px;
+
+						color: #d4d8dd;
+						}
+
+
+						code {
+						font-family:
+						Consolas,
+						"Courier New",
+						monospace;
 
 						font-size: 14px;
-
-						background:
-						rgba(
-						11,
-						13,
-						17,
-						0.65
-						);
-						}
-
-
-						summary::-webkit-details-marker {
-						display: none;
-						}
-
-
-						summary::after {
-						content: "+";
-
-						float: right;
-
-						color: #888f99;
-
-						font-size: 18px;
-						}
-
-
-						details[open] summary::after {
-						content: "−";
-						}
-
-
-						summary:hover {
-						background: #171a20;
-						}
-
-
-						.dropdown-content {
-						padding:
-						20px 25px 25px;
-
-						color: #aeb3ba;
-
-						border-top:
-						1px solid #252a31;
-						}
-
-
-						.dropdown-content p {
-						margin-bottom: 10px;
-						}
-
-
-						.dropdown-content p:last-child {
-						margin-bottom: 0;
 						}
 
 
@@ -611,8 +853,24 @@
 						}
 
 
-						.project-description {
-						min-height: auto;
+						.work-grid {
+						grid-template-columns:
+						1fr;
+						}
+
+
+						.media-layout {
+						grid-template-columns:
+						1fr;
+						}
+
+
+						.image-column {
+						grid-template-columns:
+						1fr 1fr;
+
+						grid-template-rows:
+						auto;
 						}
 
 						}
@@ -638,6 +896,17 @@
 						align-items: flex-start;
 						}
 
+
+						.project-detail {
+						padding: 25px;
+						}
+
+
+						.image-column {
+						grid-template-columns:
+						1fr;
+						}
+
 						}
 
 					</style>
@@ -649,17 +918,13 @@
 	<body>
 
 
-		<!-- =====================================================
-         STAR BACKGROUND
-    ====================================================== -->
+		<!-- STAR BACKGROUND -->
 
 		<div id="stars"></div>
 
 
 
-		<!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+		<!-- NAVIGATION -->
 
 		<header>
 
@@ -779,14 +1044,17 @@
 
 
 
+				<!-- PROJECT CARDS -->
+
 				<div class="project-grid">
 
 
-					<!-- =========================================
-                     ASHEN BLOOM
-                ========================================== -->
+					<!-- ASHEN BLOOM -->
 
-					<article class="project-card">
+					<article
+						class="project-card active"
+						data-project="ashen"
+                >
 
 						<div class="project-main">
 
@@ -809,47 +1077,31 @@
 
 								A third-person character-action
 								souls-lite set in a dying world
-								where nature has fused with
-								machines, corpses, and ruined cities.
+								where nature has fused with machines,
+								corpses, and ruined cities.
 
 							</p>
 
 						</div>
 
 
-						<details>
-
-							<summary>
-								View Project
-							</summary>
-
-
-							<div class="dropdown-content">
-
-								<p>
-									Programming and development details
-									will go here.
-								</p>
-
-
-								<p>
-									Testing and debugging details
-									will go here.
-								</p>
-
-							</div>
-
-						</details>
+						<button
+							class="view-project"
+							data-target="ashen"
+                    >
+							View Project
+						</button>
 
 					</article>
 
 
 
-					<!-- =========================================
-                     ROBORUN
-                ========================================== -->
+					<!-- ROBORUN -->
 
-					<article class="project-card">
+					<article
+						class="project-card"
+						data-project="roborun"
+                >
 
 						<div class="project-main">
 
@@ -872,47 +1124,30 @@
 
 								A Unity project featuring gameplay
 								systems, upgrades, a shop,
-								overworld development, and
-								map creation.
+								overworld development, and map creation.
 
 							</p>
 
 						</div>
 
 
-						<details>
-
-							<summary>
-								View Project
-							</summary>
-
-
-							<div class="dropdown-content">
-
-								<p>
-									Programming and development details
-									will go here.
-								</p>
-
-
-								<p>
-									Testing and debugging details
-									will go here.
-								</p>
-
-							</div>
-
-						</details>
+						<button
+							class="view-project"
+							data-target="roborun"
+                    >
+							View Project
+						</button>
 
 					</article>
 
 
 
-					<!-- =========================================
-                     I AM THE WALL
-                ========================================== -->
+					<!-- I AM THE WALL -->
 
-					<article class="project-card">
+					<article
+						class="project-card"
+						data-project="wall"
+                >
 
 						<div class="project-main">
 
@@ -942,31 +1177,582 @@
 						</div>
 
 
-						<details>
+						<button
+							class="view-project"
+							data-target="wall"
+                    >
+							View Project
+						</button>
 
-							<summary>
-								View Project
-							</summary>
-
-
-							<div class="dropdown-content">
-
-								<p>
-									Development and project details
-									will go here.
-								</p>
+					</article>
 
 
-								<p>
-									Testing and debugging details
-									will go here.
-								</p>
+				</div>
+
+
+
+				<!-- =================================================
+                 ONE SHARED PROJECT SHOWCASE
+            ================================================== -->
+
+				<div class="project-showcase">
+
+
+					<!-- =============================================
+                     ASHEN BLOOM DETAIL
+                ============================================== -->
+
+					<div
+						id="ashen"
+						class="project-detail active"
+                >
+
+						<div class="detail-top">
+
+							<p class="detail-engine">
+								UNREAL ENGINE 5.6
+							</p>
+
+
+							<h2>
+								Ashen Bloom
+							</h2>
+
+
+							<p>
+
+								A collaborative Unreal Engine project
+								where my work focused on gameplay systems,
+								environment tools, procedural generation,
+								UI systems, testing, and debugging.
+
+							</p>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Project Overview
+							</h3>
+
+
+							<p>
+
+								More information about Ashen Bloom
+								will go here.
+
+							</p>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Development & QA
+							</h3>
+
+
+							<div class="work-grid">
+
+
+								<div class="work-box">
+
+									<h4>
+										Programming / Development
+									</h4>
+
+
+									<p>
+
+										Inventory system, level-up system,
+										inventory character rotation,
+										PCG forest generation,
+										landscape grass, and landscape
+										material development.
+
+									</p>
+
+								</div>
+
+
+
+								<div class="work-box">
+
+									<h4>
+										Testing / Debugging
+									</h4>
+
+
+									<p>
+
+										Testing, bug investigation,
+										troubleshooting, reproduction,
+										and verification information
+										will go here.
+
+									</p>
+
+								</div>
+
 
 							</div>
 
-						</details>
+						</div>
 
-					</article>
+
+
+						<div class="detail-section">
+
+							<h3>
+								Tools & Technologies
+							</h3>
+
+
+							<div class="tags">
+
+								<span>Unreal Engine 5.6</span>
+
+								<span>C++</span>
+
+								<span>Blueprints</span>
+
+								<span>PCG</span>
+
+								<span>Gaea 2</span>
+
+								<span>Blender</span>
+
+								<span>Perforce</span>
+
+								<span>Visual Studio</span>
+
+							</div>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Gameplay & Media
+							</h3>
+
+
+							<div class="media-layout">
+
+								<div class="video-box">
+
+									Gameplay Video
+
+								</div>
+
+
+								<div class="image-column">
+
+									<div class="image-box">
+										Screenshot 1
+									</div>
+
+
+									<div class="image-box">
+										Screenshot 2
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Code Example
+							</h3>
+
+
+							<div class="code-box">
+
+								<div class="code-title">
+									Ashen Bloom • C++
+								</div>
+
+
+								<pre>
+									<code>
+										// Ashen Bloom code example
+										// will go here later.
+									</code>
+								</pre>
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+
+					<!-- =============================================
+                     ROBORUN DETAIL
+                ============================================== -->
+
+					<div
+						id="roborun"
+						class="project-detail"
+                >
+
+						<div class="detail-top">
+
+							<p class="detail-engine">
+								UNITY
+							</p>
+
+
+							<h2>
+								RoboRun
+							</h2>
+
+
+							<p>
+
+								A Unity and C# project involving
+								gameplay systems, progression,
+								shop functionality, and world development.
+
+							</p>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Project Overview
+							</h3>
+
+
+							<p>
+
+								More information about RoboRun
+								will go here.
+
+							</p>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Development & QA
+							</h3>
+
+
+							<div class="work-grid">
+
+
+								<div class="work-box">
+
+									<h4>
+										Programming / Development
+									</h4>
+
+
+									<p>
+
+										Shop systems, upgrade systems,
+										gameplay functionality,
+										overworld development,
+										and map creation.
+
+									</p>
+
+								</div>
+
+
+
+								<div class="work-box">
+
+									<h4>
+										Testing / Debugging
+									</h4>
+
+
+									<p>
+
+										Testing, debugging, issue
+										reproduction, and verification
+										information will go here.
+
+									</p>
+
+								</div>
+
+
+							</div>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Tools & Technologies
+							</h3>
+
+
+							<div class="tags">
+
+								<span>Unity</span>
+
+								<span>C#</span>
+
+								<span>Visual Studio</span>
+
+							</div>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Gameplay & Media
+							</h3>
+
+
+							<div class="media-layout">
+
+								<div class="video-box">
+
+									Gameplay Video
+
+								</div>
+
+
+								<div class="image-column">
+
+									<div class="image-box">
+										Screenshot 1
+									</div>
+
+
+									<div class="image-box">
+										Screenshot 2
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Code Example
+							</h3>
+
+
+							<div class="code-box">
+
+								<div class="code-title">
+									RoboRun • C#
+								</div>
+
+
+								<pre>
+									<code>
+										// RoboRun code example
+										// will go here later.
+									</code>
+								</pre>
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+
+					<!-- =============================================
+                     I AM THE WALL DETAIL
+                ============================================== -->
+
+					<div
+						id="wall"
+						class="project-detail"
+                >
+
+						<div class="detail-top">
+
+							<p class="detail-engine">
+								GODOT GAME JAM
+							</p>
+
+
+							<h2>
+								I Am the Wall
+							</h2>
+
+
+							<p>
+
+								A Godot game jam project where
+								I contributed to the visual direction,
+								design, pixel art, and animation.
+
+							</p>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Project Overview
+							</h3>
+
+
+							<p>
+
+								More information about I Am the Wall
+								will go here.
+
+							</p>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Development & QA
+							</h3>
+
+
+							<div class="work-grid">
+
+
+								<div class="work-box">
+
+									<h4>
+										Development / Design
+									</h4>
+
+
+									<p>
+
+										Pixel art, animation,
+										color palette creation,
+										and game design documentation.
+
+									</p>
+
+								</div>
+
+
+
+								<div class="work-box">
+
+									<h4>
+										Testing / Debugging
+									</h4>
+
+
+									<p>
+
+										Game jam testing, issue checking,
+										gameplay verification,
+										and debugging details
+										will go here.
+
+									</p>
+
+								</div>
+
+
+							</div>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Tools & Technologies
+							</h3>
+
+
+							<div class="tags">
+
+								<span>Godot</span>
+
+								<span>Pixel Art</span>
+
+								<span>Animation</span>
+
+								<span>Game Design</span>
+
+							</div>
+
+						</div>
+
+
+
+						<div class="detail-section">
+
+							<h3>
+								Gameplay & Media
+							</h3>
+
+
+							<div class="media-layout">
+
+								<div class="video-box">
+
+									Gameplay Video
+
+								</div>
+
+
+								<div class="image-column">
+
+									<div class="image-box">
+										Screenshot / Pixel Art
+									</div>
+
+
+									<div class="image-box">
+										Animation Example
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
 
 
 				</div>
@@ -987,10 +1773,93 @@
 
 
 		<!-- =====================================================
-         STAR BACKGROUND SCRIPT
+         SCRIPT
     ====================================================== -->
 
 		<script>
+
+
+			/* =====================================================
+			PROJECT SWITCHING
+			===================================================== */
+
+			const projectButtons =
+			document.querySelectorAll(
+			".view-project"
+			);
+
+
+			const projectDetails =
+			document.querySelectorAll(
+			".project-detail"
+			);
+
+
+			const projectCards =
+			document.querySelectorAll(
+			".project-card"
+			);
+
+
+			projectButtons.forEach(
+			button => {
+
+			button.addEventListener(
+			"click",
+			() => {
+
+			const target =
+			button.dataset.target;
+
+
+			projectDetails.forEach(
+			detail => {
+
+			detail.classList.remove(
+			"active"
+			);
+
+			}
+			);
+
+
+			projectCards.forEach(
+			card => {
+
+			card.classList.remove(
+			"active"
+			);
+
+			}
+			);
+
+
+			document
+			.getElementById(target)
+			.classList.add(
+			"active"
+			);
+
+
+			document
+			.querySelector(
+			`[data-project="${target}"]`
+			)
+			.classList.add(
+			"active"
+			);
+
+			}
+			);
+
+			}
+			);
+
+
+
+			/* =====================================================
+			STARS
+			===================================================== */
 
 			const stars =
 			document.getElementById(
