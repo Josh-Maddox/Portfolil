@@ -1,9 +1,7 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en">
 
 	<head>
-
 		<meta charset="UTF-8">
 
 			<meta
@@ -16,9 +14,7 @@
 					content="Josh Maddox - Game Programmer and QA Engineer portfolio."
     >
 
-					<title>
-						Josh Maddox | Game Programmer & QA Engineer
-					</title>
+					<title>Josh Maddox | Game Programmer & QA Engineer</title>
 
 
 					<style>
@@ -76,7 +72,7 @@
 
 
 						/* =====================================================
-						FALLING STAR BACKGROUND
+						CSS-ONLY FALLING STAR BACKGROUND
 						===================================================== */
 
 						#stars {
@@ -88,68 +84,121 @@
 						width: 100vw;
 						height: 100vh;
 
-						overflow: hidden;
-
 						pointer-events: none;
 
-						z-index: 1;
+						overflow: hidden;
+
+						z-index: 0;
 						}
 
 
-						.star {
+						/*
+						LARGE / BRIGHTER STAR LAYER
+						*/
+
+						#stars::before {
+						content: "";
+
 						position: absolute;
 
-						top: -20px;
+						top: -1000px;
+						left: 0;
 
-						display: block;
+						width: 100%;
+						height: calc(100% + 1000px);
 
-						background: #ffffff;
+						background-image:
+						radial-gradient(
+						circle,
+						rgba(255, 255, 255, 0.95) 1.5px,
+						transparent 2px
+						),
 
-						border-radius: 50%;
-
-						opacity: 0;
-
-						box-shadow:
-						0 0 6px
-						rgba(
-						255,
-						255,
-						255,
-						0.8
+						radial-gradient(
+						circle,
+						rgba(255, 255, 255, 0.75) 1px,
+						transparent 1.7px
 						);
 
+						background-size:
+						110px 110px,
+						170px 170px;
+
+						background-position:
+						15px 20px,
+						60px 75px;
+
 						animation:
-						starFall linear infinite;
+						starsFallLarge 18s linear infinite;
 						}
 
 
-						@keyframes starFall {
+						/*
+						SMALLER / DIMMER STAR LAYER
+						*/
 
-						0% {
+						#stars::after {
+						content: "";
+
+						position: absolute;
+
+						top: -1200px;
+						left: 0;
+
+						width: 100%;
+						height: calc(100% + 1200px);
+
+						background-image:
+						radial-gradient(
+						circle,
+						rgba(255, 255, 255, 0.55) 1px,
+						transparent 1.5px
+						),
+
+						radial-gradient(
+						circle,
+						rgba(255, 255, 255, 0.35) 1px,
+						transparent 1.4px
+						);
+
+						background-size:
+						75px 75px,
+						135px 135px;
+
+						background-position:
+						30px 45px,
+						80px 20px;
+
+						animation:
+						starsFallSmall 26s linear infinite;
+						}
+
+
+						@keyframes starsFallLarge {
+
+						from {
 						transform:
-						translateY(-30px);
-
-						opacity: 0;
+						translateY(0);
 						}
 
-
-						10% {
-						opacity:
-						var(--star-opacity);
-						}
-
-
-						90% {
-						opacity:
-						var(--star-opacity);
-						}
-
-
-						100% {
+						to {
 						transform:
-						translateY(110vh);
+						translateY(1000px);
+						}
 
-						opacity: 0;
+						}
+
+
+						@keyframes starsFallSmall {
+
+						from {
+						transform:
+						translateY(0);
+						}
+
+						to {
+						transform:
+						translateY(1200px);
 						}
 
 						}
@@ -157,7 +206,7 @@
 
 
 						/* =====================================================
-						KEEP CONTENT ABOVE STARS
+						KEEP WEBSITE CONTENT ABOVE STARS
 						===================================================== */
 
 						header,
@@ -165,7 +214,7 @@
 						footer {
 						position: relative;
 
-						z-index: 2;
+						z-index: 1;
 						}
 
 
@@ -1014,7 +1063,7 @@
 
 
 		<!-- =====================================================
-         STAR BACKGROUND
+         CSS-ONLY STAR BACKGROUND
     ====================================================== -->
 
 		<div id="stars"></div>
@@ -1893,15 +1942,10 @@
 
 
 		<!-- =====================================================
-         JAVASCRIPT
+         PROJECT SWITCHING ONLY
     ====================================================== -->
 
 		<script>
-
-
-			/* =====================================================
-			PROJECT SWITCHING
-			===================================================== */
 
 			const projectButtons =
 			document.querySelectorAll(
@@ -1974,100 +2018,6 @@
 
 			}
 			);
-
-
-
-			/* =====================================================
-			FALLING STARS
-			===================================================== */
-
-			const starBackground =
-			document.getElementById(
-			"stars"
-			);
-
-
-			if (starBackground) {
-
-			const starCount =
-			140;
-
-
-			for (
-			let i = 0;
-			i < starCount;
-                i++
-            ) {
-
-                const star =
-                    document.createElement(
-                        "span"
-                    );
-
-
-                star.classList.add(
-                    "star"
-                );
-
-
-                /*
-                Random size
-                */
-
-                const size =
-                    Math.random() * 2.5 + 1;
-
-
-                star.style.width =
-                    size + "px";
-
-
-                star.style.height =
-                    size + "px";
-
-
-                /*
-                Random position across screen
-                */
-
-                star.style.left =
-                    Math.random() * 100 + "vw";
-
-
-                /*
-                Random falling speed
-                */
-
-                star.style.animationDuration =
-                    Math.random() * 15 + 12 + "s";
-
-
-                /*
-                Random starting point in animation
-                */
-
-                star.style.animationDelay =
-                    Math.random() * -25 + "s";
-
-
-                /*
-                Random brightness
-                */
-
-                star.style.setProperty(
-                    "--star-opacity",
-                    Math.random() * 0.55 + 0.25
-                );
-
-
-                starBackground.appendChild(
-                    star
-                );
-
-            }
-
-        }
-
 
 		</script>
 
