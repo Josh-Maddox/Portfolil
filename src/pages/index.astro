@@ -14,7 +14,9 @@
 					content="Josh Maddox - Game Programmer and QA Engineer portfolio."
     >
 
-					<title>Josh Maddox | Game Programmer & QA Engineer</title>
+					<title>
+						Josh Maddox | Game Programmer & QA Engineer
+					</title>
 
 
 					<style>
@@ -38,13 +40,7 @@
 						body {
 						min-height: 100vh;
 
-						background:
-						linear-gradient(
-						180deg,
-						#07090c 0%,
-						#090b0f 45%,
-						#07090c 100%
-						);
+						background: #000;
 
 						color: #f2f2f2;
 
@@ -72,10 +68,10 @@
 
 
 						/* =====================================================
-						CSS-ONLY FALLING STAR BACKGROUND
+						MATRIX BACKGROUND
 						===================================================== */
 
-						#stars {
+						#matrix-bg {
 						position: fixed;
 
 						top: 0;
@@ -86,127 +82,15 @@
 
 						pointer-events: none;
 
-						overflow: hidden;
-
 						z-index: 0;
-						}
 
-
-						/*
-						LARGE / BRIGHTER STAR LAYER
-						*/
-
-						#stars::before {
-						content: "";
-
-						position: absolute;
-
-						top: -1000px;
-						left: 0;
-
-						width: 100%;
-						height: calc(100% + 1000px);
-
-						background-image:
-						radial-gradient(
-						circle,
-						rgba(255, 255, 255, 0.95) 1.5px,
-						transparent 2px
-						),
-
-						radial-gradient(
-						circle,
-						rgba(255, 255, 255, 0.75) 1px,
-						transparent 1.7px
-						);
-
-						background-size:
-						110px 110px,
-						170px 170px;
-
-						background-position:
-						15px 20px,
-						60px 75px;
-
-						animation:
-						starsFallLarge 18s linear infinite;
-						}
-
-
-						/*
-						SMALLER / DIMMER STAR LAYER
-						*/
-
-						#stars::after {
-						content: "";
-
-						position: absolute;
-
-						top: -1200px;
-						left: 0;
-
-						width: 100%;
-						height: calc(100% + 1200px);
-
-						background-image:
-						radial-gradient(
-						circle,
-						rgba(255, 255, 255, 0.55) 1px,
-						transparent 1.5px
-						),
-
-						radial-gradient(
-						circle,
-						rgba(255, 255, 255, 0.35) 1px,
-						transparent 1.4px
-						);
-
-						background-size:
-						75px 75px,
-						135px 135px;
-
-						background-position:
-						30px 45px,
-						80px 20px;
-
-						animation:
-						starsFallSmall 26s linear infinite;
-						}
-
-
-						@keyframes starsFallLarge {
-
-						from {
-						transform:
-						translateY(0);
-						}
-
-						to {
-						transform:
-						translateY(1000px);
-						}
-
-						}
-
-
-						@keyframes starsFallSmall {
-
-						from {
-						transform:
-						translateY(0);
-						}
-
-						to {
-						transform:
-						translateY(1200px);
-						}
-
+						background: #000;
 						}
 
 
 
 						/* =====================================================
-						KEEP WEBSITE CONTENT ABOVE STARS
+						KEEP WEBSITE ABOVE MATRIX
 						===================================================== */
 
 						header,
@@ -214,7 +98,7 @@
 						footer {
 						position: relative;
 
-						z-index: 1;
+						z-index: 2;
 						}
 
 
@@ -714,7 +598,7 @@
 
 
 						.detail-top p {
-						max-width: 800px;
+						max-width: 850px;
 
 						color: #aeb4bc;
 						}
@@ -898,17 +782,7 @@
 						}
 
 
-						.image-box img {
-						width: 100%;
-
-						height: 100%;
-
-						display: block;
-
-						object-fit: cover;
-						}
-
-
+						.image-box img,
 						.video-box video {
 						width: 100%;
 
@@ -1063,10 +937,13 @@
 
 
 		<!-- =====================================================
-         CSS-ONLY STAR BACKGROUND
+         MATRIX BACKGROUND
     ====================================================== -->
 
-		<div id="stars"></div>
+		<canvas
+			id="matrix-bg"
+			aria-hidden="true"
+    ></canvas>
 
 
 
@@ -1226,10 +1103,9 @@
 
 							<p class="project-description">
 
-								A third-person character-action
-								souls-lite set in a dying world
-								where nature has fused with machines,
-								corpses, and ruined cities.
+								A third-person character-action souls-lite
+								set in a dying world where nature has fused
+								with machines, corpses, and ruined cities.
 
 							</p>
 
@@ -1237,6 +1113,7 @@
 
 
 						<button
+							type="button"
 							class="view-project"
 							data-target="ashen"
                     >
@@ -1283,6 +1160,7 @@
 
 
 						<button
+							type="button"
 							class="view-project"
 							data-target="roborun"
                     >
@@ -1329,6 +1207,7 @@
 
 
 						<button
+							type="button"
 							class="view-project"
 							data-target="wall"
                     >
@@ -1391,10 +1270,8 @@
 
 
 							<p>
-
 								More information about Ashen Bloom
 								will go here.
-
 							</p>
 
 						</div>
@@ -1499,14 +1376,11 @@
 
 
 								<div class="video-box">
-
 									Gameplay Video
-
 								</div>
 
 
 								<div class="image-column">
-
 
 									<div class="image-box">
 										Screenshot 1
@@ -1516,7 +1390,6 @@
 									<div class="image-box">
 										Screenshot 2
 									</div>
-
 
 								</div>
 
@@ -1597,10 +1470,8 @@
 
 
 							<p>
-
 								More information about RoboRun
 								will go here.
-
 							</p>
 
 						</div>
@@ -1694,14 +1565,11 @@
 
 
 								<div class="video-box">
-
 									Gameplay Video
-
 								</div>
 
 
 								<div class="image-column">
-
 
 									<div class="image-box">
 										Screenshot 1
@@ -1711,7 +1579,6 @@
 									<div class="image-box">
 										Screenshot 2
 									</div>
-
 
 								</div>
 
@@ -1792,10 +1659,8 @@
 
 
 							<p>
-
 								More information about I Am the Wall
 								will go here.
-
 							</p>
 
 						</div>
@@ -1891,14 +1756,11 @@
 
 
 								<div class="video-box">
-
 									Gameplay Video
-
 								</div>
 
 
 								<div class="image-column">
-
 
 									<div class="image-box">
 										Screenshot / Pixel Art
@@ -1908,7 +1770,6 @@
 									<div class="image-box">
 										Animation Example
 									</div>
-
 
 								</div>
 
@@ -1934,18 +1795,21 @@
     ====================================================== -->
 
 		<footer>
-
 			© 2026 Josh Maddox
-
 		</footer>
 
 
 
 		<!-- =====================================================
-         PROJECT SWITCHING ONLY
+         JAVASCRIPT
     ====================================================== -->
 
 		<script>
+
+
+			/* =====================================================
+			PROJECT SWITCHING
+			===================================================== */
 
 			const projectButtons =
 			document.querySelectorAll(
@@ -1976,6 +1840,18 @@
 			button.dataset.target;
 
 
+			const targetDetail =
+			document.getElementById(
+			target
+			);
+
+
+			const targetCard =
+			document.querySelector(
+			`[data-project="${target}"]`
+			);
+
+
 			projectDetails.forEach(
 			detail => {
 
@@ -1998,26 +1874,393 @@
 			);
 
 
-			document
-			.getElementById(target)
-			.classList.add(
+			if (targetDetail) {
+
+			targetDetail.classList.add(
 			"active"
 			);
 
+			}
 
-			document
-			.querySelector(
-			`[data-project="${target}"]`
-			)
-			.classList.add(
+
+			if (targetCard) {
+
+			targetCard.classList.add(
 			"active"
 			);
+
+			}
 
 			}
 			);
 
 			}
 			);
+
+
+
+			/* =====================================================
+			SLOW MATRIX BACKGROUND
+			===================================================== */
+
+			const matrixCanvas =
+			document.getElementById(
+			"matrix-bg"
+			);
+
+
+			if (matrixCanvas) {
+
+			const ctx =
+			matrixCanvas.getContext(
+			"2d"
+			);
+
+
+			const characters =
+			"アァカサタナハマヤャラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&*+-<>";
+
+
+			const fontSize =
+			18;
+
+
+			let columns =
+			[];
+
+
+			function resizeMatrix() {
+
+			const pixelRatio =
+			window.devicePixelRatio || 1;
+
+
+			matrixCanvas.width =
+			Math.floor(
+			window.innerWidth *
+			pixelRatio
+			);
+
+
+			matrixCanvas.height =
+			Math.floor(
+			window.innerHeight *
+			pixelRatio
+			);
+
+
+			matrixCanvas.style.width =
+			window.innerWidth +
+			"px";
+
+
+			matrixCanvas.style.height =
+			window.innerHeight +
+			"px";
+
+
+			ctx.setTransform(
+			pixelRatio,
+			0,
+			0,
+			pixelRatio,
+			0,
+			0
+			);
+
+
+			const columnCount =
+			Math.ceil(
+			window.innerWidth /
+			fontSize
+			);
+
+
+			columns =
+			[];
+
+
+			for (
+			let i = 0;
+			i < columnCount;
+                    i++
+                ) {
+
+                    const trailLength =
+                        Math.floor(
+                            Math.random() * 6
+                        ) + 5;
+
+
+                    const symbols =
+                        [];
+
+
+                    for (
+                        let j = 0;
+                        j < trailLength;
+                        j++
+                    ) {
+
+                        symbols.push(
+                            characters.charAt(
+                                Math.floor(
+                                    Math.random() *
+                                    characters.length
+                                )
+                            )
+                        );
+
+                    }
+
+
+                    columns.push({
+
+                        y:
+                            Math.random() *
+                            window.innerHeight,
+
+                        speed:
+                            Math.random() *
+                            0.03 +
+                            0.01,
+
+                        brightness:
+                            Math.random() *
+                            0.45 +
+                            0.30,
+
+                        symbols:
+                            symbols,
+
+                        lastCharacterChange:
+                            performance.now(),
+
+                        characterChangeSpeed:
+                            Math.random() *
+                            700 +
+                            700
+
+                    });
+
+                }
+
+
+                ctx.fillStyle =
+                    "#000";
+
+
+                ctx.fillRect(
+                    0,
+                    0,
+                    window.innerWidth,
+                    window.innerHeight
+                );
+
+            }
+
+
+
+            function drawMatrix() {
+
+                /*
+                   This slightly dark transparent
+                   layer creates the fading trail.
+                */
+
+                ctx.fillStyle =
+                    "rgba(0, 0, 0, 0.10)";
+
+
+                ctx.fillRect(
+                    0,
+                    0,
+                    window.innerWidth,
+                    window.innerHeight
+                );
+
+
+                ctx.font =
+                    `${fontSize}px monospace`;
+
+
+                ctx.textAlign =
+                    "center";
+
+
+                for (
+                    let i = 0;
+                    i < columns.length;
+                    i++
+                ) {
+
+                    const column =
+                        columns[i];
+
+
+                    const x =
+                        i * fontSize +
+                        fontSize / 2;
+
+
+                    const now =
+                        performance.now();
+
+
+                    if (
+                        now -
+                        column.lastCharacterChange >=
+                        column.characterChangeSpeed
+                    ) {
+
+                        const characterToChange =
+                            Math.floor(
+                                Math.random() *
+                                column.symbols.length
+                            );
+
+
+                        column.symbols[characterToChange] =
+                            characters.charAt(
+                                Math.floor(
+                                    Math.random() *
+                                    characters.length
+                                )
+                            );
+
+
+                        column.lastCharacterChange =
+                            now;
+
+
+                        column.characterChangeSpeed =
+                            Math.random() *
+                            700 +
+                            700;
+
+                    }
+
+
+                    for (
+                        let j = 0;
+                        j < column.symbols.length;
+                        j++
+                    ) {
+
+                        const characterY =
+                            column.y -
+                            j * fontSize;
+
+
+                        const fade =
+                            1 -
+                            (
+                                j /
+                                column.symbols.length
+                            );
+
+
+                        ctx.fillStyle =
+                            `rgba(0, 255, 65, ${column.brightness * fade})`;
+
+
+                        ctx.fillText(
+                            column.symbols[j],
+                            x,
+                            characterY
+                        );
+
+
+                        if (
+                            j === 0 &&
+			Math.random() >
+			0.985
+			) {
+
+			ctx.fillStyle =
+			"rgba(190, 255, 205, 0.95)";
+
+
+			ctx.fillText(
+			column.symbols[j],
+			x,
+			characterY
+			);
+
+			}
+
+			}
+
+
+			/*
+			Each column has its own
+			random slow speed.
+			*/
+
+			column.y +=
+			column.speed *
+			fontSize;
+
+
+			/*
+			When a column reaches the bottom,
+			restart it at a random point
+			above the screen.
+			*/
+
+			if (
+			column.y >
+			window.innerHeight +
+			fontSize
+			) {
+
+			column.y =
+			-(
+			Math.random() *
+			window.innerHeight *
+			0.75
+			);
+
+
+			column.speed =
+			Math.random() *
+			0.08 +
+			0.003;
+
+
+			column.brightness =
+			Math.random() *
+			0.45 +
+			0.30;
+
+			}
+
+			}
+
+
+			requestAnimationFrame(
+			drawMatrix
+			);
+
+			}
+
+
+
+			resizeMatrix();
+
+
+			window.addEventListener(
+			"resize",
+			resizeMatrix
+			);
+
+
+			requestAnimationFrame(
+			drawMatrix
+			);
+
+			}
+
 
 		</script>
 
