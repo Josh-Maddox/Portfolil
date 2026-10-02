@@ -85,43 +85,45 @@
 						top: 0;
 						left: 0;
 
-						width: 100%;
-						height: 100%;
+						width: 100vw;
+						height: 100vh;
 
 						overflow: hidden;
 
 						pointer-events: none;
 
-						z-index: 0;
+						z-index: 1;
 						}
 
 
 						.star {
 						position: absolute;
 
-						top: -10px;
+						top: -20px;
 
-						background: white;
+						display: block;
+
+						background: #ffffff;
 
 						border-radius: 50%;
 
 						opacity: 0;
 
 						box-shadow:
-						0 0 5px
+						0 0 6px
 						rgba(
 						255,
 						255,
 						255,
-						0.35
+						0.8
 						);
 
 						animation:
-						fall linear infinite;
+						starFall linear infinite;
 						}
 
 
-						@keyframes fall {
+						@keyframes starFall {
 
 						0% {
 						transform:
@@ -137,7 +139,7 @@
 						}
 
 
-						85% {
+						90% {
 						opacity:
 						var(--star-opacity);
 						}
@@ -163,7 +165,7 @@
 						footer {
 						position: relative;
 
-						z-index: 1;
+						z-index: 2;
 						}
 
 
@@ -369,7 +371,13 @@
 
 
 						.secondary-button {
-						background: #15181d;
+						background:
+						rgba(
+						21,
+						24,
+						29,
+						0.90
+						);
 
 						border:
 						1px solid #383d45;
@@ -458,7 +466,7 @@
 						18,
 						21,
 						26,
-						0.94
+						0.92
 						);
 
 						border:
@@ -588,7 +596,7 @@
 						13,
 						16,
 						20,
-						0.93
+						0.92
 						);
 
 						border:
@@ -1035,6 +1043,7 @@
 						Home
 					</a>
 
+
 					<a href="#projects">
 						Projects
 					</a>
@@ -1285,7 +1294,7 @@
 
 
 				<!-- =================================================
-                 ONE SHARED PROJECT DISPLAY AREA
+                 SHARED PROJECT DISPLAY
             ================================================== -->
 
 				<div class="project-showcase">
@@ -1325,8 +1334,6 @@
 
 
 
-						<!-- OVERVIEW -->
-
 						<div class="detail-section">
 
 							<h3>
@@ -1344,8 +1351,6 @@
 						</div>
 
 
-
-						<!-- DEVELOPMENT AND QA -->
 
 						<div class="detail-section">
 
@@ -1403,8 +1408,6 @@
 
 
 
-						<!-- TOOLS -->
-
 						<div class="detail-section">
 
 							<h3>
@@ -1436,8 +1439,6 @@
 
 
 
-						<!-- MEDIA -->
-
 						<div class="detail-section">
 
 							<h3>
@@ -1459,16 +1460,12 @@
 
 
 									<div class="image-box">
-
 										Screenshot 1
-
 									</div>
 
 
 									<div class="image-box">
-
 										Screenshot 2
-
 									</div>
 
 
@@ -1479,8 +1476,6 @@
 						</div>
 
 
-
-						<!-- CODE -->
 
 						<div class="detail-section">
 
@@ -1545,8 +1540,6 @@
 
 
 
-						<!-- OVERVIEW -->
-
 						<div class="detail-section">
 
 							<h3>
@@ -1564,8 +1557,6 @@
 						</div>
 
 
-
-						<!-- DEVELOPMENT AND QA -->
 
 						<div class="detail-section">
 
@@ -1622,8 +1613,6 @@
 
 
 
-						<!-- TOOLS -->
-
 						<div class="detail-section">
 
 							<h3>
@@ -1644,8 +1633,6 @@
 						</div>
 
 
-
-						<!-- MEDIA -->
 
 						<div class="detail-section">
 
@@ -1668,16 +1655,12 @@
 
 
 									<div class="image-box">
-
 										Screenshot 1
-
 									</div>
 
 
 									<div class="image-box">
-
 										Screenshot 2
-
 									</div>
 
 
@@ -1688,8 +1671,6 @@
 						</div>
 
 
-
-						<!-- CODE -->
 
 						<div class="detail-section">
 
@@ -1754,8 +1735,6 @@
 
 
 
-						<!-- OVERVIEW -->
-
 						<div class="detail-section">
 
 							<h3>
@@ -1773,8 +1752,6 @@
 						</div>
 
 
-
-						<!-- DEVELOPMENT AND QA -->
 
 						<div class="detail-section">
 
@@ -1831,8 +1808,6 @@
 
 
 
-						<!-- TOOLS -->
-
 						<div class="detail-section">
 
 							<h3>
@@ -1856,8 +1831,6 @@
 
 
 
-						<!-- MEDIA -->
-
 						<div class="detail-section">
 
 							<h3>
@@ -1879,16 +1852,12 @@
 
 
 									<div class="image-box">
-
 										Screenshot / Pixel Art
-
 									</div>
 
 
 									<div class="image-box">
-
 										Animation Example
-
 									</div>
 
 
@@ -2018,80 +1987,84 @@
 			);
 
 
+			if (starBackground) {
+
 			const starCount =
-			100;
+			140;
 
 
 			for (
 			let i = 0;
 			i < starCount;
-            i++
-        ) {
+                i++
+            ) {
 
-            const star =
-                document.createElement(
-                    "span"
+                const star =
+                    document.createElement(
+                        "span"
+                    );
+
+
+                star.classList.add(
+                    "star"
                 );
 
 
-            star.className =
-                "star";
+                /*
+                Random size
+                */
+
+                const size =
+                    Math.random() * 2.5 + 1;
 
 
-            /*
-            Random star size
-            */
-
-            const size =
-                Math.random() * 2 + 0.7;
+                star.style.width =
+                    size + "px";
 
 
-            star.style.width =
-                size + "px";
+                star.style.height =
+                    size + "px";
 
 
-            star.style.height =
-                size + "px";
+                /*
+                Random position across screen
+                */
+
+                star.style.left =
+                    Math.random() * 100 + "vw";
 
 
-            /*
-            Random horizontal position
-            */
+                /*
+                Random falling speed
+                */
 
-            star.style.left =
-                Math.random() * 100 + "%";
-
-
-            /*
-            Different falling speeds
-            */
-
-            star.style.animationDuration =
-                Math.random() * 18 + 14 + "s";
+                star.style.animationDuration =
+                    Math.random() * 15 + 12 + "s";
 
 
-            /*
-            Starts stars at different positions
-            in the animation immediately.
-            */
+                /*
+                Random starting point in animation
+                */
 
-            star.style.animationDelay =
-                Math.random() * -35 + "s";
-
-
-            /*
-            Different brightness levels
-            */
-
-            star.style.setProperty(
-                "--star-opacity",
-                Math.random() * 0.40 + 0.10
-            );
+                star.style.animationDelay =
+                    Math.random() * -25 + "s";
 
 
-            starBackground.appendChild(
-                star
-            );
+                /*
+                Random brightness
+                */
+
+                star.style.setProperty(
+                    "--star-opacity",
+                    Math.random() * 0.55 + 0.25
+                );
+
+
+                starBackground.appendChild(
+                    star
+                );
+
+            }
 
         }
 
