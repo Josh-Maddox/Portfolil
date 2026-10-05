@@ -1,6 +1,11 @@
 ﻿---
-import { Image } from "astro:assets";
-import profilePhoto from "../Images/Josh-profilePic.jpg";
+const baseUrl =
+    import.meta.env.BASE_URL.endsWith("/")
+        ? import.meta.env.BASE_URL
+        : import.meta.env.BASE_URL + "/";
+
+const profilePhotoUrl =
+    baseUrl + "Images/Josh-profilePic.jpg";
 ---
 
 <!DOCTYPE html>
@@ -41,12 +46,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
             min-height: 100vh;
             background: #000;
             color: #f2f2f2;
-
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
+            font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
             overflow-x: hidden;
         }
@@ -72,17 +72,12 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         #matrix-bg {
             position: fixed;
-
             top: 0;
             left: 0;
-
             width: 100vw;
             height: 100vh;
-
             pointer-events: none;
-
             z-index: 0;
-
             background: #000;
         }
 
@@ -107,39 +102,20 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         header {
             position: sticky;
-
             top: 0;
-
             z-index: 100;
-
-            background:
-                rgba(
-                    8,
-                    10,
-                    13,
-                    0.90
-                );
-
-            border-bottom:
-                1px solid #24282f;
-
-            backdrop-filter:
-                blur(10px);
+            background: rgba(8, 10, 13, 0.90);
+            border-bottom: 1px solid #24282f;
+            backdrop-filter: blur(10px);
         }
 
         nav {
             width: 90%;
-
             max-width: 1150px;
-
             min-height: 70px;
-
             margin: auto;
-
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
         }
 
@@ -170,9 +146,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         main {
             width: 90%;
-
             max-width: 1150px;
-
             margin: auto;
         }
 
@@ -183,27 +157,10 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
         ===================================================== */
 
         .content-box {
-            background:
-                rgba(
-                    18,
-                    21,
-                    26,
-                    0.92
-                );
-
-            border:
-                1px solid #2b3038;
-
+            background: rgba(18, 21, 26, 0.92);
+            border: 1px solid #2b3038;
             border-radius: 8px;
-
-            box-shadow:
-                0 20px 60px
-                rgba(
-                    0,
-                    0,
-                    0,
-                    0.25
-                );
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
         }
 
 
@@ -213,129 +170,80 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
         ===================================================== */
 
         .hero {
-            min-height:
-                calc(
-                    100vh - 70px
-                );
-
+            min-height: calc(100vh - 70px);
             display: flex;
-
             flex-direction: column;
-
             justify-content: center;
-
-            padding:
-                50px 0;
+            padding: 50px 0;
         }
 
         .hero-content-box {
             width: 100%;
-
             max-width: 1100px;
-
             padding: 35px;
         }
 
         .hero-layout {
             display: grid;
-
-            grid-template-columns:
-                1.45fr 0.8fr;
-
+            grid-template-columns: 1.45fr 0.8fr;
             gap: 30px;
-
             align-items: stretch;
         }
 
         .hero-left {
             display: flex;
-
             flex-direction: column;
-
             justify-content: center;
         }
 
         .hero-label {
             margin-bottom: 15px;
-
             color: #8d949e;
-
             font-size: 13px;
-
             font-weight: bold;
-
             letter-spacing: 4px;
         }
 
         .hero h1 {
             margin-bottom: 20px;
-
-            font-size:
-                clamp(
-                    60px,
-                    9vw,
-                    110px
-                );
-
+            font-size: clamp(60px, 9vw, 110px);
             line-height: 0.95;
-
             letter-spacing: -3px;
         }
 
         .hero h2 {
             margin-bottom: 25px;
-
             color: #b8bdc5;
-
-            font-size:
-                clamp(
-                    25px,
-                    4vw,
-                    35px
-                );
-
+            font-size: clamp(25px, 4vw, 35px);
             font-weight: normal;
         }
 
         .hero-description {
             max-width: 760px;
-
             color: #a6abb3;
-
             font-size: 18px;
         }
 
         .hero-buttons {
             display: flex;
-
             gap: 15px;
-
             margin-top: 35px;
         }
 
         .button {
             display: inline-block;
-
-            padding:
-                12px 22px;
-
+            padding: 12px 22px;
             border-radius: 5px;
-
             font-weight: bold;
-
-            transition:
-                transform 0.2s,
-                background 0.2s;
+            transition: transform 0.2s, background 0.2s;
         }
 
         .button:hover {
-            transform:
-                translateY(-2px);
+            transform: translateY(-2px);
         }
 
         .primary-button {
             background: white;
-
             color: #080a0d;
         }
 
@@ -351,47 +259,27 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .hero-image-box {
             min-height: 420px;
-
-            background:
-                rgba(
-                    14,
-                    17,
-                    22,
-                    0.95
-                );
-
-            border:
-                1px solid #2f353e;
-
+            background: rgba(14, 17, 22, 0.95);
+            border: 1px solid #2f353e;
             border-radius: 8px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             overflow: hidden;
-
             position: relative;
         }
 
         .hero-image-box img {
             width: 100%;
-
             height: 100%;
-
             object-fit: cover;
-
             display: block;
         }
 
         .hero-image-placeholder {
             width: 100%;
             height: 100%;
-
             text-align: center;
-
             color: #9ba1aa;
         }
 
@@ -402,42 +290,29 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
         ===================================================== */
 
         #projects {
-            padding:
-                90px 0 120px;
+            padding: 90px 0 120px;
         }
 
         .section-intro-box {
             padding: 30px;
-
             margin-bottom: 35px;
         }
 
         .section-label {
             margin-bottom: 10px;
-
             color: #858c96;
-
             font-size: 12px;
-
             font-weight: bold;
-
             letter-spacing: 4px;
         }
 
         .section-title {
             margin-bottom: 15px;
-
-            font-size:
-                clamp(
-                    38px,
-                    6vw,
-                    55px
-                );
+            font-size: clamp(38px, 6vw, 55px);
         }
 
         .section-description {
             max-width: 700px;
-
             color: #9fa5ae;
         }
 
@@ -449,50 +324,25 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .project-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(
-                    3,
-                    1fr
-                );
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 22px;
-
             margin-bottom: 35px;
         }
 
         .project-card {
             display: flex;
-
             flex-direction: column;
-
             min-height: 320px;
-
-            background:
-                rgba(
-                    18,
-                    21,
-                    26,
-                    0.92
-                );
-
-            border:
-                1px solid #2b3038;
-
+            background: rgba(18, 21, 26, 0.92);
+            border: 1px solid #2b3038;
             border-radius: 8px;
-
             overflow: hidden;
-
-            transition:
-                border-color 0.2s,
-                transform 0.2s;
+            transition: border-color 0.2s, transform 0.2s;
         }
 
         .project-card:hover {
             border-color: #525a66;
-
-            transform:
-                translateY(-3px);
+            transform: translateY(-3px);
         }
 
         .project-card.active {
@@ -501,69 +351,48 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .project-main {
             flex: 1;
-
             padding: 25px;
         }
 
         .project-engine {
             margin-bottom: 8px;
-
             color: #7f8791;
-
             font-size: 11px;
-
             font-weight: bold;
-
             letter-spacing: 2px;
         }
 
         .project-main h3 {
             margin-bottom: 7px;
-
             font-size: 26px;
         }
 
         .project-tech {
             margin-bottom: 15px;
-
             color: #828994;
-
             font-size: 13px;
         }
 
         .project-description {
             color: #b5bac1;
-
             font-size: 15px;
         }
 
         .view-project {
             width: 100%;
-
-            padding:
-                16px 22px;
-
+            padding: 16px 22px;
             border: none;
-
-            border-top:
-                1px solid #2b3038;
-
+            border-top: 1px solid #2b3038;
             background: #13161b;
-
             color: #eeeeee;
-
             cursor: pointer;
-
             text-align: left;
-
             font-weight: bold;
         }
 
         .view-project::after {
             content: "→";
-
             float: right;
-
             color: #828994;
         }
 
@@ -571,8 +400,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
             background: #1a1e24;
         }
 
-        .project-card.active
-        .view-project {
+        .project-card.active .view-project {
             background: #1c2026;
         }
 
@@ -584,37 +412,16 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .project-showcase {
             width: 100%;
-
             min-height: 500px;
-
-            background:
-                rgba(
-                    13,
-                    16,
-                    20,
-                    0.92
-                );
-
-            border:
-                1px solid #2b3038;
-
+            background: rgba(13, 16, 20, 0.92);
+            border: 1px solid #2b3038;
             border-radius: 8px;
-
             overflow: hidden;
-
-            box-shadow:
-                0 20px 60px
-                rgba(
-                    0,
-                    0,
-                    0,
-                    0.25
-                );
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
         }
 
         .project-detail {
             display: none;
-
             padding: 45px;
         }
 
@@ -630,15 +437,9 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .detail-top {
             margin-bottom: 45px;
-
             display: grid;
-
-            grid-template-columns:
-                minmax(0, 1fr)
-                auto;
-
+            grid-template-columns: minmax(0, 1fr) auto;
             gap: 35px;
-
             align-items: start;
         }
 
@@ -648,30 +449,19 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .detail-engine {
             margin-bottom: 8px;
-
             color: #858c96;
-
             font-size: 12px;
-
             font-weight: bold;
-
             letter-spacing: 3px;
         }
 
         .detail-top h2 {
             margin-bottom: 12px;
-
-            font-size:
-                clamp(
-                    36px,
-                    6vw,
-                    55px
-                );
+            font-size: clamp(36px, 6vw, 55px);
         }
 
         .detail-top p {
             max-width: 850px;
-
             color: #aeb4bc;
         }
 
@@ -683,91 +473,52 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .project-link-box {
             min-width: 210px;
-
             padding: 22px;
-
-            background:
-                rgba(
-                    21,
-                    24,
-                    29,
-                    0.95
-                );
-
-            border:
-                1px solid #30353d;
-
+            background: rgba(21, 24, 29, 0.95);
+            border: 1px solid #30353d;
             border-radius: 7px;
         }
 
         .project-link-label {
             margin-bottom: 12px;
-
             color: #858c96;
-
             font-size: 11px;
-
             font-weight: bold;
-
             letter-spacing: 2px;
         }
 
         .project-github-button {
             display: block;
-
             width: 100%;
-
-            padding:
-                12px 18px;
-
+            padding: 12px 18px;
             background: #f2f2f2;
-
             color: #090b0f;
-
             border-radius: 5px;
-
             text-align: center;
-
             font-weight: bold;
-
-            transition:
-                background 0.2s,
-                transform 0.2s;
+            transition: background 0.2s, transform 0.2s;
         }
 
         .project-github-button:hover {
             background: #d8d8d8;
-
-            transform:
-                translateY(-2px);
+            transform: translateY(-2px);
         }
 
         .project-source-platform {
             display: block;
-
             width: 100%;
-
-            padding:
-                12px 18px;
-
+            padding: 12px 18px;
             background: #f2f2f2;
-
             color: #090b0f;
-
             border-radius: 5px;
-
             text-align: center;
-
             font-weight: bold;
         }
 
         .project-source-note {
             margin-top: 12px;
-
             color: #8f969f;
-
             font-size: 12px;
-
             line-height: 1.5;
         }
 
@@ -783,21 +534,17 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .detail-section h3 {
             margin-bottom: 18px;
-
             font-size: 26px;
         }
 
         .detail-section > p {
             max-width: 850px;
-
             color: #aeb4bc;
         }
 
         .detail-list {
             display: grid;
-
             gap: 10px;
-
             color: #b6bcc4;
         }
 
@@ -813,43 +560,25 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .work-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(
-                    2,
-                    1fr
-                );
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 18px;
         }
 
         .work-box {
             padding: 22px;
-
-            background:
-                rgba(
-                    21,
-                    24,
-                    29,
-                    0.90
-                );
-
-            border:
-                1px solid #2c3139;
-
+            background: rgba(21, 24, 29, 0.90);
+            border: 1px solid #2c3139;
             border-radius: 6px;
         }
 
         .work-box h4 {
             margin-bottom: 10px;
-
             font-size: 19px;
         }
 
         .work-box p,
         .work-box li {
             color: #a5abb3;
-
             font-size: 15px;
         }
 
@@ -861,25 +590,16 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .tags {
             display: flex;
-
             flex-wrap: wrap;
-
             gap: 9px;
         }
 
         .tags span {
-            padding:
-                7px 11px;
-
+            padding: 7px 11px;
             background: #171a20;
-
-            border:
-                1px solid #30353d;
-
+            border: 1px solid #30353d;
             border-radius: 4px;
-
             color: #b9bec5;
-
             font-size: 13px;
         }
 
@@ -891,80 +611,49 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .media-layout {
             display: grid;
-
-            grid-template-columns:
-                2fr 1fr;
-
+            grid-template-columns: 2fr 1fr;
             gap: 18px;
         }
 
         .video-box {
             min-height: 360px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             background: #101318;
-
-            border:
-                1px solid #30353d;
-
+            border: 1px solid #30353d;
             border-radius: 6px;
-
             color: #666d76;
-
             text-align: center;
-
             overflow: hidden;
-
             padding: 20px;
         }
 
         .image-column {
             display: grid;
-
-            grid-template-rows:
-                1fr 1fr;
-
+            grid-template-rows: 1fr 1fr;
             gap: 18px;
         }
 
         .image-box {
             min-height: 170px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             background: #15181d;
-
-            border:
-                1px solid #30353d;
-
+            border: 1px solid #30353d;
             border-radius: 6px;
-
             color: #666d76;
-
             text-align: center;
-
             overflow: hidden;
-
             padding: 18px;
         }
 
         .image-box img,
         .video-box video {
             width: 100%;
-
             height: 100%;
-
             display: block;
-
             object-fit: cover;
         }
 
@@ -976,45 +665,28 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
         .code-box {
             overflow-x: auto;
-
             background: #07090c;
-
-            border:
-                1px solid #30353d;
-
+            border: 1px solid #30353d;
             border-radius: 6px;
         }
 
         .code-title {
-            padding:
-                11px 15px;
-
+            padding: 11px 15px;
             background: #171a20;
-
-            border-bottom:
-                1px solid #30353d;
-
+            border-bottom: 1px solid #30353d;
             color: #9097a1;
-
             font-size: 13px;
         }
 
         pre {
             margin: 0;
-
             padding: 22px;
-
             color: #d4d8dd;
-
             white-space: pre-wrap;
         }
 
         code {
-            font-family:
-                Consolas,
-                "Courier New",
-                monospace;
-
+            font-family: Consolas, "Courier New", monospace;
             font-size: 14px;
         }
 
@@ -1025,23 +697,11 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
         ===================================================== */
 
         footer {
-            padding:
-                35px 20px;
-
+            padding: 35px 20px;
             text-align: center;
-
             color: #666d76;
-
-            background:
-                rgba(
-                    8,
-                    10,
-                    13,
-                    0.90
-                );
-
-            border-top:
-                1px solid #24282f;
+            background: rgba(8, 10, 13, 0.90);
+            border-top: 1px solid #24282f;
         }
 
 
@@ -1070,7 +730,6 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
             .project-link-box {
                 min-width: 0;
-
                 max-width: 300px;
             }
 
@@ -1083,9 +742,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
             }
 
             .image-column {
-                grid-template-columns:
-                    1fr 1fr;
-
+                grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto;
             }
 
@@ -1100,7 +757,6 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
             .hero h1 {
                 font-size: 55px;
-
                 letter-spacing: -2px;
             }
 
@@ -1110,7 +766,6 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
             .hero-buttons {
                 flex-direction: column;
-
                 align-items: flex-start;
             }
 
@@ -1140,9 +795,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 <body>
 
 
-    <!-- =====================================================
-         MATRIX BACKGROUND
-    ====================================================== -->
+    <!-- MATRIX BACKGROUND -->
 
     <canvas
         id="matrix-bg"
@@ -1151,9 +804,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-    <!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+    <!-- NAVIGATION -->
 
     <header>
 
@@ -1189,9 +840,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
     <main>
 
 
-        <!-- =================================================
-             HOME
-        ================================================== -->
+        <!-- HOME -->
 
         <section
             id="home"
@@ -1245,9 +894,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-                    <!-- =================================================
-                         PROFILE PHOTO
-                    ================================================== -->
+                    <!-- PROFILE PHOTO -->
 
                     <div class="hero-right">
 
@@ -1255,8 +902,8 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
                             <div class="hero-image-placeholder">
 
-                                <Image
-                                    src={profilePhoto}
+                                <img
+                                    src={profilePhotoUrl}
                                     alt="Josh Maddox"
                                 />
 
@@ -1275,9 +922,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-        <!-- =================================================
-             PROJECTS
-        ================================================== -->
+        <!-- PROJECTS -->
 
         <section id="projects">
 
@@ -1306,9 +951,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-            <!-- =================================================
-                 PROJECT CARDS
-            ================================================== -->
+            <!-- PROJECT CARDS -->
 
             <div class="project-grid">
 
@@ -1457,16 +1100,12 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-            <!-- =================================================
-                 PROJECT SHOWCASE
-            ================================================== -->
+            <!-- PROJECT SHOWCASE -->
 
             <div class="project-showcase">
 
 
-                <!-- =================================================
-                     ASHEN BLOOM
-                ================================================== -->
+                <!-- ASHEN BLOOM -->
 
                 <div
                     id="ashen"
@@ -1502,8 +1141,6 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
                         </div>
 
 
-
-                        <!-- ASHEN BLOOM VERSION CONTROL -->
 
                         <div class="project-link-box">
 
@@ -1559,29 +1196,17 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
                         <ul class="detail-list">
 
-                            <li>
-                                Implemented the Inventory system.
-                            </li>
+                            <li>Implemented the Inventory system.</li>
 
-                            <li>
-                                Built the Level-up system.
-                            </li>
+                            <li>Built the Level-up system.</li>
 
-                            <li>
-                                Created the inventory character rotation view.
-                            </li>
+                            <li>Created the inventory character rotation view.</li>
 
-                            <li>
-                                Built the Forest PCG system.
-                            </li>
+                            <li>Built the Forest PCG system.</li>
 
-                            <li>
-                                Set up landscape grass using LTG_Grass.
-                            </li>
+                            <li>Set up landscape grass using LTG_Grass.</li>
 
-                            <li>
-                                Authored the landscape texture layering system.
-                            </li>
+                            <li>Authored the landscape texture layering system.</li>
 
                             <li>
                                 Worked collaboratively with the team inside
@@ -1773,9 +1398,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-                <!-- =================================================
-                     ROBORUN
-                ================================================== -->
+                <!-- ROBORUN -->
 
                 <div
                     id="roborun"
@@ -1864,21 +1487,13 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
                         <ul class="detail-list">
 
-                            <li>
-                                Worked on the shop system.
-                            </li>
+                            <li>Worked on the shop system.</li>
 
-                            <li>
-                                Worked on player upgrade systems.
-                            </li>
+                            <li>Worked on player upgrade systems.</li>
 
-                            <li>
-                                Helped build the overworld structure.
-                            </li>
+                            <li>Helped build the overworld structure.</li>
 
-                            <li>
-                                Created most of the map content.
-                            </li>
+                            <li>Created most of the map content.</li>
 
                             <li>
                                 Supported gameplay system implementation
@@ -2064,9 +1679,7 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-                <!-- =================================================
-                     I AM THE WALL
-                ================================================== -->
+                <!-- I AM THE WALL -->
 
                 <div
                     id="wall"
@@ -2156,17 +1769,11 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
                         <ul class="detail-list">
 
-                            <li>
-                                Created most of the pixel art.
-                            </li>
+                            <li>Created most of the pixel art.</li>
 
-                            <li>
-                                Created most of the animation work.
-                            </li>
+                            <li>Created most of the animation work.</li>
 
-                            <li>
-                                Handled the color palette direction.
-                            </li>
+                            <li>Handled the color palette direction.</li>
 
                             <li>
                                 Contributed to the game design document (GDD).
@@ -2361,22 +1968,13 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-    <!-- =====================================================
-         FOOTER
-    ====================================================== -->
-
     <footer>
         © 2026 Josh Maddox
     </footer>
 
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
     <script>
-
 
         /* =====================================================
            PROJECT SWITCHING
@@ -2387,12 +1985,10 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
                 ".view-project"
             );
 
-
         const projectDetails =
             document.querySelectorAll(
                 ".project-detail"
             );
-
 
         const projectCards =
             document.querySelectorAll(
@@ -2410,12 +2006,10 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
                         const target =
                             button.dataset.target;
 
-
                         const targetDetail =
                             document.getElementById(
                                 target
                             );
-
 
                         const targetCard =
                             document.querySelector(
