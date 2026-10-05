@@ -1,2585 +1,2536 @@
-﻿
----
+﻿---
 import profilePhoto from "../Images/Josh-profilePic.jpg";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8" />
 
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1.0"
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
     />
 
-		<meta
-			name="description"
-			content="Josh Maddox - Game Programmer and QA Engineer portfolio."
+    <meta
+        name="description"
+        content="Josh Maddox - Game Programmer and QA Engineer portfolio."
     />
 
-		<title>Josh Maddox | Game Programmer & QA Engineer</title>
+    <title>Josh Maddox | Game Programmer & QA Engineer</title>
 
-		<style>
+    <style>
 
-			/* =====================================================
-			BASIC
-			===================================================== */
+        /* =====================================================
+           BASIC
+        ===================================================== */
 
-			* {
-			box-sizing: border-box;
-			margin: 0;
-			padding: 0;
-			}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-			html {
-			scroll-behavior: smooth;
-			}
+        html {
+            scroll-behavior: smooth;
+        }
 
-			body {
-			min-height: 100vh;
-			background: #000;
-			color: #f2f2f2;
+        body {
+            min-height: 100vh;
+            background: #000;
+            color: #f2f2f2;
 
-			font-family:
-			Arial,
-			Helvetica,
-			sans-serif;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-			line-height: 1.6;
-			overflow-x: hidden;
-			}
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-			a {
-			color: inherit;
-			text-decoration: none;
-			}
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-			button {
-			font: inherit;
-			}
+        button {
+            font: inherit;
+        }
 
-			ul {
-			padding-left: 20px;
-			}
+        ul {
+            padding-left: 20px;
+        }
 
 
 
-			/* =====================================================
-			MATRIX BACKGROUND
-			===================================================== */
+        /* =====================================================
+           MATRIX BACKGROUND
+        ===================================================== */
 
-			#matrix-bg {
-			position: fixed;
+        #matrix-bg {
+            position: fixed;
 
-			top: 0;
-			left: 0;
+            top: 0;
+            left: 0;
 
-			width: 100vw;
-			height: 100vh;
+            width: 100vw;
+            height: 100vh;
 
-			pointer-events: none;
+            pointer-events: none;
 
-			z-index: 0;
+            z-index: 0;
 
-			background: #000;
-			}
+            background: #000;
+        }
 
 
 
-			/* =====================================================
-			KEEP WEBSITE ABOVE MATRIX
-			===================================================== */
+        /* =====================================================
+           KEEP WEBSITE ABOVE MATRIX
+        ===================================================== */
 
-			header,
-			main,
-			footer {
-			position: relative;
-			z-index: 2;
-			}
+        header,
+        main,
+        footer {
+            position: relative;
+            z-index: 2;
+        }
 
 
 
-			/* =====================================================
-			NAVIGATION
-			===================================================== */
+        /* =====================================================
+           NAVIGATION
+        ===================================================== */
 
-			header {
-			position: sticky;
+        header {
+            position: sticky;
 
-			top: 0;
+            top: 0;
 
-			z-index: 100;
+            z-index: 100;
 
-			background:
-			rgba(
-			8,
-			10,
-			13,
-			0.90
-			);
+            background:
+                rgba(
+                    8,
+                    10,
+                    13,
+                    0.90
+                );
 
-			border-bottom:
-			1px solid #24282f;
+            border-bottom:
+                1px solid #24282f;
 
-			backdrop-filter:
-			blur(10px);
-			}
+            backdrop-filter:
+                blur(10px);
+        }
 
-			nav {
-			width: 90%;
+        nav {
+            width: 90%;
 
-			max-width: 1150px;
+            max-width: 1150px;
 
-			min-height: 70px;
+            min-height: 70px;
 
-			margin: auto;
+            margin: auto;
 
-			display: flex;
+            display: flex;
 
-			align-items: center;
+            align-items: center;
 
-			justify-content: space-between;
-			}
+            justify-content: space-between;
+        }
 
-			.logo {
-			font-size: 20px;
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-			font-weight: bold;
-			}
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
 
-			.nav-links {
-			display: flex;
+        .nav-links a {
+            color: #a8adb5;
+            font-size: 14px;
+        }
 
-			gap: 25px;
-			}
+        .nav-links a:hover {
+            color: white;
+        }
 
-			.nav-links a {
-			color: #a8adb5;
 
-			font-size: 14px;
-			}
 
-			.nav-links a:hover {
-			color: white;
-			}
+        /* =====================================================
+           MAIN
+        ===================================================== */
 
+        main {
+            width: 90%;
 
+            max-width: 1150px;
 
-			/* =====================================================
-			MAIN
-			===================================================== */
+            margin: auto;
+        }
 
-			main {
-			width: 90%;
 
-			max-width: 1150px;
 
-			margin: auto;
-			}
+        /* =====================================================
+           SHARED CONTENT BOX
+        ===================================================== */
 
+        .content-box {
+            background:
+                rgba(
+                    18,
+                    21,
+                    26,
+                    0.92
+                );
 
+            border:
+                1px solid #2b3038;
 
-			/* =====================================================
-			SHARED CONTENT BOX
-			===================================================== */
+            border-radius: 8px;
 
-			.content-box {
-			background:
-			rgba(
-			18,
-			21,
-			26,
-			0.92
-			);
+            box-shadow:
+                0 20px 60px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.25
+                );
+        }
 
-			border:
-			1px solid #2b3038;
 
-			border-radius: 8px;
 
-			box-shadow:
-			0 20px 60px
-			rgba(
-			0,
-			0,
-			0,
-			0.25
-			);
-			}
+        /* =====================================================
+           HOME
+        ===================================================== */
 
+        .hero {
+            min-height:
+                calc(
+                    100vh - 70px
+                );
 
+            display: flex;
 
-			/* =====================================================
-			HOME
-			===================================================== */
+            flex-direction: column;
 
-			.hero {
-			min-height:
-			calc(
-			100vh - 70px
-			);
+            justify-content: center;
 
-			display: flex;
+            padding:
+                50px 0;
+        }
 
-			flex-direction: column;
+        .hero-content-box {
+            width: 100%;
 
-			justify-content: center;
+            max-width: 1100px;
 
-			padding:
-			50px 0;
-			}
+            padding: 35px;
+        }
 
-			.hero-content-box {
-			width: 100%;
+        .hero-layout {
+            display: grid;
 
-			max-width: 1100px;
+            grid-template-columns:
+                1.45fr 0.8fr;
 
-			padding: 35px;
-			}
+            gap: 30px;
 
-			.hero-layout {
-			display: grid;
+            align-items: stretch;
+        }
 
-			grid-template-columns:
-			1.45fr 0.8fr;
+        .hero-left {
+            display: flex;
 
-			gap: 30px;
+            flex-direction: column;
 
-			align-items: stretch;
-			}
+            justify-content: center;
+        }
 
-			.hero-left {
-			display: flex;
+        .hero-label {
+            margin-bottom: 15px;
 
-			flex-direction: column;
+            color: #8d949e;
 
-			justify-content: center;
-			}
+            font-size: 13px;
 
-			.hero-label {
-			margin-bottom: 15px;
+            font-weight: bold;
 
-			color: #8d949e;
+            letter-spacing: 4px;
+        }
 
-			font-size: 13px;
+        .hero h1 {
+            margin-bottom: 20px;
 
-			font-weight: bold;
+            font-size:
+                clamp(
+                    60px,
+                    9vw,
+                    110px
+                );
 
-			letter-spacing: 4px;
-			}
+            line-height: 0.95;
 
-			.hero h1 {
-			margin-bottom: 20px;
+            letter-spacing: -3px;
+        }
 
-			font-size:
-			clamp(
-			60px,
-			9vw,
-			110px
-			);
+        .hero h2 {
+            margin-bottom: 25px;
 
-			line-height: 0.95;
+            color: #b8bdc5;
 
-			letter-spacing: -3px;
-			}
+            font-size:
+                clamp(
+                    25px,
+                    4vw,
+                    35px
+                );
 
-			.hero h2 {
-			margin-bottom: 25px;
+            font-weight: normal;
+        }
 
-			color: #b8bdc5;
+        .hero-description {
+            max-width: 760px;
 
-			font-size:
-			clamp(
-			25px,
-			4vw,
-			35px
-			);
+            color: #a6abb3;
 
-			font-weight: normal;
-			}
+            font-size: 18px;
+        }
 
-			.hero-description {
-			max-width: 760px;
+        .hero-buttons {
+            display: flex;
 
-			color: #a6abb3;
+            gap: 15px;
 
-			font-size: 18px;
-			}
+            margin-top: 35px;
+        }
 
-			.hero-buttons {
-			display: flex;
+        .button {
+            display: inline-block;
 
-			gap: 15px;
+            padding:
+                12px 22px;
 
-			margin-top: 35px;
-			}
+            border-radius: 5px;
 
-			.button {
-			display: inline-block;
+            font-weight: bold;
 
-			padding:
-			12px 22px;
+            transition:
+                transform 0.2s,
+                background 0.2s;
+        }
 
-			border-radius: 5px;
+        .button:hover {
+            transform:
+                translateY(-2px);
+        }
 
-			font-weight: bold;
+        .primary-button {
+            background: white;
 
-			transition:
-			transform 0.2s,
-			background 0.2s;
-			}
+            color: #080a0d;
+        }
 
-			.button:hover {
-			transform:
-			translateY(-2px);
-			}
+        .primary-button:hover {
+            background: #d8d8d8;
+        }
 
-			.primary-button {
-			background: white;
 
-			color: #080a0d;
-			}
 
-			.primary-button:hover {
-			background: #d8d8d8;
-			}
+        /* =====================================================
+           PROFILE IMAGE
+        ===================================================== */
 
+        .hero-image-box {
+            min-height: 420px;
 
+            background:
+                rgba(
+                    14,
+                    17,
+                    22,
+                    0.95
+                );
 
-			/* =====================================================
-			PROFILE IMAGE
-			===================================================== */
+            border:
+                1px solid #2f353e;
 
-			.hero-image-box {
-			min-height: 420px;
+            border-radius: 8px;
 
-			background:
-			rgba(
-			14,
-			17,
-			22,
-			0.95
-			);
+            display: flex;
 
-			border:
-			1px solid #2f353e;
+            align-items: center;
 
-			border-radius: 8px;
+            justify-content: center;
 
-			display: flex;
+            overflow: hidden;
 
-			align-items: center;
+            position: relative;
+        }
 
-			justify-content: center;
+        .hero-image-box img {
+            width: 100%;
 
-			overflow: hidden;
+            height: 100%;
 
-			position: relative;
-			}
+            object-fit: cover;
 
-			.hero-image-box img {
-			width: 100%;
+            display: block;
+        }
 
-			height: 100%;
+        .hero-image-placeholder {
+            width: 100%;
+            height: 100%;
 
-			object-fit: cover;
+            text-align: center;
 
-			display: block;
-			}
+            color: #9ba1aa;
+        }
 
-			.hero-image-placeholder {
-			padding: 25px;
 
-			text-align: center;
 
-			color: #9ba1aa;
-			}
+        /* =====================================================
+           PROJECT SECTION
+        ===================================================== */
 
-			.hero-image-placeholder strong {
-			display: block;
+        #projects {
+            padding:
+                90px 0 120px;
+        }
 
-			margin-bottom: 10px;
+        .section-intro-box {
+            padding: 30px;
 
-			font-size: 20px;
+            margin-bottom: 35px;
+        }
 
-			color: #f2f2f2;
-			}
+        .section-label {
+            margin-bottom: 10px;
 
-			.hero-image-placeholder span {
-			display: block;
+            color: #858c96;
 
-			margin-top: 8px;
+            font-size: 12px;
 
-			font-size: 14px;
+            font-weight: bold;
 
-			color: #7f8791;
-			}
+            letter-spacing: 4px;
+        }
 
+        .section-title {
+            margin-bottom: 15px;
 
+            font-size:
+                clamp(
+                    38px,
+                    6vw,
+                    55px
+                );
+        }
 
-			/* =====================================================
-			PROJECT SECTION
-			===================================================== */
+        .section-description {
+            max-width: 700px;
 
-			#projects {
-			padding:
-			90px 0 120px;
-			}
+            color: #9fa5ae;
+        }
 
-			.section-intro-box {
-			padding: 30px;
 
-			margin-bottom: 35px;
-			}
 
-			.section-label {
-			margin-bottom: 10px;
+        /* =====================================================
+           PROJECT CARDS
+        ===================================================== */
 
-			color: #858c96;
+        .project-grid {
+            display: grid;
 
-			font-size: 12px;
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
 
-			font-weight: bold;
+            gap: 22px;
 
-			letter-spacing: 4px;
-			}
+            margin-bottom: 35px;
+        }
 
-			.section-title {
-			margin-bottom: 15px;
+        .project-card {
+            display: flex;
 
-			font-size:
-			clamp(
-			38px,
-			6vw,
-			55px
-			);
-			}
+            flex-direction: column;
 
-			.section-description {
-			max-width: 700px;
+            min-height: 320px;
 
-			color: #9fa5ae;
-			}
+            background:
+                rgba(
+                    18,
+                    21,
+                    26,
+                    0.92
+                );
 
+            border:
+                1px solid #2b3038;
 
+            border-radius: 8px;
 
-			/* =====================================================
-			PROJECT CARDS
-			===================================================== */
+            overflow: hidden;
 
-			.project-grid {
-			display: grid;
+            transition:
+                border-color 0.2s,
+                transform 0.2s;
+        }
 
-			grid-template-columns:
-			repeat(
-			3,
-			1fr
-			);
+        .project-card:hover {
+            border-color: #525a66;
 
-			gap: 22px;
+            transform:
+                translateY(-3px);
+        }
 
-			margin-bottom: 35px;
-			}
+        .project-card.active {
+            border-color: #89919d;
+        }
 
-			.project-card {
-			display: flex;
+        .project-main {
+            flex: 1;
 
-			flex-direction: column;
+            padding: 25px;
+        }
 
-			min-height: 320px;
+        .project-engine {
+            margin-bottom: 8px;
 
-			background:
-			rgba(
-			18,
-			21,
-			26,
-			0.92
-			);
+            color: #7f8791;
 
-			border:
-			1px solid #2b3038;
+            font-size: 11px;
 
-			border-radius: 8px;
+            font-weight: bold;
 
-			overflow: hidden;
+            letter-spacing: 2px;
+        }
 
-			transition:
-			border-color 0.2s,
-			transform 0.2s;
-			}
+        .project-main h3 {
+            margin-bottom: 7px;
 
-			.project-card:hover {
-			border-color: #525a66;
+            font-size: 26px;
+        }
 
-			transform:
-			translateY(-3px);
-			}
+        .project-tech {
+            margin-bottom: 15px;
 
-			.project-card.active {
-			border-color: #89919d;
-			}
+            color: #828994;
 
-			.project-main {
-			flex: 1;
+            font-size: 13px;
+        }
 
-			padding: 25px;
-			}
+        .project-description {
+            color: #b5bac1;
 
-			.project-engine {
-			margin-bottom: 8px;
+            font-size: 15px;
+        }
 
-			color: #7f8791;
+        .view-project {
+            width: 100%;
 
-			font-size: 11px;
+            padding:
+                16px 22px;
 
-			font-weight: bold;
+            border: none;
 
-			letter-spacing: 2px;
-			}
+            border-top:
+                1px solid #2b3038;
 
-			.project-main h3 {
-			margin-bottom: 7px;
+            background: #13161b;
 
-			font-size: 26px;
-			}
+            color: #eeeeee;
 
-			.project-tech {
-			margin-bottom: 15px;
+            cursor: pointer;
 
-			color: #828994;
+            text-align: left;
 
-			font-size: 13px;
-			}
+            font-weight: bold;
+        }
 
-			.project-description {
-			color: #b5bac1;
+        .view-project::after {
+            content: "→";
 
-			font-size: 15px;
-			}
+            float: right;
 
-			.view-project {
-			width: 100%;
+            color: #828994;
+        }
 
-			padding:
-			16px 22px;
+        .view-project:hover {
+            background: #1a1e24;
+        }
 
-			border: none;
+        .project-card.active
+        .view-project {
+            background: #1c2026;
+        }
 
-			border-top:
-			1px solid #2b3038;
 
-			background: #13161b;
 
-			color: #eeeeee;
+        /* =====================================================
+           SHARED PROJECT AREA
+        ===================================================== */
 
-			cursor: pointer;
+        .project-showcase {
+            width: 100%;
 
-			text-align: left;
+            min-height: 500px;
 
-			font-weight: bold;
-			}
+            background:
+                rgba(
+                    13,
+                    16,
+                    20,
+                    0.92
+                );
 
-			.view-project::after {
-			content: "→";
+            border:
+                1px solid #2b3038;
 
-			float: right;
+            border-radius: 8px;
 
-			color: #828994;
-			}
+            overflow: hidden;
 
-			.view-project:hover {
-			background: #1a1e24;
-			}
+            box-shadow:
+                0 20px 60px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.25
+                );
+        }
 
-			.project-card.active
-			.view-project {
-			background: #1c2026;
-			}
+        .project-detail {
+            display: none;
 
+            padding: 45px;
+        }
 
+        .project-detail.active {
+            display: block;
+        }
 
-			/* =====================================================
-			SHARED PROJECT AREA
-			===================================================== */
 
-			.project-showcase {
-			width: 100%;
 
-			min-height: 500px;
+        /* =====================================================
+           PROJECT HEADER
+        ===================================================== */
 
-			background:
-			rgba(
-			13,
-			16,
-			20,
-			0.92
-			);
+        .detail-top {
+            margin-bottom: 45px;
 
-			border:
-			1px solid #2b3038;
+            display: grid;
 
-			border-radius: 8px;
+            grid-template-columns:
+                minmax(0, 1fr)
+                auto;
 
-			overflow: hidden;
+            gap: 35px;
 
-			box-shadow:
-			0 20px 60px
-			rgba(
-			0,
-			0,
-			0,
-			0.25
-			);
-			}
+            align-items: start;
+        }
 
-			.project-detail {
-			display: none;
+        .detail-heading {
+            min-width: 0;
+        }
 
-			padding: 45px;
-			}
+        .detail-engine {
+            margin-bottom: 8px;
 
-			.project-detail.active {
-			display: block;
-			}
+            color: #858c96;
 
+            font-size: 12px;
 
+            font-weight: bold;
 
-			/* =====================================================
-			PROJECT HEADER
-			===================================================== */
+            letter-spacing: 3px;
+        }
 
-			.detail-top {
-			margin-bottom: 45px;
+        .detail-top h2 {
+            margin-bottom: 12px;
 
-			display: grid;
+            font-size:
+                clamp(
+                    36px,
+                    6vw,
+                    55px
+                );
+        }
 
-			grid-template-columns:
-			minmax(0, 1fr)
-			auto;
+        .detail-top p {
+            max-width: 850px;
 
-			gap: 35px;
+            color: #aeb4bc;
+        }
 
-			align-items: start;
-			}
 
-			.detail-heading {
-			min-width: 0;
-			}
 
-			.detail-engine {
-			margin-bottom: 8px;
+        /* =====================================================
+           PROJECT SOURCE
+        ===================================================== */
 
-			color: #858c96;
+        .project-link-box {
+            min-width: 210px;
 
-			font-size: 12px;
+            padding: 22px;
 
-			font-weight: bold;
+            background:
+                rgba(
+                    21,
+                    24,
+                    29,
+                    0.95
+                );
 
-			letter-spacing: 3px;
-			}
+            border:
+                1px solid #30353d;
 
-			.detail-top h2 {
-			margin-bottom: 12px;
+            border-radius: 7px;
+        }
 
-			font-size:
-			clamp(
-			36px,
-			6vw,
-			55px
-			);
-			}
+        .project-link-label {
+            margin-bottom: 12px;
 
-			.detail-top p {
-			max-width: 850px;
+            color: #858c96;
 
-			color: #aeb4bc;
-			}
+            font-size: 11px;
 
+            font-weight: bold;
 
+            letter-spacing: 2px;
+        }
 
-			/* =====================================================
-			PROJECT GITHUB
-			===================================================== */
+        .project-github-button {
+            display: block;
 
-			.project-link-box {
-			min-width: 210px;
+            width: 100%;
 
-			padding: 22px;
+            padding:
+                12px 18px;
 
-			background:
-			rgba(
-			21,
-			24,
-			29,
-			0.95
-			);
+            background: #f2f2f2;
 
-			border:
-			1px solid #30353d;
+            color: #090b0f;
 
-			border-radius: 7px;
-			}
+            border-radius: 5px;
 
-			.project-link-label {
-			margin-bottom: 12px;
+            text-align: center;
 
-			color: #858c96;
+            font-weight: bold;
 
-			font-size: 11px;
+            transition:
+                background 0.2s,
+                transform 0.2s;
+        }
 
-			font-weight: bold;
+        .project-github-button:hover {
+            background: #d8d8d8;
 
-			letter-spacing: 2px;
-			}
+            transform:
+                translateY(-2px);
+        }
 
-			.project-github-button {
-			display: block;
+        .project-source-platform {
+            display: block;
 
-			width: 100%;
+            width: 100%;
 
-			padding:
-			12px 18px;
+            padding:
+                12px 18px;
 
-			background: #f2f2f2;
+            background: #f2f2f2;
 
-			color: #090b0f;
+            color: #090b0f;
 
-			border-radius: 5px;
+            border-radius: 5px;
 
-			text-align: center;
+            text-align: center;
 
-			font-weight: bold;
+            font-weight: bold;
+        }
 
-			transition:
-			background 0.2s,
-			transform 0.2s;
-			}
+        .project-source-note {
+            margin-top: 12px;
 
-			.project-github-button:hover {
-			background: #d8d8d8;
+            color: #8f969f;
 
-			transform:
-			translateY(-2px);
-			}
+            font-size: 12px;
 
+            line-height: 1.5;
+        }
 
 
-			/* =====================================================
-			PROJECT SECTIONS
-			===================================================== */
 
-			.detail-section {
-			margin-top: 50px;
-			}
+        /* =====================================================
+           PROJECT SECTIONS
+        ===================================================== */
 
-			.detail-section h3 {
-			margin-bottom: 18px;
+        .detail-section {
+            margin-top: 50px;
+        }
 
-			font-size: 26px;
-			}
+        .detail-section h3 {
+            margin-bottom: 18px;
 
-			.detail-section > p {
-			max-width: 850px;
+            font-size: 26px;
+        }
 
-			color: #aeb4bc;
-			}
+        .detail-section > p {
+            max-width: 850px;
 
-			.detail-list {
-			display: grid;
+            color: #aeb4bc;
+        }
 
-			gap: 10px;
+        .detail-list {
+            display: grid;
 
-			color: #b6bcc4;
-			}
+            gap: 10px;
 
-			.detail-list li {
-			margin-left: 4px;
-			}
+            color: #b6bcc4;
+        }
 
+        .detail-list li {
+            margin-left: 4px;
+        }
 
 
-			/* =====================================================
-			DEVELOPMENT / QA
-			===================================================== */
 
-			.work-grid {
-			display: grid;
+        /* =====================================================
+           DEVELOPMENT / QA
+        ===================================================== */
 
-			grid-template-columns:
-			repeat(
-			2,
-			1fr
-			);
+        .work-grid {
+            display: grid;
 
-			gap: 18px;
-			}
+            grid-template-columns:
+                repeat(
+                    2,
+                    1fr
+                );
 
-			.work-box {
-			padding: 22px;
+            gap: 18px;
+        }
 
-			background:
-			rgba(
-			21,
-			24,
-			29,
-			0.90
-			);
+        .work-box {
+            padding: 22px;
 
-			border:
-			1px solid #2c3139;
+            background:
+                rgba(
+                    21,
+                    24,
+                    29,
+                    0.90
+                );
 
-			border-radius: 6px;
-			}
+            border:
+                1px solid #2c3139;
 
-			.work-box h4 {
-			margin-bottom: 10px;
+            border-radius: 6px;
+        }
 
-			font-size: 19px;
-			}
+        .work-box h4 {
+            margin-bottom: 10px;
 
-			.work-box p,
-			.work-box li {
-			color: #a5abb3;
+            font-size: 19px;
+        }
 
-			font-size: 15px;
-			}
+        .work-box p,
+        .work-box li {
+            color: #a5abb3;
 
+            font-size: 15px;
+        }
 
 
-			/* =====================================================
-			TOOLS
-			===================================================== */
 
-			.tags {
-			display: flex;
+        /* =====================================================
+           TOOLS
+        ===================================================== */
 
-			flex-wrap: wrap;
+        .tags {
+            display: flex;
 
-			gap: 9px;
-			}
+            flex-wrap: wrap;
 
-			.tags span {
-			padding:
-			7px 11px;
+            gap: 9px;
+        }
 
-			background: #171a20;
+        .tags span {
+            padding:
+                7px 11px;
 
-			border:
-			1px solid #30353d;
+            background: #171a20;
 
-			border-radius: 4px;
+            border:
+                1px solid #30353d;
 
-			color: #b9bec5;
+            border-radius: 4px;
 
-			font-size: 13px;
-			}
+            color: #b9bec5;
 
+            font-size: 13px;
+        }
 
 
-			/* =====================================================
-			VIDEO / IMAGES
-			===================================================== */
 
-			.media-layout {
-			display: grid;
+        /* =====================================================
+           VIDEO / IMAGES
+        ===================================================== */
 
-			grid-template-columns:
-			2fr 1fr;
+        .media-layout {
+            display: grid;
 
-			gap: 18px;
-			}
+            grid-template-columns:
+                2fr 1fr;
 
-			.video-box {
-			min-height: 360px;
+            gap: 18px;
+        }
 
-			display: flex;
+        .video-box {
+            min-height: 360px;
 
-			align-items: center;
+            display: flex;
 
-			justify-content: center;
+            align-items: center;
 
-			background: #101318;
+            justify-content: center;
 
-			border:
-			1px solid #30353d;
+            background: #101318;
 
-			border-radius: 6px;
+            border:
+                1px solid #30353d;
 
-			color: #666d76;
+            border-radius: 6px;
 
-			text-align: center;
+            color: #666d76;
 
-			overflow: hidden;
+            text-align: center;
 
-			padding: 20px;
-			}
+            overflow: hidden;
 
-			.image-column {
-			display: grid;
+            padding: 20px;
+        }
 
-			grid-template-rows:
-			1fr 1fr;
+        .image-column {
+            display: grid;
 
-			gap: 18px;
-			}
+            grid-template-rows:
+                1fr 1fr;
 
-			.image-box {
-			min-height: 170px;
+            gap: 18px;
+        }
 
-			display: flex;
+        .image-box {
+            min-height: 170px;
 
-			align-items: center;
+            display: flex;
 
-			justify-content: center;
+            align-items: center;
 
-			background: #15181d;
+            justify-content: center;
 
-			border:
-			1px solid #30353d;
+            background: #15181d;
 
-			border-radius: 6px;
+            border:
+                1px solid #30353d;
 
-			color: #666d76;
+            border-radius: 6px;
 
-			text-align: center;
+            color: #666d76;
 
-			overflow: hidden;
+            text-align: center;
 
-			padding: 18px;
-			}
+            overflow: hidden;
 
-			.image-box img,
-			.video-box video {
-			width: 100%;
+            padding: 18px;
+        }
 
-			height: 100%;
+        .image-box img,
+        .video-box video {
+            width: 100%;
 
-			display: block;
+            height: 100%;
 
-			object-fit: cover;
-			}
+            display: block;
 
+            object-fit: cover;
+        }
 
 
-			/* =====================================================
-			CODE
-			===================================================== */
 
-			.code-box {
-			overflow-x: auto;
+        /* =====================================================
+           CODE
+        ===================================================== */
 
-			background: #07090c;
+        .code-box {
+            overflow-x: auto;
 
-			border:
-			1px solid #30353d;
+            background: #07090c;
 
-			border-radius: 6px;
-			}
+            border:
+                1px solid #30353d;
 
-			.code-title {
-			padding:
-			11px 15px;
+            border-radius: 6px;
+        }
 
-			background: #171a20;
+        .code-title {
+            padding:
+                11px 15px;
 
-			border-bottom:
-			1px solid #30353d;
+            background: #171a20;
 
-			color: #9097a1;
+            border-bottom:
+                1px solid #30353d;
 
-			font-size: 13px;
-			}
+            color: #9097a1;
 
-			pre {
-			margin: 0;
+            font-size: 13px;
+        }
 
-			padding: 22px;
+        pre {
+            margin: 0;
 
-			color: #d4d8dd;
+            padding: 22px;
 
-			white-space: pre-wrap;
-			}
+            color: #d4d8dd;
 
-			code {
-			font-family:
-			Consolas,
-			"Courier New",
-			monospace;
+            white-space: pre-wrap;
+        }
 
-			font-size: 14px;
-			}
+        code {
+            font-family:
+                Consolas,
+                "Courier New",
+                monospace;
 
+            font-size: 14px;
+        }
 
 
-			/* =====================================================
-			FOOTER
-			===================================================== */
 
-			footer {
-			padding:
-			35px 20px;
+        /* =====================================================
+           FOOTER
+        ===================================================== */
 
-			text-align: center;
+        footer {
+            padding:
+                35px 20px;
 
-			color: #666d76;
+            text-align: center;
 
-			background:
-			rgba(
-			8,
-			10,
-			13,
-			0.90
-			);
+            color: #666d76;
 
-			border-top:
-			1px solid #24282f;
-			}
+            background:
+                rgba(
+                    8,
+                    10,
+                    13,
+                    0.90
+                );
 
+            border-top:
+                1px solid #24282f;
+        }
 
 
-			/* =====================================================
-			MOBILE
-			===================================================== */
 
-			@media (max-width: 950px) {
+        /* =====================================================
+           MOBILE
+        ===================================================== */
 
-			.hero-layout {
-			grid-template-columns: 1fr;
-			}
+        @media (max-width: 950px) {
 
-			.hero-image-box {
-			min-height: 320px;
-			}
+            .hero-layout {
+                grid-template-columns: 1fr;
+            }
 
-			.project-grid {
-			grid-template-columns: 1fr;
-			}
+            .hero-image-box {
+                min-height: 320px;
+            }
 
-			.detail-top {
-			grid-template-columns: 1fr;
-			}
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
 
-			.project-link-box {
-			min-width: 0;
+            .detail-top {
+                grid-template-columns: 1fr;
+            }
 
-			max-width: 300px;
-			}
+            .project-link-box {
+                min-width: 0;
 
-			.work-grid {
-			grid-template-columns: 1fr;
-			}
+                max-width: 300px;
+            }
 
-			.media-layout {
-			grid-template-columns: 1fr;
-			}
+            .work-grid {
+                grid-template-columns: 1fr;
+            }
 
-			.image-column {
-			grid-template-columns:
-			1fr 1fr;
+            .media-layout {
+                grid-template-columns: 1fr;
+            }
 
-			grid-template-rows: auto;
-			}
+            .image-column {
+                grid-template-columns:
+                    1fr 1fr;
 
-			}
+                grid-template-rows: auto;
+            }
 
+        }
 
-			@media (max-width: 600px) {
 
-			.nav-links {
-			display: none;
-			}
+        @media (max-width: 600px) {
 
-			.hero h1 {
-			font-size: 55px;
+            .nav-links {
+                display: none;
+            }
 
-			letter-spacing: -2px;
-			}
+            .hero h1 {
+                font-size: 55px;
 
-			.hero-content-box {
-			padding: 25px;
-			}
+                letter-spacing: -2px;
+            }
 
-			.hero-buttons {
-			flex-direction: column;
+            .hero-content-box {
+                padding: 25px;
+            }
 
-			align-items: flex-start;
-			}
+            .hero-buttons {
+                flex-direction: column;
 
-			.section-intro-box {
-			padding: 25px;
-			}
+                align-items: flex-start;
+            }
 
-			.project-detail {
-			padding: 25px;
-			}
+            .section-intro-box {
+                padding: 25px;
+            }
 
-			.project-link-box {
-			max-width: none;
-			}
+            .project-detail {
+                padding: 25px;
+            }
 
-			.image-column {
-			grid-template-columns: 1fr;
-			}
+            .project-link-box {
+                max-width: none;
+            }
 
-			}
+            .image-column {
+                grid-template-columns: 1fr;
+            }
 
-		</style>
+        }
 
-	</head>
+    </style>
 
+</head>
 
-	<body>
 
+<body>
 
-		<!-- =====================================================
-         MATRIX BACKGROUND
-    ====================================================== -->
+    <!-- MATRIX BACKGROUND -->
 
-		<canvas
-			id="matrix-bg"
-			aria-hidden="true"
+    <canvas
+        id="matrix-bg"
+        aria-hidden="true"
     ></canvas>
 
 
 
-		<!-- =====================================================
-         NAVIGATION
-    ====================================================== -->
+    <!-- NAVIGATION -->
 
-		<header>
+    <header>
 
-			<nav>
+        <nav>
 
-				<a
-					href="#home"
-					class="logo"
+            <a
+                href="#home"
+                class="logo"
             >
-					Josh Maddox
-				</a>
+                Josh Maddox
+            </a>
 
 
-				<div class="nav-links">
+            <div class="nav-links">
 
-					<a href="#home">
-						Home
-					</a>
-
-
-					<a href="#projects">
-						Projects
-					</a>
-
-				</div>
-
-			</nav>
-
-		</header>
+                <a href="#home">
+                    Home
+                </a>
 
 
+                <a href="#projects">
+                    Projects
+                </a>
 
-		<main>
+            </div>
+
+        </nav>
+
+    </header>
 
 
-			<!-- =================================================
-             HOME
-        ================================================== -->
 
-			<section
-				id="home"
-				class="hero"
+    <main>
+
+
+        <!-- HOME -->
+
+        <section
+            id="home"
+            class="hero"
         >
 
-				<div class="content-box hero-content-box">
+            <div class="content-box hero-content-box">
 
-					<div class="hero-layout">
-
-
-						<div class="hero-left">
-
-							<p class="hero-label">
-								GAME PROGRAMMER • QA ENGINEER
-							</p>
+                <div class="hero-layout">
 
 
-							<h1>
-								Josh Maddox
-							</h1>
+                    <div class="hero-left">
+
+                        <p class="hero-label">
+                            GAME PROGRAMMER • QA ENGINEER
+                        </p>
 
 
-							<h2>
-								Game Programmer | QA Engineer
-							</h2>
+                        <h1>
+                            Josh Maddox
+                        </h1>
 
 
-							<p class="hero-description">
-
-								Game Development graduate focused on game programming,
-								quality assurance, testing, debugging, and technical
-								problem solving. Experienced with Unreal Engine, C++,
-								Unity, C#, Godot, and collaborative game development.
-
-							</p>
+                        <h2>
+                            Game Programmer | QA Engineer
+                        </h2>
 
 
-							<div class="hero-buttons">
+                        <p class="hero-description">
 
-								<a
-									href="#projects"
-									class="button primary-button"
+                            Game Development graduate focused on game programming,
+                            quality assurance, testing, debugging, and technical
+                            problem solving. Experienced with Unreal Engine, C++,
+                            Unity, C#, Godot, and collaborative game development.
+
+                        </p>
+
+
+                        <div class="hero-buttons">
+
+                            <a
+                                href="#projects"
+                                class="button primary-button"
                             >
-									View Projects
-								</a>
+                                View Projects
+                            </a>
 
-							</div>
+                        </div>
 
-						</div>
-
-
-
-						<!-- =================================================
-                         PROFILE PHOTO
-                    ================================================== -->
-
-						<div class="hero-right">
-
-							<div class="hero-image-box">
-
-								<div class="hero-image-placeholder">
-
-									<img
-									 src={profilePhoto.src}
-									 alt="Josh Maddox"
-									/>
-
-								</div>
-
-							</div>
-
-						</div>
-
-
-					</div>
-
-				</div>
-
-			</section>
+                    </div>
 
 
 
-			<!-- =================================================
-             PROJECTS
-        ================================================== -->
+                    <!-- PROFILE PHOTO -->
 
-			<section id="projects">
+                    <div class="hero-right">
+
+                        <div class="hero-image-box">
+
+                            <div class="hero-image-placeholder">
+
+                                <img
+                                    src={profilePhoto.src}
+                                    alt="Josh Maddox"
+                                />
+
+                            </div>
+
+                        </div>
+
+                    </div>
 
 
-				<div class="content-box section-intro-box">
+                </div>
 
-					<p class="section-label">
-						SELECTED WORK
-					</p>
+            </div>
 
-
-					<h2 class="section-title">
-						Featured Projects
-					</h2>
-
-
-					<p class="section-description">
-
-						Projects demonstrating programming, game development,
-						testing, debugging, technical problem solving, and
-						collaborative development experience.
-
-					</p>
-
-				</div>
+        </section>
 
 
 
-				<!-- =================================================
-                 PROJECT CARDS
-            ================================================== -->
+        <!-- PROJECTS -->
 
-				<div class="project-grid">
+        <section id="projects">
 
 
-					<!-- ASHEN BLOOM -->
+            <div class="content-box section-intro-box">
 
-					<article
-						class="project-card active"
-						data-project="ashen"
+                <p class="section-label">
+                    SELECTED WORK
+                </p>
+
+
+                <h2 class="section-title">
+                    Featured Projects
+                </h2>
+
+
+                <p class="section-description">
+
+                    Projects demonstrating programming, game development,
+                    testing, debugging, technical problem solving, and
+                    collaborative development experience.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- PROJECT CARDS -->
+
+            <div class="project-grid">
+
+
+                <!-- ASHEN BLOOM -->
+
+                <article
+                    class="project-card active"
+                    data-project="ashen"
                 >
 
-						<div class="project-main">
+                    <div class="project-main">
 
-							<p class="project-engine">
-								UNREAL ENGINE 5.6
-							</p>
-
-
-							<h3>
-								Ashen Bloom
-							</h3>
+                        <p class="project-engine">
+                            UNREAL ENGINE 5.6
+                        </p>
 
 
-							<p class="project-tech">
-								C++ • Blueprints • PCG
-							</p>
+                        <h3>
+                            Ashen Bloom
+                        </h3>
 
 
-							<p class="project-description">
-
-								A third-person character-action souls-lite
-								in a dying world where nature has fused
-								with machines, corpses, and ruined cities.
-
-							</p>
-
-						</div>
+                        <p class="project-tech">
+                            C++ • Blueprints • PCG
+                        </p>
 
 
-						<button
-							type="button"
-							class="view-project"
-							data-target="ashen"
+                        <p class="project-description">
+
+                            A third-person character-action souls-lite
+                            in a dying world where nature has fused
+                            with machines, corpses, and ruined cities.
+
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="view-project"
+                        data-target="ashen"
                     >
-							View Project
-						</button>
+                        View Project
+                    </button>
 
-					</article>
+                </article>
 
 
 
-					<!-- ROBORUN -->
+                <!-- ROBORUN -->
 
-					<article
-						class="project-card"
-						data-project="roborun"
+                <article
+                    class="project-card"
+                    data-project="roborun"
                 >
 
-						<div class="project-main">
+                    <div class="project-main">
 
-							<p class="project-engine">
-								UNITY
-							</p>
-
-
-							<h3>
-								RoboRun
-							</h3>
+                        <p class="project-engine">
+                            UNITY
+                        </p>
 
 
-							<p class="project-tech">
-								Unity • C#
-							</p>
+                        <h3>
+                            RoboRun
+                        </h3>
 
 
-							<p class="project-description">
-
-								A Unity project featuring gameplay systems,
-								upgrades, a shop, overworld development,
-								and level / map creation.
-
-							</p>
-
-						</div>
+                        <p class="project-tech">
+                            Unity • C#
+                        </p>
 
 
-						<button
-							type="button"
-							class="view-project"
-							data-target="roborun"
+                        <p class="project-description">
+
+                            A Unity project featuring gameplay systems,
+                            upgrades, a shop, overworld development,
+                            and level / map creation.
+
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="view-project"
+                        data-target="roborun"
                     >
-							View Project
-						</button>
+                        View Project
+                    </button>
 
-					</article>
+                </article>
 
 
 
-					<!-- I AM THE WALL -->
+                <!-- I AM THE WALL -->
 
-					<article
-						class="project-card"
-						data-project="wall"
+                <article
+                    class="project-card"
+                    data-project="wall"
                 >
 
-						<div class="project-main">
+                    <div class="project-main">
 
-							<p class="project-engine">
-								GODOT GAME JAM
-							</p>
-
-
-							<h3>
-								I Am the Wall
-							</h3>
+                        <p class="project-engine">
+                            GODOT GAME JAM
+                        </p>
 
 
-							<p class="project-tech">
-								Godot • Pixel Art • Animation
-							</p>
+                        <h3>
+                            I Am the Wall
+                        </h3>
 
 
-							<p class="project-description">
-
-								A game jam project where I contributed most
-								of the pixel art, animation, color palette work,
-								and game design support.
-
-							</p>
-
-						</div>
+                        <p class="project-tech">
+                            Godot • Pixel Art • Animation
+                        </p>
 
 
-						<button
-							type="button"
-							class="view-project"
-							data-target="wall"
+                        <p class="project-description">
+
+                            A game jam project where I contributed most
+                            of the pixel art, animation, color palette work,
+                            and game design support.
+
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="view-project"
+                        data-target="wall"
                     >
-							View Project
-						</button>
+                        View Project
+                    </button>
 
-					</article>
-
-
-				</div>
+                </article>
 
 
-
-				<!-- =================================================
-                 PROJECT SHOWCASE
-            ================================================== -->
-
-				<div class="project-showcase">
+            </div>
 
 
-					<!-- =================================================
+
+            <!-- PROJECT SHOWCASE -->
+
+            <div class="project-showcase">
+
+
+                <!-- =================================================
                      ASHEN BLOOM
                 ================================================== -->
 
-					<div
-						id="ashen"
-						class="project-detail active"
+                <div
+                    id="ashen"
+                    class="project-detail active"
                 >
 
 
-						<div class="detail-top">
+                    <div class="detail-top">
 
 
-							<div class="detail-heading">
+                        <div class="detail-heading">
 
-								<p class="detail-engine">
-									UNREAL ENGINE 5.6
-								</p>
+                            <p class="detail-engine">
+                                UNREAL ENGINE 5.6
+                            </p>
 
 
-								<h2>
-									Ashen Bloom
-								</h2>
+                            <h2>
+                                Ashen Bloom
+                            </h2>
 
 
-								<p>
+                            <p>
 
-									Ashen Bloom is a singleplayer third-person
-									character-action souls-lite set in a dying world
-									where nature has fused with machines, corpses,
-									and ruined cities. This project was developed
-									collaboratively in Unreal Engine 5.6.
+                                Ashen Bloom is a singleplayer third-person
+                                character-action souls-lite set in a dying world
+                                where nature has fused with machines, corpses,
+                                and ruined cities. This project was developed
+                                collaboratively in Unreal Engine 5.6.
 
-								</p>
+                            </p>
 
-							</div>
+                        </div>
 
 
 
-							<!-- ASHEN BLOOM GITHUB -->
+                        <!-- ASHEN BLOOM VERSION CONTROL -->
 
-							<div class="project-link-box">
+                        <div class="project-link-box">
 
-								<p class="project-link-label">
-									PROJECT SOURCE
-								</p>
+                            <p class="project-link-label">
+                                VERSION CONTROL
+                            </p>
 
 
-								<a
-									href="https://github.com/Josh-Maddox/ASHEN-BLOOM-REPO"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="project-github-button"
-                            >
-									GitHub
-								</a>
+                            <div class="project-source-platform">
+                                Perforce
+                            </div>
 
-							</div>
 
+                            <p class="project-source-note">
+                                School-managed repository. Source is not publicly available.
+                            </p>
 
-						</div>
+                        </div>
 
 
+                    </div>
 
-						<div class="detail-section">
 
-							<h3>
-								Project Overview
-							</h3>
 
+                    <div class="detail-section">
 
-							<p>
+                        <h3>
+                            Project Overview
+                        </h3>
 
-								Ashen Bloom combines action combat,
-								exploration, environmental storytelling,
-								and stylized dark fantasy / sci-fi worldbuilding.
-								The project included gameplay systems, UI,
-								progression, environment work, and technical
-								world building.
 
-							</p>
+                        <p>
 
-						</div>
+                            Ashen Bloom combines action combat,
+                            exploration, environmental storytelling,
+                            and stylized dark fantasy / sci-fi worldbuilding.
+                            The project included gameplay systems, UI,
+                            progression, environment work, and technical
+                            world building.
 
+                        </p>
 
+                    </div>
 
-						<div class="detail-section">
 
-							<h3>
-								My Contributions
-							</h3>
 
+                    <div class="detail-section">
 
-							<ul class="detail-list">
+                        <h3>
+                            My Contributions
+                        </h3>
 
-								<li>
-									Implemented the Inventory system.
-								</li>
 
-								<li>
-									Built the Level-up system.
-								</li>
+                        <ul class="detail-list">
 
-								<li>
-									Created the inventory character rotation view.
-								</li>
+                            <li>
+                                Implemented the Inventory system.
+                            </li>
 
-								<li>
-									Built the Forest PCG system.
-								</li>
+                            <li>
+                                Built the Level-up system.
+                            </li>
 
-								<li>
-									Set up landscape grass using LTG_Grass.
-								</li>
+                            <li>
+                                Created the inventory character rotation view.
+                            </li>
 
-								<li>
-									Authored the landscape texture layering system.
-								</li>
+                            <li>
+                                Built the Forest PCG system.
+                            </li>
 
-								<li>
-									Worked collaboratively with the team inside
-									Unreal Engine 5.6.
-								</li>
+                            <li>
+                                Set up landscape grass using LTG_Grass.
+                            </li>
 
-							</ul>
+                            <li>
+                                Authored the landscape texture layering system.
+                            </li>
 
-						</div>
+                            <li>
+                                Worked collaboratively with the team inside
+                                Unreal Engine 5.6.
+                            </li>
 
+                        </ul>
 
+                    </div>
 
-						<div class="detail-section">
 
-							<h3>
-								Development & QA
-							</h3>
 
+                    <div class="detail-section">
 
-							<div class="work-grid">
+                        <h3>
+                            Development & QA
+                        </h3>
 
 
-								<div class="work-box">
+                        <div class="work-grid">
 
-									<h4>
-										Programming / Development
-									</h4>
 
+                            <div class="work-box">
 
-									<ul class="detail-list">
+                                <h4>
+                                    Programming / Development
+                                </h4>
 
-										<li>
-											Gameplay support systems in Unreal Engine 5.6.
-										</li>
 
-										<li>
-											Inventory and player progression features.
-										</li>
+                                <ul class="detail-list">
 
-										<li>
-											Environment support through procedural
-											forest setup.
-										</li>
+                                    <li>
+                                        Gameplay support systems in Unreal Engine 5.6.
+                                    </li>
 
-										<li>
-											Landscape grass and material layer setup.
-										</li>
+                                    <li>
+                                        Inventory and player progression features.
+                                    </li>
 
-										<li>
-											Technical implementation using C++
-											and Blueprints.
-										</li>
+                                    <li>
+                                        Environment support through procedural
+                                        forest setup.
+                                    </li>
 
-									</ul>
+                                    <li>
+                                        Landscape grass and material layer setup.
+                                    </li>
 
-								</div>
+                                    <li>
+                                        Technical implementation using C++
+                                        and Blueprints.
+                                    </li>
 
+                                </ul>
 
+                            </div>
 
-								<div class="work-box">
 
-									<h4>
-										Testing / Debugging
-									</h4>
 
+                            <div class="work-box">
 
-									<ul class="detail-list">
+                                <h4>
+                                    Testing / Debugging
+                                </h4>
 
-										<li>
-											Tested systems after implementation
-											and iteration.
-										</li>
 
-										<li>
-											Helped identify bugs and technical
-											issues during development.
-										</li>
+                                <ul class="detail-list">
 
-										<li>
-											Checked functionality after changes
-											to UI, systems, and environment work.
-										</li>
+                                    <li>
+                                        Tested systems after implementation
+                                        and iteration.
+                                    </li>
 
-										<li>
-											Used troubleshooting and iteration
-											to improve stability and usability.
-										</li>
+                                    <li>
+                                        Helped identify bugs and technical
+                                        issues during development.
+                                    </li>
 
-									</ul>
+                                    <li>
+                                        Checked functionality after changes
+                                        to UI, systems, and environment work.
+                                    </li>
 
-								</div>
+                                    <li>
+                                        Used troubleshooting and iteration
+                                        to improve stability and usability.
+                                    </li>
 
+                                </ul>
 
-							</div>
+                            </div>
 
-						</div>
 
+                        </div>
 
+                    </div>
 
-						<div class="detail-section">
 
-							<h3>
-								Tools & Technologies
-							</h3>
 
+                    <div class="detail-section">
 
-							<div class="tags">
+                        <h3>
+                            Tools & Technologies
+                        </h3>
 
-								<span>Unreal Engine 5.6</span>
 
-								<span>C++</span>
+                        <div class="tags">
 
-								<span>Blueprints</span>
+                            <span>Unreal Engine 5.6</span>
+                            <span>C++</span>
+                            <span>Blueprints</span>
+                            <span>PCG</span>
+                            <span>Gaea 2</span>
+                            <span>Blender</span>
+                            <span>Perforce</span>
+                            <span>Visual Studio</span>
 
-								<span>PCG</span>
+                        </div>
 
-								<span>Gaea 2</span>
+                    </div>
 
-								<span>Blender</span>
 
-								<span>Perforce</span>
 
-								<span>Visual Studio</span>
+                    <div class="detail-section">
 
-							</div>
+                        <h3>
+                            Gameplay & Media
+                        </h3>
 
-						</div>
 
+                        <div class="media-layout">
 
 
-						<div class="detail-section">
+                            <div class="video-box">
+                                Add Ashen Bloom gameplay video here
+                            </div>
 
-							<h3>
-								Gameplay & Media
-							</h3>
 
+                            <div class="image-column">
 
-							<div class="media-layout">
+                                <div class="image-box">
+                                    Add forest / environment screenshot here
+                                </div>
 
 
-								<div class="video-box">
-									Add Ashen Bloom gameplay video here
-								</div>
+                                <div class="image-box">
+                                    Add inventory / UI screenshot here
+                                </div>
 
+                            </div>
 
-								<div class="image-column">
 
-									<div class="image-box">
-										Add forest / environment screenshot here
-									</div>
+                        </div>
 
+                    </div>
 
-									<div class="image-box">
-										Add inventory / UI screenshot here
-									</div>
 
-								</div>
 
+                    <div class="detail-section">
 
-							</div>
+                        <h3>
+                            Code Example
+                        </h3>
 
-						</div>
 
+                        <div class="code-box">
 
+                            <div class="code-title">
+                                Ashen Bloom • C++ / Unreal
+                            </div>
 
-						<div class="detail-section">
 
-							<h3>
-								Code Example
-							</h3>
+<pre><code>// Example section for Ashen Bloom
+// Good places to show later:
+//
+// - Inventory system code
+// - Level-up / progression code
+// - PCG support code
+// - Landscape / environment setup notes
+//
+// Replace this with one of your real project examples.</code></pre>
 
+                        </div>
 
-							<div class="code-box">
+                    </div>
 
-								<div class="code-title">
-									Ashen Bloom • C++ / Unreal
-								</div>
 
+                </div>
 
-								<pre>
-									<code>
-										// Example section for Ashen Bloom
-										// Good places to show later:
-										//
-										// - Inventory system code
-										// - Level-up / progression code
-										// - PCG support code
-										// - Landscape / environment setup notes
-										//
-										// Replace this with one of your real project examples.
-									</code>
-								</pre>
 
-							</div>
 
-						</div>
-
-
-					</div>
-
-
-
-					<!-- =================================================
+                <!-- =================================================
                      ROBORUN
                 ================================================== -->
 
-					<div
-						id="roborun"
-						class="project-detail"
+                <div
+                    id="roborun"
+                    class="project-detail"
                 >
 
 
-						<div class="detail-top">
+                    <div class="detail-top">
 
 
-							<div class="detail-heading">
+                        <div class="detail-heading">
 
-								<p class="detail-engine">
-									UNITY
-								</p>
-
-
-								<h2>
-									RoboRun
-								</h2>
+                            <p class="detail-engine">
+                                UNITY
+                            </p>
 
 
-								<p>
-
-									RoboRun is a Unity and C# project centered
-									on gameplay systems, upgrades, player progression,
-									shop functionality, overworld development,
-									and map creation.
-
-								</p>
-
-							</div>
+                            <h2>
+                                RoboRun
+                            </h2>
 
 
+                            <p>
 
-							<!-- ROBORUN GITHUB -->
+                                RoboRun is a Unity and C# project centered
+                                on gameplay systems, upgrades, player progression,
+                                shop functionality, overworld development,
+                                and map creation.
 
-							<div class="project-link-box">
+                            </p>
 
-								<p class="project-link-label">
-									PROJECT SOURCE
-								</p>
+                        </div>
 
 
-								<a
-									href="https://github.com/Josh-Maddox/ROBORUN-REPO"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="project-github-button"
+
+                        <div class="project-link-box">
+
+                            <p class="project-link-label">
+                                PROJECT SOURCE
+                            </p>
+
+
+                            <a
+                                href="https://github.com/Josh-Maddox/ROBORUN-REPO"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-github-button"
                             >
-									GitHub
-								</a>
+                                GitHub
+                            </a>
 
-							</div>
+                        </div>
 
 
-						</div>
+                    </div>
 
 
 
-						<div class="detail-section">
+                    <div class="detail-section">
 
-							<h3>
-								Project Overview
-							</h3>
+                        <h3>
+                            Project Overview
+                        </h3>
 
 
-							<p>
+                        <p>
 
-								RoboRun focused on gameplay structure
-								and progression systems. The project gave me
-								experience implementing features in Unity
-								and organizing multiple connected systems
-								that support player flow.
+                            RoboRun focused on gameplay structure
+                            and progression systems. The project gave me
+                            experience implementing features in Unity
+                            and organizing multiple connected systems
+                            that support player flow.
 
-							</p>
+                        </p>
 
-						</div>
+                    </div>
 
 
 
-						<div class="detail-section">
+                    <div class="detail-section">
 
-							<h3>
-								My Contributions
-							</h3>
+                        <h3>
+                            My Contributions
+                        </h3>
 
 
-							<ul class="detail-list">
+                        <ul class="detail-list">
 
-								<li>
-									Worked on the shop system.
-								</li>
+                            <li>
+                                Worked on the shop system.
+                            </li>
 
-								<li>
-									Worked on player upgrade systems.
-								</li>
+                            <li>
+                                Worked on player upgrade systems.
+                            </li>
 
-								<li>
-									Helped build the overworld structure.
-								</li>
+                            <li>
+                                Helped build the overworld structure.
+                            </li>
 
-								<li>
-									Created most of the map content.
-								</li>
+                            <li>
+                                Created most of the map content.
+                            </li>
 
-								<li>
-									Supported gameplay system implementation
-									in Unity with C#.
-								</li>
+                            <li>
+                                Supported gameplay system implementation
+                                in Unity with C#.
+                            </li>
 
-							</ul>
+                        </ul>
 
-						</div>
+                    </div>
 
 
 
-						<div class="detail-section">
+                    <div class="detail-section">
 
-							<h3>
-								Development & QA
-							</h3>
+                        <h3>
+                            Development & QA
+                        </h3>
 
 
-							<div class="work-grid">
+                        <div class="work-grid">
 
 
-								<div class="work-box">
+                            <div class="work-box">
 
-									<h4>
-										Programming / Development
-									</h4>
+                                <h4>
+                                    Programming / Development
+                                </h4>
 
 
-									<ul class="detail-list">
+                                <ul class="detail-list">
 
-										<li>
-											Implemented and connected shop
-											and upgrade features.
-										</li>
+                                    <li>
+                                        Implemented and connected shop
+                                        and upgrade features.
+                                    </li>
 
-										<li>
-											Supported progression-focused
-											gameplay systems.
-										</li>
+                                    <li>
+                                        Supported progression-focused
+                                        gameplay systems.
+                                    </li>
 
-										<li>
-											Built and arranged overworld content.
-										</li>
+                                    <li>
+                                        Built and arranged overworld content.
+                                    </li>
 
-										<li>
-											Handled a large portion of map
-											creation work.
-										</li>
+                                    <li>
+                                        Handled a large portion of map
+                                        creation work.
+                                    </li>
 
-									</ul>
+                                </ul>
 
-								</div>
+                            </div>
 
 
 
-								<div class="work-box">
+                            <div class="work-box">
 
-									<h4>
-										Testing / Debugging
-									</h4>
+                                <h4>
+                                    Testing / Debugging
+                                </h4>
 
 
-									<ul class="detail-list">
+                                <ul class="detail-list">
 
-										<li>
-											Tested feature flow between gameplay,
-											upgrades, and the shop.
-										</li>
+                                    <li>
+                                        Tested feature flow between gameplay,
+                                        upgrades, and the shop.
+                                    </li>
 
-										<li>
-											Checked system behavior after
-											gameplay changes.
-										</li>
+                                    <li>
+                                        Checked system behavior after
+                                        gameplay changes.
+                                    </li>
 
-										<li>
-											Used debugging and iteration
-											to refine functionality.
-										</li>
+                                    <li>
+                                        Used debugging and iteration
+                                        to refine functionality.
+                                    </li>
 
-										<li>
-											Verified map and overworld content
-											placement during development.
-										</li>
+                                    <li>
+                                        Verified map and overworld content
+                                        placement during development.
+                                    </li>
 
-									</ul>
+                                </ul>
 
-								</div>
+                            </div>
 
 
-							</div>
+                        </div>
 
-						</div>
+                    </div>
 
 
 
-						<div class="detail-section">
+                    <div class="detail-section">
 
-							<h3>
-								Tools & Technologies
-							</h3>
+                        <h3>
+                            Tools & Technologies
+                        </h3>
 
 
-							<div class="tags">
+                        <div class="tags">
 
-								<span>Unity</span>
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Visual Studio</span>
+                            <span>Gameplay Systems</span>
+                            <span>Level / Map Building</span>
 
-								<span>C#</span>
+                        </div>
 
-								<span>Visual Studio</span>
+                    </div>
 
-								<span>Gameplay Systems</span>
 
-								<span>Level / Map Building</span>
 
-							</div>
+                    <div class="detail-section">
 
-						</div>
+                        <h3>
+                            Gameplay & Media
+                        </h3>
 
 
+                        <div class="media-layout">
 
-						<div class="detail-section">
 
-							<h3>
-								Gameplay & Media
-							</h3>
+                            <div class="video-box">
+                                Add RoboRun gameplay video here
+                            </div>
 
 
-							<div class="media-layout">
+                            <div class="image-column">
 
+                                <div class="image-box">
+                                    Add overworld screenshot here
+                                </div>
 
-								<div class="video-box">
-									Add RoboRun gameplay video here
-								</div>
 
+                                <div class="image-box">
+                                    Add shop / upgrade screenshot here
+                                </div>
 
-								<div class="image-column">
+                            </div>
 
-									<div class="image-box">
-										Add overworld screenshot here
-									</div>
 
+                        </div>
 
-									<div class="image-box">
-										Add shop / upgrade screenshot here
-									</div>
+                    </div>
 
-								</div>
 
 
-							</div>
+                    <div class="detail-section">
 
-						</div>
+                        <h3>
+                            Code Example
+                        </h3>
 
 
+                        <div class="code-box">
 
-						<div class="detail-section">
+                            <div class="code-title">
+                                RoboRun • C# / Unity
+                            </div>
 
-							<h3>
-								Code Example
-							</h3>
 
+<pre><code>// Example section for RoboRun
+// Good places to show later:
+//
+// - Shop system logic
+// - Upgrade system code
+// - Player progression logic
+// - Map / world setup scripts
+//
+// Replace this with one of your real project examples.</code></pre>
 
-							<div class="code-box">
+                        </div>
 
-								<div class="code-title">
-									RoboRun • C# / Unity
-								</div>
+                    </div>
 
 
-								<pre>
-									<code>
-										// Example section for RoboRun
-										// Good places to show later:
-										//
-										// - Shop system logic
-										// - Upgrade system code
-										// - Player progression logic
-										// - Map / world setup scripts
-										//
-										// Replace this with one of your real project examples.
-									</code>
-								</pre>
+                </div>
 
-							</div>
 
-						</div>
 
-
-					</div>
-
-
-
-					<!-- =================================================
+                <!-- =================================================
                      I AM THE WALL
                 ================================================== -->
 
-					<div
-						id="wall"
-						class="project-detail"
+                <div
+                    id="wall"
+                    class="project-detail"
                 >
 
 
-						<div class="detail-top">
+                    <div class="detail-top">
 
 
-							<div class="detail-heading">
+                        <div class="detail-heading">
 
-								<p class="detail-engine">
-									GODOT GAME JAM
-								</p>
-
-
-								<h2>
-									I Am the Wall
-								</h2>
+                            <p class="detail-engine">
+                                GODOT GAME JAM
+                            </p>
 
 
-								<p>
-
-									I Am the Wall was a Godot game jam project
-									built around fast iteration, game design support,
-									and a strong visual identity. I contributed most
-									of the pixel art and animation work.
-
-								</p>
-
-							</div>
+                            <h2>
+                                I Am the Wall
+                            </h2>
 
 
+                            <p>
 
-							<!-- I AM THE WALL GITHUB -->
+                                I Am the Wall was a Godot game jam project
+                                built around fast iteration, game design support,
+                                and a strong visual identity. I contributed most
+                                of the pixel art and animation work.
 
-							<div class="project-link-box">
+                            </p>
 
-								<p class="project-link-label">
-									PROJECT SOURCE
-								</p>
+                        </div>
 
 
-								<a
-									href="https://github.com/Josh-Maddox/I-AM-THE-WALL-REPO"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="project-github-button"
+
+                        <div class="project-link-box">
+
+                            <p class="project-link-label">
+                                PROJECT SOURCE
+                            </p>
+
+
+                            <a
+                                href="https://github.com/Josh-Maddox/I-AM-THE-WALL-REPO"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-github-button"
                             >
-									GitHub
-								</a>
+                                GitHub
+                            </a>
 
-							</div>
+                        </div>
 
 
-						</div>
+                    </div>
 
 
 
-						<div class="detail-section">
+                    <div class="detail-section">
 
-							<h3>
-								Project Overview
-							</h3>
+                        <h3>
+                            Project Overview
+                        </h3>
 
 
-							<p>
+                        <p>
 
-								This project was created during a game jam
-								and required quick decision-making, creative
-								problem solving, and efficient production.
-								It was a strong exercise in collaboration,
-								visual development, and finishing work
-								under time pressure.
+                            This project was created during a game jam
+                            and required quick decision-making, creative
+                            problem solving, and efficient production.
+                            It was a strong exercise in collaboration,
+                            visual development, and finishing work
+                            under time pressure.
 
-							</p>
+                        </p>
 
-						</div>
+                    </div>
 
 
 
-						<div class="detail-section">
+                    <div class="detail-section">
 
-							<h3>
-								My Contributions
-							</h3>
+                        <h3>
+                            My Contributions
+                        </h3>
 
 
-							<ul class="detail-list">
+                        <ul class="detail-list">
 
-								<li>
-									Created most of the pixel art.
-								</li>
+                            <li>
+                                Created most of the pixel art.
+                            </li>
 
-								<li>
-									Created most of the animation work.
-								</li>
+                            <li>
+                                Created most of the animation work.
+                            </li>
 
-								<li>
-									Handled the color palette direction.
-								</li>
+                            <li>
+                                Handled the color palette direction.
+                            </li>
 
-								<li>
-									Contributed to the game design document (GDD).
-								</li>
+                            <li>
+                                Contributed to the game design document (GDD).
+                            </li>
 
-								<li>
-									Supported the overall presentation
-									and identity of the project.
-								</li>
+                            <li>
+                                Supported the overall presentation
+                                and identity of the project.
+                            </li>
 
-							</ul>
+                        </ul>
 
-						</div>
+                    </div>
 
 
 
-						<div class="detail-section">
+                    <div class="detail-section">
 
-							<h3>
-								Development & QA
-							</h3>
+                        <h3>
+                            Development & QA
+                        </h3>
 
 
-							<div class="work-grid">
+                        <div class="work-grid">
 
 
-								<div class="work-box">
+                            <div class="work-box">
 
-									<h4>
-										Development / Design
-									</h4>
+                                <h4>
+                                    Development / Design
+                                </h4>
 
 
-									<ul class="detail-list">
+                                <ul class="detail-list">
 
-										<li>
-											Visual direction through pixel
-											art and animation.
-										</li>
+                                    <li>
+                                        Visual direction through pixel
+                                        art and animation.
+                                    </li>
 
-										<li>
-											Art support for gameplay readability.
-										</li>
+                                    <li>
+                                        Art support for gameplay readability.
+                                    </li>
 
-										<li>
-											Color palette work to support
-											the overall feel of the project.
-										</li>
+                                    <li>
+                                        Color palette work to support
+                                        the overall feel of the project.
+                                    </li>
 
-										<li>
-											Design support through GDD contribution.
-										</li>
+                                    <li>
+                                        Design support through GDD contribution.
+                                    </li>
 
-									</ul>
+                                </ul>
 
-								</div>
+                            </div>
 
 
 
-								<div class="work-box">
+                            <div class="work-box">
 
-									<h4>
-										Testing / Debugging
-									</h4>
+                                <h4>
+                                    Testing / Debugging
+                                </h4>
 
 
-									<ul class="detail-list">
+                                <ul class="detail-list">
 
-										<li>
-											Checked gameplay feel and presentation
-											during development.
-										</li>
+                                    <li>
+                                        Checked gameplay feel and presentation
+                                        during development.
+                                    </li>
 
-										<li>
-											Playtested quickly under jam conditions.
-										</li>
+                                    <li>
+                                        Playtested quickly under jam conditions.
+                                    </li>
 
-										<li>
-											Reviewed bugs and issues during
-											rapid iteration.
-										</li>
+                                    <li>
+                                        Reviewed bugs and issues during
+                                        rapid iteration.
+                                    </li>
 
-										<li>
-											Adjusted visuals and presentation
-											based on testing feedback.
-										</li>
+                                    <li>
+                                        Adjusted visuals and presentation
+                                        based on testing feedback.
+                                    </li>
 
-									</ul>
+                                </ul>
 
-								</div>
+                            </div>
 
 
-							</div>
+                        </div>
 
-						</div>
+                    </div>
 
 
 
-						<div class="detail-section">
+                    <div class="detail-section">
 
-							<h3>
-								Tools & Technologies
-							</h3>
+                        <h3>
+                            Tools & Technologies
+                        </h3>
 
 
-							<div class="tags">
+                        <div class="tags">
 
-								<span>Godot</span>
+                            <span>Godot</span>
+                            <span>Game Jam</span>
+                            <span>Pixel Art</span>
+                            <span>Animation</span>
+                            <span>Game Design</span>
 
-								<span>Game Jam</span>
+                        </div>
 
-								<span>Pixel Art</span>
+                    </div>
 
-								<span>Animation</span>
 
-								<span>Game Design</span>
 
-							</div>
+                    <div class="detail-section">
 
-						</div>
+                        <h3>
+                            Gameplay & Media
+                        </h3>
 
 
+                        <div class="media-layout">
 
-						<div class="detail-section">
 
-							<h3>
-								Gameplay & Media
-							</h3>
+                            <div class="video-box">
+                                Add I Am the Wall gameplay video here
+                            </div>
 
 
-							<div class="media-layout">
+                            <div class="image-column">
 
+                                <div class="image-box">
+                                    Add pixel art screenshot here
+                                </div>
 
-								<div class="video-box">
-									Add I Am the Wall gameplay video here
-								</div>
 
+                                <div class="image-box">
+                                    Add animation or gameplay screenshot here
+                                </div>
 
-								<div class="image-column">
+                            </div>
 
-									<div class="image-box">
-										Add pixel art screenshot here
-									</div>
 
+                        </div>
 
-									<div class="image-box">
-										Add animation or gameplay screenshot here
-									</div>
+                    </div>
 
-								</div>
 
 
-							</div>
+                    <div class="detail-section">
 
-						</div>
+                        <h3>
+                            Code / Design Notes
+                        </h3>
 
 
+                        <div class="code-box">
 
-						<div class="detail-section">
+                            <div class="code-title">
+                                I Am the Wall • Notes
+                            </div>
 
-							<h3>
-								Code / Design Notes
-							</h3>
 
+<pre><code>// Good things to show here later:
+//
+// - Pixel art workflow notes
+// - Animation sheet examples
+// - Design notes from the GDD
+// - Gameplay / jam iteration notes
+//
+// Replace this section with content you want to highlight.</code></pre>
 
-							<div class="code-box">
+                        </div>
 
-								<div class="code-title">
-									I Am the Wall • Notes
-								</div>
+                    </div>
 
 
-								<pre>
-									<code>
-										// Good things to show here later:
-										//
-										// - Pixel art workflow notes
-										// - Animation sheet examples
-										// - Design notes from the GDD
-										// - Gameplay / jam iteration notes
-										//
-										// Replace this section with content you want to highlight.
-									</code>
-								</pre>
+                </div>
 
-							</div>
 
-						</div>
+            </div>
 
+        </section>
 
-					</div>
 
+    </main>
 
-				</div>
 
-			</section>
 
+    <footer>
+        © 2026 Josh Maddox
+    </footer>
 
-		</main>
 
 
+    <script>
 
-		<!-- =====================================================
-         FOOTER
-    ====================================================== -->
+        /* =====================================================
+           PROJECT SWITCHING
+        ===================================================== */
 
-		<footer>
-			© 2026 Josh Maddox
-		</footer>
+        const projectButtons =
+            document.querySelectorAll(
+                ".view-project"
+            );
 
 
+        const projectDetails =
+            document.querySelectorAll(
+                ".project-detail"
+            );
 
-		<!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
 
-		<script>
+        const projectCards =
+            document.querySelectorAll(
+                ".project-card"
+            );
 
 
-			/* =====================================================
-			PROJECT SWITCHING
-			===================================================== */
+        projectButtons.forEach(
+            function (button) {
 
-			const projectButtons =
-			document.querySelectorAll(
-			".view-project"
-			);
+                button.addEventListener(
+                    "click",
+                    function () {
 
+                        const target =
+                            button.dataset.target;
 
-			const projectDetails =
-			document.querySelectorAll(
-			".project-detail"
-			);
 
+                        const targetDetail =
+                            document.getElementById(
+                                target
+                            );
 
-			const projectCards =
-			document.querySelectorAll(
-			".project-card"
-			);
 
+                        const targetCard =
+                            document.querySelector(
+                                '[data-project="' +
+                                target +
+                                '"]'
+                            );
 
-			projectButtons.forEach(
-			function (button) {
 
-			button.addEventListener(
-			"click",
-			function () {
+                        projectDetails.forEach(
+                            function (detail) {
 
-			const target =
-			button.dataset.target;
+                                detail.classList.remove(
+                                    "active"
+                                );
 
+                            }
+                        );
 
-			const targetDetail =
-			document.getElementById(
-			target
-			);
 
+                        projectCards.forEach(
+                            function (card) {
 
-			const targetCard =
-			document.querySelector(
-			'[data-project="' +
-			target +
-			'"]'
-			);
+                                card.classList.remove(
+                                    "active"
+                                );
 
+                            }
+                        );
 
-			projectDetails.forEach(
-			function (detail) {
 
-			detail.classList.remove(
-			"active"
-			);
+                        if (targetDetail) {
 
-			}
-			);
+                            targetDetail.classList.add(
+                                "active"
+                            );
 
+                        }
 
-			projectCards.forEach(
-			function (card) {
 
-			card.classList.remove(
-			"active"
-			);
+                        if (targetCard) {
 
-			}
-			);
+                            targetCard.classList.add(
+                                "active"
+                            );
 
+                        }
 
-			if (targetDetail) {
+                    }
+                );
 
-			targetDetail.classList.add(
-			"active"
-			);
+            }
+        );
 
-			}
 
 
-			if (targetCard) {
+        /* =====================================================
+           SLOW MATRIX BACKGROUND
+        ===================================================== */
 
-			targetCard.classList.add(
-			"active"
-			);
+        const matrixCanvas =
+            document.getElementById(
+                "matrix-bg"
+            );
 
-			}
 
-			}
-			);
+        if (matrixCanvas) {
 
-			}
-			);
+            const ctx =
+                matrixCanvas.getContext(
+                    "2d"
+                );
 
 
+            const characters =
+                "アァカサタナハマヤャラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&*+-<>";
 
-			/* =====================================================
-			SLOW MATRIX BACKGROUND
-			===================================================== */
 
-			const matrixCanvas =
-			document.getElementById(
-			"matrix-bg"
-			);
+            const fontSize =
+                18;
 
 
-			if (matrixCanvas) {
+            let columns =
+                [];
 
-			const ctx =
-			matrixCanvas.getContext(
-			"2d"
-			);
 
+            function resizeMatrix() {
 
-			const characters =
-			"アァカサタナハマヤャラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ#$%&*+-<>";
+                const pixelRatio =
+                    window.devicePixelRatio || 1;
 
 
-			const fontSize =
-			18;
+                matrixCanvas.width =
+                    Math.floor(
+                        window.innerWidth *
+                        pixelRatio
+                    );
 
 
-			let columns =
-			[];
+                matrixCanvas.height =
+                    Math.floor(
+                        window.innerHeight *
+                        pixelRatio
+                    );
 
 
-			function resizeMatrix() {
+                matrixCanvas.style.width =
+                    window.innerWidth +
+                    "px";
 
-			const pixelRatio =
-			window.devicePixelRatio || 1;
 
+                matrixCanvas.style.height =
+                    window.innerHeight +
+                    "px";
 
-			matrixCanvas.width =
-			Math.floor(
-			window.innerWidth *
-			pixelRatio
-			);
 
+                ctx.setTransform(
+                    pixelRatio,
+                    0,
+                    0,
+                    pixelRatio,
+                    0,
+                    0
+                );
 
-			matrixCanvas.height =
-			Math.floor(
-			window.innerHeight *
-			pixelRatio
-			);
 
+                const columnCount =
+                    Math.ceil(
+                        window.innerWidth /
+                        fontSize
+                    );
 
-			matrixCanvas.style.width =
-			window.innerWidth +
-			"px";
 
+                columns =
+                    [];
 
-			matrixCanvas.style.height =
-			window.innerHeight +
-			"px";
 
-
-			ctx.setTransform(
-			pixelRatio,
-			0,
-			0,
-			pixelRatio,
-			0,
-			0
-			);
-
-
-			const columnCount =
-			Math.ceil(
-			window.innerWidth /
-			fontSize
-			);
-
-
-			columns =
-			[];
-
-
-			for (
-			let i = 0;
-			i < columnCount;
+                for (
+                    let i = 0;
+                    i < columnCount;
                     i++
                 ) {
 
@@ -2779,87 +2730,87 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
                         if (
                             j === 0 &&
-			Math.random() >
-			0.985
-			) {
+                            Math.random() >
+                            0.985
+                        ) {
 
-			ctx.fillStyle =
-			"rgba(190, 255, 205, 0.95)";
-
-
-			ctx.fillText(
-			column.symbols[j],
-			x,
-			characterY
-			);
-
-			}
-
-			}
+                            ctx.fillStyle =
+                                "rgba(190, 255, 205, 0.95)";
 
 
-			column.y +=
-			column.speed *
-			fontSize;
+                            ctx.fillText(
+                                column.symbols[j],
+                                x,
+                                characterY
+                            );
+
+                        }
+
+                    }
 
 
-			if (
-			column.y >
-			window.innerHeight +
-			fontSize
-			) {
-
-			column.y =
-			-(
-			Math.random() *
-			window.innerHeight *
-			0.75
-			);
+                    column.y +=
+                        column.speed *
+                        fontSize;
 
 
-			column.speed =
-			Math.random() *
-			0.08 +
-			0.003;
+                    if (
+                        column.y >
+                        window.innerHeight +
+                        fontSize
+                    ) {
+
+                        column.y =
+                            -(
+                                Math.random() *
+                                window.innerHeight *
+                                0.75
+                            );
 
 
-			column.brightness =
-			Math.random() *
-			0.45 +
-			0.30;
-
-			}
-
-			}
+                        column.speed =
+                            Math.random() *
+                            0.08 +
+                            0.003;
 
 
-			requestAnimationFrame(
-			drawMatrix
-			);
+                        column.brightness =
+                            Math.random() *
+                            0.45 +
+                            0.30;
 
-			}
+                    }
 
-
-
-			resizeMatrix();
-
-
-			window.addEventListener(
-			"resize",
-			resizeMatrix
-			);
+                }
 
 
-			requestAnimationFrame(
-			drawMatrix
-			);
+                requestAnimationFrame(
+                    drawMatrix
+                );
 
-			}
-
-
-		</script>
+            }
 
 
-	</body>
+
+            resizeMatrix();
+
+
+            window.addEventListener(
+                "resize",
+                resizeMatrix
+            );
+
+
+            requestAnimationFrame(
+                drawMatrix
+            );
+
+        }
+
+
+    </script>
+
+
+</body>
 
 </html>
