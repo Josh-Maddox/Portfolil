@@ -1,4 +1,5 @@
 ﻿---
+import { Image } from "astro:assets";
 import profilePhoto from "../Images/Josh-profilePic.jpg";
 ---
 
@@ -1138,7 +1139,10 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 <body>
 
-    <!-- MATRIX BACKGROUND -->
+
+    <!-- =====================================================
+         MATRIX BACKGROUND
+    ====================================================== -->
 
     <canvas
         id="matrix-bg"
@@ -1147,7 +1151,9 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-    <!-- NAVIGATION -->
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
 
     <header>
 
@@ -1183,7 +1189,9 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
     <main>
 
 
-        <!-- HOME -->
+        <!-- =================================================
+             HOME
+        ================================================== -->
 
         <section
             id="home"
@@ -1237,7 +1245,9 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-                    <!-- PROFILE PHOTO -->
+                    <!-- =================================================
+                         PROFILE PHOTO
+                    ================================================== -->
 
                     <div class="hero-right">
 
@@ -1245,8 +1255,8 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
                             <div class="hero-image-placeholder">
 
-                                <img
-                                    src={profilePhoto.src}
+                                <Image
+                                    src={profilePhoto}
                                     alt="Josh Maddox"
                                 />
 
@@ -1265,7 +1275,9 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-        <!-- PROJECTS -->
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
 
         <section id="projects">
 
@@ -1294,7 +1306,9 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-            <!-- PROJECT CARDS -->
+            <!-- =================================================
+                 PROJECT CARDS
+            ================================================== -->
 
             <div class="project-grid">
 
@@ -1443,7 +1457,9 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
-            <!-- PROJECT SHOWCASE -->
+            <!-- =================================================
+                 PROJECT SHOWCASE
+            ================================================== -->
 
             <div class="project-showcase">
 
@@ -2345,13 +2361,22 @@ import profilePhoto from "../Images/Josh-profilePic.jpg";
 
 
 
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer>
         © 2026 Josh Maddox
     </footer>
 
 
 
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
     <script>
+
 
         /* =====================================================
            PROJECT SWITCHING
